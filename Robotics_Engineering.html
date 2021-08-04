@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Robotics Engineering</title>
+  <meta name="description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Robotics Engineering" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Robotics Engineering" />
+  
+  <meta name="twitter:description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  
+
+<meta name="author" content="Steve Cline" />
+
+
+<meta name="date" content="2021-07-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<div>  </div>
+<img src="WHSROBO.png" style="width:230px;height:260px;" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="0.0.1" data-path=""><a href="#setting-up-ssh-for-windows"><i class="fa fa-check"></i><b>0.0.1</b> Setting up SSH for Windows</a></li>
+<li class="chapter" data-level="0.0.2" data-path=""><a href="#setting-up-ssh-for-mac-or-linux"><i class="fa fa-check"></i><b>0.0.2</b> Setting up SSH for Mac or Linux</a></li>
+<li class="chapter" data-level="0.0.3" data-path=""><a href="#references"><i class="fa fa-check"></i><b>0.0.3</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Robotics Engineering</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Robotics Engineering</h1>
+<p class="author"><em>Steve Cline</em></p>
+<p class="date"><em>2021-07-26</em></p>
+</div>
+<pre><code>options(tinytex.verbose = TRUE)
+
+--- 
+
+# Prerequisites
+
+&lt;p&gt;&lt;b&gt;&lt;i&gt;While we will use Canvas as much as possible in this course, it is not a suitable platform for a course which relies heavily on programming.  As a result, you will need to get comfortable using sites like GitHub and other development platforms.  Familiarity with these sites will prepare you for future work in college and beyond.&lt;/b&gt;&lt;/i&gt;&lt;/p&gt;
+
+&lt;u&gt;For this course you will need to do the following to prepare to learn:&lt;/u&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Locate the [Course Lecture Notes] section of this site.  Browse through the notes to gain an understanding of what we will be covering this year.&lt;/li&gt;
+  &lt;li&gt;If you do not already have one, sign up for a &lt;a href=&quot;https://github.com/&quot; target = &quot;_blank&quot;&gt;GitHub&lt;/a&gt; account.&lt;/li&gt;
+  &lt;li&gt;Bookmark the course &lt;a href=&quot;https://github.com/stcline/Robotics_Engineering_Course&quot; target=&quot;_blank&quot;&gt;GitHub Repository&lt;/a&gt;.  This is where many of the programming resources will be found.  In addition, assignments will be submitted here.&lt;/li&gt;
+  &lt;li&gt;Locate our two textbooks for the course.  They are both online and free.  The first is an electronics textbook called &lt;a href=&quot;https://www.allaboutcircuits.com/textbook/&quot; target =&quot;_blank&quot;&gt;&lt;i&gt;Lessons in Electric Circuits&lt;/i&gt;&lt;/a&gt;.  The second is a programming textbook called &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;&lt;i&gt;Think Python&lt;/i&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;!-- &lt;li&gt;Subscribe to the course &lt;a href=&quot;https://www.youtube.com/playlist?list=PLdzkJRGG1oi3xGaaHM44BkpW-bYuD9KQS&quot; target=&quot;_blank&quot;&gt;YouTube Channel&lt;/a&gt;.&lt;/li&gt;  Directions for how to do this are found in the [Follow the Course YouTube Channel] section of this site.&lt;/li&gt; --&gt;
+  &lt;!-- &lt;li&gt;Log on to the class Jupyter Notebook server&lt;/li&gt; --&gt;
+  &lt;li&gt;Navigate to our &lt;a href=&quot;https://thumbsdb.herokuapp.com/circuit/&quot; target = &quot;_blank&quot;&gt;online circuit design website&lt;/a&gt;.  We will use this site extensively during our electronics unit.
+  &lt;li&gt;Sign up for an OnShape account by following the instructions in the [OnShape Account Setup] section of this site.&lt;/li&gt;
+  &lt;li&gt;Complete the &lt;a href=&quot;https://docs.google.com/document/d/1GyzqmEnwxi8B-1l7OLEiFR7GuWuK1Wd5o3fenj8jpm8/edit?usp=sharing&quot; target =&quot;_blank&quot;&gt;WHS Mechatronics Lab Code of Conduct Agreement&lt;/a&gt;.&lt;/li&gt;
+
+&lt;!--chapter:end:index.Rmd--&gt;
+
+# Introduction {#intro}
+
+## A brief Overview of the Course
+&lt;p&gt; &lt;b&gt;Remember that engineers spend a majority of their time debugging their designs.  You will too.  It is not because this course is made too hard for you...it is just the way engineering works.&lt;/b&gt;&lt;/p&gt;
+
+&lt;img src=&quot;https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/df-20457_rv2.jpg&quot;&gt;
+&lt;p&gt;&lt;i&gt;&quot;They say that no plan survives first contact with implementation.  I&#39;d have to agree.&quot;&lt;/i&gt;&lt;br&gt;   -- Mark Watney, Sol 40&lt;/p&gt;
+&lt;p&gt;Why begin with this quote?  One of my favorite books and movies of all time is &lt;i&gt;The Martian&lt;/i&gt;.  The struggles of the main character, Mark Whatney, demonstrate the challenges facing engineers.  While we will not be risking our lives on another planet, our solutions to the problems in this course, follow the same pattern as his.  Where he sought to survive being the only human on another planet by engineering his way out, we will survive this course by learning to attack problems in the same way and remember not to give up.  We must keep in mind, &lt;b&gt;no plan will work the first time&lt;/b&gt;.
+
+During this class students will explore the field of mechatronics using a variety of hands-on activities. Students begin the semester with an introduction to basic history and theory of robotics, the engineering process and tools used to create robotic devices. We will introduce basic electronics concepts. We will examine various types of mechanical mechanisms from simple machines to more complex drive systems. Moving forward, programming becomes an essential and vital element.  Students program the onboard micro-processor found on a &lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-4-model-b/&quot; target=&quot;_blank&quot;&gt;Raspberry Pi 4B+&lt;/a&gt;.  This control board will use the &lt;a href=&quot;https://www.raspberrypi.org/documentation/raspbian/&quot; target=&quot;_blank&quot;&gt;Raspian OS&lt;/a&gt; which is a version of Linux.  While students will work within the Linux shell, the programming language of this course is &lt;a href = &quot;https://www.python.org/doc/&quot; target=&quot;_blank&quot;&gt;Python&lt;/a&gt;.  Students work individually and in teams to design and build simple and complex mechatronic systems capable of meeting a variety of criteria including driving, pushing, controlling speed, etc. Sensors are introduced to allow robotic devices to interact with the environment.  Actuator design is discussed and different manipulator systems are introduced. As an essential part of mechanical design, students will be exposed to CAD concepts using &lt;a href=&quot;https://www.onshape.com/&quot; target=&quot;_blank&quot;&gt;OnShape&lt;/a&gt;.
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Mecha_workaround.svg/480px-Mecha_workaround.svg.png&quot; class=&quot;center&quot;&gt;&lt;p&gt;&lt;br&gt;&lt;i&gt;As you can see from this Euler diagram here, &lt;a href=&quot;https://en.wikipedia.org/wiki/Mechatronics&quot; target=&quot;_blank&quot;&gt;Mechatronics&lt;/a&gt; is a complicated field of engineering that combines many areas of study.  This is the more technical name for robotics and was created by Tetsuro Mori in 1971 and has served as the name for this field since.  In this course, you will be introduced to several of the areas on this diagram.&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Since you may need to work at home from time to time on projects for this course, be sure that you consider creating a good remote learning environment by doing the following:&lt;/b&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a dedicated workspace for yourself that you can keep neat and organized throughout the year.  Pick a place that is as quiet as possible so that you can concentrate.  Do not use this space for anything else.  In this course that space should include a place for your computer as well as an area to work on electronics projects - preferable with a hard surface like a desktop or workbench.&lt;/li&gt;
+  &lt;li&gt;Manage your sleep schedule.  You will need to be able to concentrate and stay focused since you do not have a teacher hovering over your workspace to keep you focused.  If you go to bed at a consistent time and wake up at a consistent time, you will be able to learn more effectively.&lt;/li&gt;
+  &lt;li&gt;Make sure you know how to log on to every account needed for the course.  See the [Prerequisites] for all of the details for this course.  Be sure to ask questions if you encounter any difficulties.&lt;/li&gt;
+
+## History of Robotics
+&lt;i&gt;Adapted from &lt;a href=&quot;https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/robotics/history.html#:~:text=The%20earliest%20robots%20as%20we,industry%2C%20but%20did%20not%20succeed.&quot; target=&quot;_blank&quot;&gt;Robotics: A Brief History, Stanford University&lt;/a&gt;&lt;/i&gt;
+
+&lt;b&gt;Origins of &quot;Robot&quot; and &quot;Robotics&quot;&lt;/b&gt;
+
+    The word &quot;robot&quot; conjures up a variety of images, from R2D2 and C3PO of Star Wars fame; to human-like machines that exist to serve their creators (perhaps in the form of the cooking and cleaning Rosie in the popular cartoon series the Jetsons); to the Rover Sojourner, which explored the Martian landscape as part of the Mars Pathfinder mission.  Some people may alternatively perceive robots as dangerous technological ventures that will someday lead to the demise of the human race, either by outsmarting or outmuscling us and taking over the world, or by turning us into completely technology-dependent beings who passively sit by and program robots to do all of our work.  In fact, the first use of the word &quot;robot&quot; occurred in a play about mechanical men that are built to work on factory assembly lines and that rebel against their human masters.  These machines in &lt;i&gt;R.U.R. (Rossum&#39;s Universal Robots)&lt;/i&gt;, written by Czech playwright Karl Capek in 1921, got their name from the Czech word for slave.
+    
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Capek_play.jpg/375px-Capek_play.jpg&quot; class=&quot;center&quot;&gt;
+&lt;br&gt; 
+    
+    The word &quot;robotics&quot; was also coined by a writer.  Russian-born American science-fiction writer Isaac Asimov first used the word in 1942 in his short story &quot;Runabout.&quot;  Asimov had a much brighter and more optimistic opinion of the robot&#39;s role in human society than did Capek.  He generally characterized the robots in his short stories as helpful servants of man and viewed robots as &quot;a better, cleaner race.&quot;  Asimov also proposed three &quot;Laws of Robotics&quot; that his robots, as well as sci-fi robotic characters of many other stories, followed:
+
+&lt;ol&gt;
+&lt;li&gt;A robot may not injure a human being or, through inaction, allow a human being to come to harm.&lt;/li&gt;
+&lt;li&gt;A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.&lt;/li&gt;
+&lt;li&gt;A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;Added later is the Zeroth Law to precede the others: A robot may not harm humanity, or, by inaction, allow humanity to come to harm.&lt;/i&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/8/8e/I_Robot_-_Runaround.jpg&quot; class=&quot;center&quot;&gt;
+&lt;br&gt;
+&lt;b&gt;Early Conceptions of Robots&lt;/b&gt;
+
+One of the first instances of a mechanical device built to regularly carry out a particular physical task occurred around 3000 B.C.:  Egyptian water clocks used human figurines to strike the hour bells.  In 400 B.C., Archytus of Taremtum, inventor of the pulley and the screw, also invented a wooden pigeon that could fly.  Hydraulically-operated statues that could speak, gesture, and prophecy were commonly constructed in Hellenic Egypt during the second century B.C.
+        
+In the first century A.D., Petronius Arbiter made a doll that could move like a human being.  Giovanni Torriani created a wooden robot that could fetch the Emperor&#39;s daily bread from the store in 1557.  Robotic inventions reached a relative peak (before the 20th century) in the 1700s; countless ingenius, yet impractical, automata (i.e. robots) were created during this time period.  The 19th century was also filled with new robotic creations, such as a talking doll by Edison and a steam-powered robot by Canadians.  Although these inventions throughout history may have planted the first seeds of inspiration for the modern robot, the scientific progress made in the 20th century in the field of robotics surpass previous advancements a thousandfold.
+
+&lt;b&gt;The First Programmable System&lt;/b&gt;
+
+There is very little doubt today about both how essential programming is to robotics and who the earliest computer programmer was.  While many would immediately think of modern computer scientists like Steve Wozniak or earlier programmers like Alan Turing, the first person to successfully put forth the idea of a programmable system like a computer was Ada Lovelace.  In her article of 1842 (Yes, during the John Tyler administration) she proposed that numbers and objects could be used to &quot;express abstract scientific operations&quot; and create action based on rules.  This was the first time anyone had proposed programming a device to act on inputs based on rules.  This is the very heart of what it is to be a robot.  Despite the great disadvantage of being born a woman in a very male dominated 19th century, she founded the field which would become the backbone of mechatronics.
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/b/b7/Ada_Byron_daguerreotype_by_Antoine_Claudet_1843_or_1850_-_cropped.png&quot; class=&quot;center&quot;&gt;
+&lt;br&gt;
+
+&lt;b&gt;The Origins of the Math of Robotics&lt;/b&gt;
+
+The backbone of decision making in the mechatronics is a field of math called Boolean Algebra.  As a professor of mathematics at Queen&#39;s College Cork in Ireland, George Boole published a work titled &lt;i&gt;&lt;a href=&quot;http://www.gutenberg.org/ebooks/15114&quot; target=&quot;_blank&quot;&gt;An Investigation of the Laws of Thought&lt;/a&gt;&lt;/i&gt; in 1854.  Boole sought to prove mathematically the existence of god through the application of logic.  While his success at justifying the existence of god has not been supported, the underlying mathematical system that he invented would be used a century later as the foundation for modern day computers.  
+&lt;img src=&quot;https://cdn.instrumentationtools.com/wp-content/uploads/2017/07/instrumentationtools.com_digital-logic-gates-truthtables.png&quot; class=&quot;center&quot;&gt;
+&lt;br&gt;
+Without Boole&#39;s contribution to mathematics and logic, modern microprocessers built from transistors would not be possible.  While he lived in obscurity during his life, the long legacy of George Boole is found in every computer programming language, including Python.  The code below, which you will become familiar with this year, demonstrates this application.
+
+        While True:
+            print(&quot;Boolean Algebra makes computer decision making possible.&quot;)
+&lt;br&gt;
+For a more in-depth understanding of his contributions to mechatronics see the embedded video in the [Supplemental Videos] Section.
+
+&lt;b&gt;The First Modern Robots&lt;/b&gt;
+
+The earliest robots as we know them were created in the early 1950s by George C. Devol, an inventor from Louisville, Kentucky.  He invented and patented a reprogrammable manipulator called &quot;Unimate,&quot; from &quot;Universal Automation.&quot;  For the next decade, he attempted to sell his product in the industry, but did not succeed.  In the late 1960s, businessman/engineer Joseph Engleberger acquired Devol&#39;s robot patent and was able to modify it into an industrial robot and form a company called Unimation to produce and market the robots.  For his efforts and successes, Engleberger is known in the industry as &quot;the Father of Robotics.&quot;
+&lt;br&gt;
+&lt;img src=&quot;https://cdn.thenewstack.io/media/2017/03/0185bfa8-shakey.150-763x1024.jpg&quot; class = &quot;center&quot;&gt;
+&lt;br&gt;
+Academia also made much progress in the creation new robots.  In 1958 at the Stanford Research Institute, Charles Rosen led a research team in developing a robot called &quot;Shakey.&quot;  Shakey was far more advanced than the original Unimate, which was designed for specialized, industrial applications.  Shakey could wheel around the room, observe the scene with his television &quot;eyes,&quot; move across unfamiliar surroundings, and to a certain degree, respond to his environment.  He was given his name because of his wobbly and clattering movements.  The [Supplemental Videos] section of this text has a video made about Shakey.
+
+In order to better understand the field of mechatronics, you will choose one person who has been foundational to the development of the field.  
+
+Assignment: The Innovators Project
+
+## The Metric System
+
+Be sure to include Newtons here.
+
+## Controlling the Raspberry Pi with a Chromebook
+
+Get this started now so that all the bugs are gone.  We will use the Pi with some code beginning in Section 4.
+
+&lt;!--chapter:end:01-intro.Rmd--&gt;
+
+# Electrical Concepts
+
+This class and modern life relies heavily on electricity and electronics.  Our course electronics text points this out quite eloquently:
+
+&lt;p&gt;&lt;i&gt;The history of electricity starts more than two thousand years ago, with the Greek philosopher Thales being the earliest known researcher into electricity. But it was Alessandro Volta who created the most common DC power source, the battery (for this invention the unit Volt was named after him).&lt;/p&gt;
+&lt;p&gt;Direct current (also known as DC) is the flow of charged particles in one unchanging direction (most commonly found as electron flow through conductive materials). DC can be found in just about every home and electronic device, as it is more practical (compared to AC from power stations) for many consumer devices. Just a few of the places where you can find direct current are batteries, phones, computers, cars, TVs, calculators, and even lightning.&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;We will begin exploring a number of concepts relating to electricity as we will essentially be using electrons as our modes of information processing.  From the electrons that flow through a button or distance sensor to be read by the microprocessor to those which supply the power for our motors and servos, we are heavily dependent on electricity.  Before we get into this, we need to go over some very important concepts.  Take out your Raspberry Pi and follow along with the video below.&lt;/p&gt;
+
+Video here
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Rules of this course in regards to electricity:&lt;/b&gt;
+&lt;ol&gt;&lt;li&gt;Always work only with DC electricity, never use AC voltage except for when you plug your Raspberry Pi into the outlet.&lt;/li&gt;
+&lt;li&gt;Always work on your circuits when the devices are unplugged and batteries removed.  Not only is this a safety issue, it will prevent the need to replace electrical components&lt;/li&gt;
+&lt;li&gt;Only use the components listed in the laboratory activity on which you are working.  Do not try new components you have never used before or are unfamiliar with.&lt;/li&gt;
+&lt;li&gt;Keep your work area clean and uncluttered.  Do not keep beverages on your workstation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;b&gt;Using EasyEDA for circuit design&lt;/b&gt;
+
+There are many useful tools available to help with circuit design.  During this course we will need to learn to use some of them.  Circuit schematics make it easy for us to design and interpret circuits to communicate our project.  For this class we will use EasyEDA.  We can run it in a web browser.  It allows us to save projects to a free account and share them for submission.  If you learn how to use it well enough you may also use it to design your own printed circuit boards (PCB) to make your own components.
+
+Go to the &lt;a href=&quot;https://easyeda.com/editor&quot; target =&quot;_blank&quot;&gt;EasyEDA editor website&lt;/a&gt;.  Create an account.  While you may be able to just start using it and learn through trial and error, here are a few tutorials that will become useful which may be found in the &lt;a href=&quot;https://docs.easyeda.com/en/FAQ/Editor/index.html&quot; target =&quot;_blank&quot;&gt;Tutorials&lt;/a&gt; section of the app:
+
+&lt;ul&gt;
+  &lt;li&gt;Introduction to EasyEDA&lt;/li&gt;
+  &lt;li&gt;UI Introduction&lt;/li&gt;
+  &lt;li&gt;Create a New Project or File&lt;/li&gt;
+  &lt;li&gt;Schematic Capture&lt;/li&gt;
+  &lt;li&gt;Basic Skills&lt;/li&gt;
+&lt;/ul&gt;
+
+You should spend some time learning how to use this app.  We will begin using it soon and you will learn how to read an electronics schematic, by designing them yourself.  Once you have set up your account and learned some basics, complete the following assignment:
+
+&lt;b&gt;Assignment 3.0&lt;/b&gt;&lt;br&gt;
+
+Using your newly discovered schematic design skills, you will make your own basic schematic.  Watch this &lt;a href=&quot;https://www.youtube.com/watch?v=9cps7Q_IrX0&quot; target =&quot;_blank&quot;&gt;short tutorial explaining schematics&lt;/a&gt;.  Create and save a schematic in EasyEDA with the following components in a circuit:
+
+&lt;ul&gt;
+  &lt;li&gt;5V power supply&lt;/li&gt;
+  &lt;li&gt;220 Ohm Resistor&lt;/li&gt;
+  &lt;li&gt;Blue LED&lt;/li&gt;
+  &lt;li&gt;Ground&lt;/li&gt;
+&lt;/ul&gt;
+
+## Circuits
+
+A basic understanding of circuit electricity is essential going forward.  For this section of the course, we will begin using our online textbook.  It gives us an excellent overview of electrons, circuits and polarity.  Please keep in mind that, in order to begin using the Raspberry Pi (i.e. receiving the power supply) you will need to pass all of the required quizzes with at least a 70%.
+
+&lt;b&gt;Key Concepts of Section 3.1&lt;/b&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A circuit is a loop of conductive material.&lt;/li&gt;
+  &lt;li&gt;In order for electrons to flow a &lt;i&gt;closed circuit&lt;/i&gt; is required.&lt;/li&gt;
+  &lt;li&gt;A circuit is &lt;i&gt;open&lt;/i&gt; or &lt;i&gt;broken&lt;/i&gt; if a complete path for the electrons to flow no longer exists.&lt;/li&gt;
+&lt;/ul&gt;  
+
+Rather than me trying to do a better job than our textbook, you are going to read the &lt;a href=&quot;https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/electric-circuits/&quot; target=&quot;_blank&quot;&gt;short section on circuits&lt;/a&gt;.  These questions will be similar to those that you will see on your unit exam (The one you need at least a 70% on to move on).  So...that means that you are not completing this worksheet for a grade.  Instead, you are trying to measure how well you learned the concepts in the reading.  Much of this year&#39;s content will be delivered this way.  Get your head around the idea of learning for the sake of learning.
+
+To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/kYwNj9uauJ4&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+&lt;b&gt;Assignment 3.1&lt;/b&gt;&lt;br&gt; 
+&lt;ol&gt;
+  &lt;li&gt;After reading the section on circuits, complete the &lt;a href=&quot;https://www.allaboutcircuits.com/worksheets/elementary-circuits/online&quot; target=&quot;_blank&quot;&gt;worksheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Using EasyEDA, design a closed circuit with the following components:&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;5V power supply&lt;/li&gt;
+      &lt;li&gt;220 Ohm Resistor&lt;/li&gt;
+      &lt;li&gt;Blue LED&lt;/li&gt;
+      &lt;li&gt;Ground&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ol&gt;    
+Submit the your work on GitHub through Assignment 3.1.
+
+## Voltage and Current
+
+The movement of electrons from one pole to another is what we use in robotics to make our robots work.  By altering the volume of electrons moving through the wires connected to a motor we can alter the speed of the wheel attached to the motor.  The potential energy coming in to our microprocessor pin over a wire attached to a photoresistor tells us the level of brightness or lumosity in a room.  Putting these two concepts together we could create a robotic system that opens the blinds on our lab when the sun sets in the west.  That is, of course, if we can program our system to make that decision on its own.  We will get to the programming part later.  For now, we will examine the concepts of voltage and current which allow us, along with resistance, to receive information through sensor and send information out to an actuation device like a motor.
+
+Read &lt;a href=&quot;https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current/&quot; target=&quot;_blank&quot;&gt;short section on voltage and current&lt;/a&gt;.  Be sure to review the concepts at the bottom of the page for understanding.
+
+To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/z8qfhFXjsrw&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+## Resistance
+
+The final concept needed to understand how electricity in a DC circuit may be used to control devices is resistance.  One day last year I was sitting in my office upstairs.  I had just come from the mechatronics lab and had packed a bunch of supplies from the lab into my backpack so I could do a little work on a demonstration I would be giving later in the week.  All of a sudden I smelled smoke.  I looked down and it was coming from my backpack!  After digging around a bit I found the culprit.  I had put a battery pack in my bag like the one here:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/battery_pack_full.jpg?raw=true&quot;&gt;
+
+Can you see the problem?  I had left all of the batteries in the pack.  When I threw it in my bag, the red and black leads touched and starte what is know as a &lt;a href=&quot;https://en.wikipedia.org/wiki/Short_circuit&quot; target =&quot;_blank&quot;&gt;short circuit&lt;/a&gt;.  With no resistance on the flow of electrons through the wires.  The by product of this rapid flow was heat which began to melt the inside of my backpack and start it smoking.  Remember this example and always pull one battery out of your battery packs when not connected to your device.  Also, never connect two poles of a power source without any resistance.  It can cause serious injury.
+
+This problem is prevented by placing a resistive force on the circuit.  Small electrical components like LEDs and sensors cannot handle even the two amperes of current available from the Raspberry Pi&#39;s 5V pin.  A reisistor is used to prevent the LED from burning up.  In order to understand how resistance works, read &lt;a href=&quot;https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/resistance/&quot; target=&quot;_blank&quot;&gt;short section on resistance&lt;/a&gt;.  
+
+&lt;b&gt;Assignment 3.3&lt;/b&gt;&lt;br&gt; 
+&lt;ol&gt;
+  &lt;li&gt;After reading the section on circuits, complete the &lt;a href=&quot;https://www.allaboutcircuits.com/worksheets/voltage-current-and-resistance&quot; target=&quot;_blank&quot;&gt;worksheet&lt;/a&gt;&lt;/li&gt;
+
+## Ohm&#39;s Law
+
+All three of these concepts come together in Ohm&#39;s Law.  In the 19th century many scientists were experimenting with electricity in an attempt to understand it.  One of these scientists, Georg Ohm, determined that there was a relationship between Voltage, Current and Resistance.  This is why an LED burns up (receives too much current) when no resistance is placed on the circuit.  If we create resistance on the circuit with a resistor the voltage, or potential energy, remains constant but the current decreases.  Ohm&#39;s law is represented by this simple formula:
+
+$$V = I * R$$
+As we will see, this formula is quite handy.  It may be rearranged to solve for any one of the three possible outputs (V-voltage, I-current, R-resistance).  In order to understand how resistance works, read &lt;a href=&quot;https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current-resistance-relate/&quot; target=&quot;_blank&quot;&gt;short section on Ohm&#39;s Law&lt;/a&gt;.  
+
+To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/8jB6hDUqN0Y&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;b&gt;Assignment 3.4&lt;/b&gt;&lt;br&gt; 
+&lt;ol&gt;
+  &lt;li&gt;After reading the section on circuits, complete the &lt;a href=&quot;https://www.allaboutcircuits.com/worksheets/ohms-law&quot; target=&quot;_blank&quot;&gt;worksheet&lt;/a&gt;&lt;/li&gt;
+
+## Using a Digital Multimeter
+
+This section will become active in the event that we are not using remote instruction.
+
+## Basic Soldering
+
+This section will become active in the event that we are not using remote instruction.
+
+&lt;!--chapter:end:02-electrical.Rmd--&gt;
+
+# Mechanical Design
+
+The inspiration for this course at Windsor High School is actually a course in the Engineering College at Colorado State Unversity called &lt;a href=&quot;https://www.engr.colostate.edu/~dga/courses/mech307/&quot; target =&quot;_blank&quot;&gt;Mechatronics and Measurement Systems&lt;/a&gt;.  That course is meant to be one of the capstone courses in the mechanical engineering degree at CSU.  In order to complete our capstone project, we will all need to have a solid understanding of the parts of a mechatronic or robotic system.
+
+## Parts of a Robotic System
+
+We need to be able to determine what components will be necessary in our robot design.  To do this, an overview of the various part types is necessary.  We will define the numerous mechanisms that may be used in our designs as well as the component systems that make a robot.  At the end of this section, you will create a design on &lt;a href=&quot;https://www.onshape.com/&quot; target =&quot;_blank&quot;&gt;OnShape&lt;/a&gt; which will serve as the basis for your capstone project next semester.  Use this as an opportunity to start thinking about what you will do in creating a robotic system.
+
+&lt;u&gt;Steps to prepare for this work&lt;/u&gt;
+&lt;ol&gt;
+  &lt;li&gt;Start thinking about a problem you might like to solve.  Is there something at home that could be improved?  For example, last year I built a solar powered Raspberry Pi controlled garden watering system.  Something like that has a definite use and provides a solution for my wife and I.  Now that it works, when we go on vacation we don&#39;t worry that our garden gets watered.&lt;/li&gt;
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/watering_system.jpg?raw=true&quot; alt=&quot;Solar powered water system&quot; style=&quot;width:60%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A solar powered robotic watering system.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+  &lt;li&gt;Look for other examples.  A good place to start is the &lt;a href=&quot;https://video-demos.colostate.edu/robotics-controls/mechatronics/projects/&quot; target =&quot;_blank&quot;&gt;Student Examples from the MECH 307 Course at CSU&lt;/a&gt;.  Other good sources of inspiration are listed below:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/tutorials/category/4&quot; target =&quot;_blank&quot;&gt;SparkFun Projects Examples&lt;/a&gt;  
+      &lt;li&gt;&lt;a href=&quot;https://www.digikey.com/en/maker/blogs/2019/top-10-diy-robot-designs&quot; target =&quot;_blank&quot;&gt;DigiKey Top 10 DIY Robot Designs&lt;/a&gt;
+      &lt;li&gt;&lt;a href=&quot;https://create.arduino.cc/projecthub/projects/tags/robot&quot; target =&quot;_blank&quot;&gt;Arduino Project Hub&lt;/a&gt;  
+      &lt;li&gt;&lt;a href=&quot;https://projects.raspberrypi.org/en/projects/?interests[]=robotics&quot; target =&quot;_blank&quot;&gt;Raspberry Pi Robotics Projects&lt;/a&gt;
+      &lt;li&gt;In additon, there are many websites that have Raspberry Pi ideas.  Your project will need to be unique but you are welcome to draw inspirations, borrow and repurpose code and integrate designs into yours.  Even if an online example uses a different control system, it can still be helpful in developing your project.
+    &lt;/ul&gt;
+  &lt;li&gt;Think about what makes you excited to do this project.  What would you have fun doing for four months next semester?&lt;/li&gt;
+&lt;/ol&gt;  
+
+Write down some ideas so that, you may come back to them later as you learn more.
+
+
+:::: {.assignmentbox .homework data-latex=&quot;&quot;}
+::: {.left data-latex=&quot;&quot;}
+**ASSIGNMENT 4.1.0: Capstone Project Launch**
+:::
+
+Spend some time researching how you might be able to create your capstone project (You will work on this project in the Spring).  To get the ball rolling on this project complete the following steps:
+
+1. Read over the &lt;a href = &quot;https://docs.google.com/document/d/1Ap9XnDHmlUpDhtRLOVqSsqf3xh5cZPlc8qJfAl380MQ/edit?usp=sharing&quot; target = &quot;_blank&quot;&gt;full assignment requirements&lt;/a&gt;.
+2. Log in to your Github Account and create a new repository for keeping all of your files.  Name the Repo &quot;Capstone Project&quot;.  In the README.md file write a full paragraph description of what you intend to create.  You will definitely revise this as time goes on but this file may be used as a notepad for now.
+3. Complete the &lt;a href = &quot;https://docs.google.com/forms/d/e/1FAIpQLSdJWRUWtkAAdcBtCdayQPgfjS2zF48ND2OKUYnIv5BgGCKshg/viewform?usp=sf_link&quot; target = &quot;_blank&quot;&gt;Capstone Project Launch Form&lt;/a&gt;.
+::::
+
+
+_Now that we have some ideas, let&#39;s learn about the various types of parts available to us._
+
+### Power Supply
+
+A major consideration is power.  Most of the systems we design need to be efficient in their use of power.  We are not always able to connect to an outlet.  For example, home surveillance cameras are small and easy to install in many different locations.  However, if we had to connect them to an AC power source, the list of possible locations for installation could be greatly reduced.  The solution is a battery pack.  How do we decide which battery though?  A surveillance camera might need to run for weeks at a time without changing the battery.  As a result, a high quality lithium ion source would probably make the most sense.  The drawback to this compact and powerful design is, of course, price.  These are the types of trade-offs we must consider.
+
+&lt;u&gt;Power Supplies might include:&lt;/u&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Raspberry-Power-Supply-Adapter-Charger/dp/B0719SX3GC/ref=sxts_sxwds-bia-wc-drs1_0?cv_ct_cx=raspberry+pi+power+supply&amp;dchild=1&amp;keywords=raspberry+pi+power+supply&amp;pd_rd_i=B0719SX3GC&amp;pd_rd_r=cfe19aaa-1ab3-4e25-a2bb-71db90ddbdd2&amp;pd_rd_w=UmEqs&amp;pd_rd_wg=lWUzP&amp;pf_rd_p=055f7364-94db-4b93-80d6-346300592c66&amp;pf_rd_r=TX0AEE71D4WXCBYK3ZSB&amp;psc=1&amp;qid=1595873393&amp;sr=1-1-f7123c3d-6c2e-4dbe-9d7a-6185fb77bc58&quot; target =&quot;_blank&quot;&gt;DC Wall adapters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href =&quot;https://www.amazon.com/ML7-12-Battery-Mighty-Brand-Product/dp/B00K8V30D0/ref=sr_1_7?crid=FP86ZQ8RCZIV&amp;dchild=1&amp;keywords=sla+battery+12v&amp;qid=1626716491&amp;sprefix=sla+battery%2Caps%2C313&amp;sr=8-7&quot; target =&quot;_blank&quot;&gt;Sealed Lead Acid Batteries&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.robotshop.com/en/nimh-2000mah-battery-pack-hitec-connector.html&quot; target =&quot;_blank&quot;&gt;Pre-built battery packs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Adafruit-Medium-Volt-Solar-Panel/dp/B01BKA1YSK&quot; target = &quot;_blank&quot;&gt;Solar panels&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+As we see, there are many options and considerations.  Only by determining total power needs, space and weight constraints and budget can we select the correct source.  For now, consider power needs first.  As you get closer to the start of your project you can narrow down your choices.
+
+
+:::: {.assignmentbox .homework data-latex=&quot;&quot;}
+::: {.left data-latex=&quot;&quot;}
+**ASSIGNMENT 4.1.1: Capstone Power Supply Considerations**
+:::
+
+Let&#39;s examine our options for power supplies in regards to the Capstone Project:
+
+1. Read over the article, &lt;a href = &quot;https://www.seeedstudio.com/blog/2021/01/22/how-to-power-supply-for-projects/&quot; target = &quot;_blank&quot;&gt;How To Choose a Power Supply for Electronic Projects&lt;/a&gt;.
+2. Read over &lt;a href = &quot;https://www.circuito.io/blog/arduino-power-supply/&quot; target = &quot;_blank&quot;&gt;How To Plan Your Circuit With Power Consumption In Mind&lt;/a&gt;.
+3. Complete the &lt;a href = &quot;https://docs.google.com/forms/d/e/1FAIpQLScGjCx5DtXJ_Qan4EAkMBbQxF7kZklDiTRPN7m1bGsZfgZ5-Q/viewform?usp=sf_link&quot; target = &quot;_blank&quot;&gt;Power Supply Selection Form&lt;/a&gt;.
+::::
+
+### Actuators
+
+:::: {.notebox .note data-latex=&quot;&quot;}
+::: {.left data-latex=&quot;&quot;}
+**TAKE NOTE!**
+:::
+
+In the next two sections, you will be running some code on your Raspberry Pi in order to test out the actuators and sensors.  If you have not done so already, review the section of this text titled [Controlling the Raspberry Pi with a Chromebook].
+::::
+
+Most robots move and interact with the physical world.  We will not make that distinction here although there are many who believe that this is a requirement.  A robotic car system has many actuation systems.  The most notable of these is the drive system.  Through the wheels and transmission the motor interacts with the surface the robot is on to propel the robot.  Any device creating motion in this way is an actuator.  Like power supplies, actuator selection meets many criteria.  A look at the &lt;a href=&quot;https://www.robotshop.com/en/motors-actuators.html&quot; target =_blank&quot;&gt;RobotShop Actuator Page&lt;/a&gt; reveals hundreds of possibilities.
+
+&lt;ul&gt;
+  &lt;li&gt;DC Motors&lt;/li&gt;
+  &lt;li&gt;Servos&lt;/li&gt;
+  &lt;li&gt;Stepper Motors&lt;/li&gt;
+  &lt;li&gt;Linear Slides&lt;/li&gt;
+&lt;/ul&gt;
+
+From these fours types of actuators, most robotic systems may develop a way of interacting with the environment.
+
+_Let&#39;s test out several types of actuators.  Start with a DC motor.  Then show how to use a HiTech servo (OTS RPi code for download). Apply to a linear slide.  Same with a stepper._
+
+Servo:
+  https://tutorials-raspberrypi.com/raspberry-pi-servo-motor-control/
+  https://www.instructables.com/Servo-Motor-Control-With-Raspberry-Pi/
+Stepper (with L298n):
+  https://www.electronicshub.org/raspberry-pi-stepper-motor-control/
+  
+Put the code up on a repo and have them clone it for use.
+
+### Sensors
+
+There are even more sensor types than there are actuator types.  If we browse the &lt;a href=&quot;https://www.adafruit.com/category/35&quot; target =&quot;_blank&quot;&gt;Adafruit Sensor Page&lt;/a&gt; we see how limitless these possibilities are.  For any type of sensor application there is, someone has though of a way to build it.
+
+As &lt;a href=&quot;http://www.cs.cmu.edu/~rasc/Download/AMRobots4.pdf&quot; target = &quot;_blank&quot;&gt;excerpt from a robotics text&lt;/a&gt; explains, sensors are either proprioceptive or exteroceptive and, at the same time, either passive or active.  This chart is taken from that text:
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Sensor%20Classifications.png?raw=true&quot; alt=&quot;Sensor Classification&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.1 - Table Illustrating Classifications of Robotics Sensors.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+_Put some sample code in a repo for using some sensors._
+
+### Control Systems
+
+For most students, the Raspberry Pi will function as the microprocessor for the course.  Students learn to interact with the Pi using the command line and Python.  In addition, the Raspberry Pi offers many advantages over other microprocessors like Arduinos.  One of the main advantages is the built in wifi capabilities.  This allows for remote programming and true Internet of Things (IoT) capabilites.  Still, some may choose a different processor, maybe even a different version of the Pi.
+
+A &lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-zero-w/&quot; target =&quot;_blank&quot;&gt;Raspberry Pi Zero W&lt;/a&gt; is an extremely compact and low cost alternative to the Rapberry Pi 4 we use in class.  It is made for low-power, compact IoT applicaitons and should be considered.  While the processor speed is slower than larger Pis, it might be just the fit for your project.  The Raspberry Pi Foundation released a new single-board controller (SBC) in the last year called the &lt;a href=&quot;https://www.raspberrypi.org/products/raspberry-pi-pico/&quot; target = &quot;_blank&quot;&gt;Pico&lt;/a&gt;.  It is a great alternative if a full OS is not needed on your project.  If you can just flash the memory and let it run, an SBC may be a good choice - not to mention, they are very inexpensive.  Other SBCs, like the world famous Arduino, are available as well.  &lt;a href=&quot;https://en.wikipedia.org/wiki/Comparison_of_single-board_microcontrollers&quot; target =&quot;_blank&quot;&gt;This list&lt;/a&gt; is quite extensive and should be considered.
+
+### Structural Parts
+
+The skeleton of the robotic system determines the physical constraints on the design.  For years now, our robotics team has dealth with this issue.  Several years ago they were presented with a challenge in the competition which required their robot to climb a mountain:
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://lh3.googleusercontent.com/pw/ACtC-3cmpHSRe6rGTt-MiIm45DNvdX5LnQPqjeFoMLTcRDMEe-jTS-R-VCHQpOXHaIDewV3isya2OqOclK3ttuJrw_SZFTdhtLex9lYP1k0KlGzc5bqn2ezhGXwOkCdMWfAII_uaL7MYbPUcI6blbrHRMNBy=w787-h904-no?authuser=0&quot; alt=&quot;Climbing a mountain&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.2 - WHS Robotics Team members analyze the challenge in the 2015 season.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+As we can see from the photograph, the mountain was quite daunting.  The previous year, the team had advanced to the world championships and found that their robot, while the best design in Colorado, was not suited to compete with the heavier robots beyond the state.  As a result they had been pushed around a bit and not been very successful.  The solution to this was to weld a steel frame together and build the robot off of that.  The result was a 70 pound robot!  Without thinking more deeply about the design of the current year, they had hampered themselves by dealing with the previous yesr&#39;s challenge in mind.  The robot was robust and strong but could not climb the mountain.  Instead, every tread system they tried to use to climb was under so much strain that it eventually broke.  They would even 3D print treads made out of high strength plastics that still could not hold up to the strain.  In this case, the structural parts let them down.  What a great learning experience that was.  All three of those students in the photo are in science and engineering programs currently in college.  The one on the right, Mitchell Watson, is literally going to be a rocket scientist when he graduates for Cal Tech.  Understanding these concepts of mechanical design are not only fundamental to robotics, they can lead to many great opportunities.
+
+There are many options for structural parts.  Over the years, we have accumulated a wealth of parts in our program which may be checked out.  In addition, we have plenty of scrap material (we hated that mountain so much that we cut it up at the end of the season and have been using it for scrap since then).  After you learn how to use CAD later in this unit, you will be able to design and print your own custom parts as well.  
+
+The type of material matters.  Begin with &lt;a href=&quot;https://www.societyofrobots.com/materials.shtml&quot; target=&quot;_blank&quot;&gt;this materials guide&lt;/a&gt; in selecting your parts.  Consider using pre-built kits or components.  Here is a list of companies that provide robotics parts:
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.pitsco.com/&quot; target = &quot;_blank&quot;&gt;Pitsco Education&lt;/a&gt;: Many different types of parts from a long-time vendor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.revrobotics.com/&quot; target = &quot;_blank&quot;&gt;REV Robotics&lt;/a&gt;: Higher quality aluminum and high grade plastic parts&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gobilda.com/&quot; target = &quot;_blank&quot;&gt;GoBilda&lt;/a&gt;: Awesome parts for large applications&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://8020.net/?SID=0iar947e93r0f4tpr4p5dd79g5/&quot; target = &quot;_blank&quot;&gt;80/20 Inc.&lt;/a&gt;: Incredibly versitile structural systems&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.robotshop.com/en/robot-kits.html&quot; target = &quot;_blank&quot;&gt;RobotShop&lt;/a&gt;: If you are looking for a kit, to get started&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/categories/31?filter_option%5Bsubcategory%5D%5B%5D=category_155&amp;filter_price_floor=&amp;filter_price_ceil=&quot; target = &quot;_blank&quot;&gt;SparkFun&lt;/a&gt;: Based in Niwot, you can go visit them and pick up your parts or take the tour to get some ideas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;br&gt;&lt;b&gt;&lt;i&gt;NOTE: For any vendors, check before you buy.  We have educational discounts with most all of them.&lt;/b&gt;&lt;/i&gt;
+
+## Mechanisms and Motion
+
+Mechanisms can be used to change the speed, direction or force required to do something. Mechanisms may be able to help you but they cannot do it on their own. 
+
+### Inputs and Outputs
+
+Machines need energy and someone or something to operate them. In mechatronics we utilze actuators attached to a control system for the source of the energy.  The energy that is used by a machine is called the ___input___. The result of this energy input is called the ___output___. While it is not a robotic system, a mechanism such as a bicycle can be explained with the diagram below.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/input_output.png?raw=true&quot; alt=&quot;Input and Output&quot; style=&quot;width:60%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A bicycle as a mechanical system.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+### Types of Motion
+
+Mechanisms are concerned with motion. There are four main types of motion. These can be illustrated by means of human body movements.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/types_motion.png?raw=true&quot; alt=&quot;Types of Motion&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - Examples of various types of motion.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+Motion that is transferred along a line is known as ___linear motion___.  Utilizing this system allows robotic designs to extend reach in all directions but is mainly used in attaining more height or reaching horizontally.  Motion which is a repetitive up-and-down or back-and-forth linear motion is known as ___reciprocating motion___.  This movement is commonly used in pumps.  ___Rotary motion___ is a circular movement of an object around a center (or point) of rotation and is the most commonly used motion in robotic systems.  Drive systems are usually based in rotary motion but other systems utilize it as well including lifting and collecting mechanisms.  Pendulums represent one application of ___oscillating motion___ which are used in robotics systems.
+
+## Levers
+
+One of the oldest mechanisms is the ___lever___. Stone Age people used them to move large objects.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/stone_age.png?raw=true&quot; alt=&quot;Stone age lever&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - Using a lever to move a heavy object.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+A lever can be described as a long rigid object with a pivot point somewhere along its length. The pivot is a fixed point about which the lever rotates. The pivot is also known as the ___fulcrum___. Levers are used to do two things: they can move a large load with only a little effort, or they can increase or amplify movement. A seesaw is a simple example of a lever.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/seesaw.png?raw=true&quot; alt=&quot;seesaw&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A seesaw is an example of a simple lever.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+### Classes and Categories
+
+Levers are classified by the relative positions of the ___fulcrum___ (the point of ___fixed pivot___), ___effort___ (the ___input force___) and ___resistance___ (or ___load___). It is common to call the input force the effort and the output force the load or the resistance. This allows the identification of three classes of levers by the relative locations of the fulcrum, the resistance and the effort.
+
+With a ___class one lever___, the fulcrum is between the effort and resistance. The effort is applied on one side of the fulcrum and the resistance (or load) on the other side, for example, a seesaw, a crowbar or a pair of scissors, a common balance , a claw hammer. Mechanical advantage may be greater than, less than, or equal to 1.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_1.png?raw=true&quot; alt=&quot;class one lever&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A class one lever and example.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+A ___class two lever___ places resistance (or load) between the effort and fulcrum. The effort is applied on one side of the resistance and the fulcrum is located on the other side, e.g. in a wheelbarrow, a nutcracker, a bottle opener or the brake pedal of a car, the load arm is smaller than the effort arm, and the mechanical advantage is always greater than one. It is also called force multiplier lever.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_2.png?raw=true&quot; alt=&quot;class two lever&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A class two lever and example.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+Utilizing a ___class three lever___ places the effort between the fulcrum and resistance. The resistance (or load) is on one side of the effort and the fulcrum is located on the other side, for example, a pair of tweezers, a hammer, a pair of tongs, fishing rod, common balance or the mandible of our skull. The effort arm is smaller than the load arm. Mechanical advantage is always less than 1. It is also called speed multiplier lever.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_3.png?raw=true&quot; alt=&quot;class three lever&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A class three lever and example.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+### Mechanical Advantage
+
+We use levers every day because they make it is easier to get work done. They give us ___mechanical advantage___ (MA) which means that you can move a large load using a small effort.  The MA in the example below is found by comparing the weight of the load with the effort needed to move it. (Remember 1kg = 10 Newton)
+
+$$MA=(Load/Effort)=300N/100N=3:1 = 3$$
+
+If you look at wheelbarrow example again you will see that the distance the effort has to move is much further that that of the load. By comparing the two distances you get the velocity ratio (VR).
+
+$$VR=(D_2/D_1)=400mm/100mm=4:1=4$$
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Wheel_barrow.png?raw=true&quot; alt=&quot;Wheel barrow example&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A wheel barrow used to lift a heavy load.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+### Efficiency
+
+Mechanisms are not always 100% efficient due to factors such as parts that bend, friction etc.
+The scientific formula for the calculation of the efficiency of a mechanism is as follows:
+
+$$Efficiency = (MA/VR)*100\%$$
+For the example of the wheel barrow above we can calculate efficiency using this formula.
+
+$$Efficiency=(3/4)*100\%=75\%$$
+
+### Moments
+
+If a seesaw is not moving but remains level, it is said to be ___balanced___. The forces on either side of the fulcrum are equal and opposite. If the force on one end of the seesaw is greater than the other, or if the fulcrum is not in the center, then the seesaw will rotate around the fulcrum. This turning force is known as a ___moment___.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_seesaw.png?raw=true&quot; alt=&quot;seesaw as a moment&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - The turning of the seesaw about the fulcrum illustrates a moment.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+Moments can be used to work out unknown weights or distances of movement. The figure below shows how to calculate the moment for a very large spanner.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_wrench.png?raw=true&quot; alt=&quot;wrench as a moment&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - A spanner wrench used to calculate a moment.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+We can calculate ways to create a balanced situation by applying these principles.  Consider the seesaw example here:
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/balanced.png?raw=true&quot; alt=&quot;balanced seesaw&quot; style=&quot;width:70%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.? - The system here is balanced by moving the fulcrum to the correct position.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+## Rotary Motion
+
+### Pulleys, Sprockets and Gears
+
+Pulleys, sprockets and gears are used to transfer rotary motion from one place to another. All are wheels. Pulleys are wheels with grooves in the rims, in which a belt or rope can run. Pulleys can transfer rotary motion from one shaft to another or can be used to lift heavy loads. Gears are wheels with teeth evenly spaced around the rims. Several gears can be placed, so that their teeth interlock, or mesh. When two or more gears are used together, they form what is called a gear train. Gears can be used to change the speed and direction in which something rotates. When chains are used to connect the “gears”, a chain and sprocket system is formed, for example on bicycles and motorcycles. Sprocket systems share properties of both of the other systems.
+
+In figure 4.3 the direction of rotation of the pulleys is the same for each pulley. The ___driver pulley___ is attached to the drive system while the ___driven pulley___ is attached to the actuational output.  The mechanical advantage is gained by the variation in the size (diameter) of the pulleys.  This mechanical advantage may be used to increase either velocity of rotation or ___torque___ (rotational force).
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/simple_pulley.png?raw=true&quot; alt=&quot;Simple Pulley&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.3 - Simple Pulley System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+Figure 4.4 illustrates a pulley system which switches the direction of each pulley.  All calculations made on a twisted pulley are the same as a simple pulley system.
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/twisted_pulley.png?raw=true&quot; alt=&quot;Twisted Pulley&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.4 - Twisted Pulley System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+Unlike pulleys, the ___driven gear___ which is attached to the actuation device rotates in the opposite direction as the ___driver gear___.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/two_gears.png?raw=true&quot; alt=&quot;Two Gears&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.6 - Simple Gear System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+By placing an ___idler gear___ of the same size as either of the other two gears, the direction of the driven gear may be reversed so that it rotates in the same way as the driver gear.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_train.png?raw=true&quot; alt=&quot;Gear Train&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.7 - Gear Train System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+This configureation is known as a ___gear train___.
+
+In order to increase the velocity ratio or mechanical advantage of a pulley or gear system, compound pulley and gear trains may be constructed.  
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_pulley.png?raw=true&quot; alt=&quot;Compound Pulley&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.5 - Compound Pulley System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_gears.png?raw=true&quot; alt=&quot;Compound Gear&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.8 - Compound Gear System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+__A NOTE ABOUT SPROCKETS AND CHAINS:__ As previously mentioned, sprockets and chains combine characteristics of the both gears and pulleys.  While the ___driver sprocket___ and the ___driven sprocket___ move in the same direction like pulleys, they have teeth which a chain can fit into to provide added stregth to the system, as in the case of gears.  Considerations for choosing the correct system for your application are below:
+
+Advantages of tooth gears and chains:
+
+- Greater forces can be transferred
+- Chains do not slip/slide
+- Chains can be disassembled for removal
+
+Advantages of pulleys and belts:
+
+- Belts are not noisy
+- Belts can be stretched for fitting and for removal
+- Crossed belts can change the direction of rotation
+
+All of the formulas in the next section are the same for sprockets as for pulleys and gears.  Typically, the number of teeth on the sprocket are used to calculate the velocity ratio as in the case of gears.
+
+The illustration below shows gears fixed to parallel shafts, forming a simple gear train. The gear fixed on the drive shaft is called the driver gear and is connected to the driven gear. The shafts will turn in opposite directions and, because the gears have different sizes, they will turn at different speeds.
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_systems.png?raw=true&quot; alt=&quot;Driver and Driven Gears&quot; style=&quot;width:60%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.12 - Driver and Driven Gears in a Simple Gear System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+The difference in their speeds (velocity ratio) can be calculated from the number of teeth on the driver gear (Teeth~1~) compared to the driven gear (Teeth~2~).
+
+$$VR = (Teeth_2/Teeth_1) = (40/20) = 2:1$$
+The ___velocity ratio___ (VR) in this example may be expressed as 2:1 (say &quot;two to one&quot;) or simply as 2.  This means that in this case the driver shaft must turn twice for the driven shaft to complete one turn.
+
+Similarly, the velocity ratio of a pulley system may be calculated with essentially the same formula.  Pulley systems use a belt to transmit motion and force from the driver shaft to the driven shaft. Cars use a pulley system with V-belts running in grooves on the pulley wheels. Speed changes are made by using different sizes of pulleys on the driver and driven shafts respectively. By comparing the sizes of the two pulleys you can calculate the velocity ratio (VR) of the system.  Instead of using the number of teeth, the difference in pulley speeds can be calculated by comparing the diameter of the driver pulley (Size~1~) to the diameter of the driven pulley (Size~2~).
+
+$$VR = (Size_2/Size_1)=(25/100)=1:4$$
+The velocity ration in this example is expressed as 1:4.  This means that one turn of the driver shaft will give four turns of the driven shaft.
+
+Once we know the velocity ratio of the gears we are working with, we can begin to predict ___output speed___ (S~O~) for a given ___input speed___ (S~I~).
+
+$$S_O=(S_I/VR)=(2000rpm/3:1)=6000rpm$$
+In this case the velocity ratio is 3:1 and the input speed is 2000 ___revolutions per minute___ (rpm).  The resulting output speed is 6,000 rpm.
+
+
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/rack_pinion.png?raw=true&quot; alt=&quot;Rack and Pinion&quot; style=&quot;width:80%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.9 - Rack and Pinion System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/worm_gear.png?raw=true&quot; alt=&quot;Simple Pulley&quot; style=&quot;width:60%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.10 - Worm Gear System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/bevel_gears.png?raw=true&quot; alt=&quot;Bevel Gears&quot; style=&quot;width:60%&quot;&gt;
+  &lt;figcaption&gt;&lt;b&gt;&lt;i&gt;Fig. 4.11 - Bevel Gear System.&lt;/b&gt;&lt;/i&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+
+
+## Linear Motion
+
+### Rack and Pinion Systems
+
+### Lead Screws
+
+## Drive Systems
+
+&lt;!-- Use this webiste as a foundation: https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html --&gt;
+
+## Computer Aided Design
+
+The concepts learned in this unit require planning and modeling to implement effectively.  It is useful to &quot;tinker&quot; with mechanical parts in order to be able to visualize the system itself.  All engineering, however, includes a significant design element.  In most cases, we need to sketch out our design on a piece of paper or board to give the solution to our problem some conceptual scale.
+
+Once you have your design down on paper, it is time to create it like a real mechatronics engineer.  For this section you will learn to use &lt;a href=&quot;https://www.onshape.com/&quot; target =&quot;_blank&quot;&gt;OnShape&lt;/a&gt;, a modern and full-scale computer aided design (CAD) system.  OnShape was founded by two engineers at SolidWorks which is still considered the gold standard of CAD.  SolidWorks comes with a hefty price tag, even for students.  OnShape is free to secondary schools.  As a result, we will use it.  Once year learn this tool, switching to other CAD software will be relatively painless.  In addition, it is entirely web based so you can use it as long as you have an internet connection and a web browser.
+
+If you have not done so already, head to the [OnShape Account Setup] section of the course book.  Follow those instructions.  After you have done this, log on to your account and follow these instructions:
+
+&lt;u&gt;Click on the &quot;Learning Center Button&quot;&lt;/u&gt;
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_lc.PNG?raw=true&quot;&gt;
+
+&lt;u&gt;Select &quot;Self-Paced Courses &gt; Learning Pathways&quot;&lt;/u&gt;
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_lp.PNG?raw=true&quot;&gt;
+
+&lt;u&gt;Select &quot;OnShape Fundamentals: CAD&quot;&lt;/u&gt;
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_fun.PNG?raw=true&quot;&gt;
+
+&lt;b&gt;Assignments 4.2.1 to 4.2.5&lt;/b&gt;&lt;br&gt;
+
+For this part of our course you may move at your own pace to complete these assignments.  Each one requires you to work through the CAD concepts and skills listed in the OnShape courses below.
+
+Complete the first five courses in this learning pathway:
+&lt;ol&gt;
+  &lt;li&gt;Navigating Onshape&lt;/li&gt;
+  &lt;li&gt;Introduction to Sketching&lt;/li&gt;
+  &lt;li&gt;Part Design Using Part Studios&lt;/li&gt;
+  &lt;li&gt;Multi-Part Part Studios&lt;/li&gt;
+  &lt;li&gt;Onshape Assemblies&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!--chapter:end:03-mechanics.Rmd--&gt;
+
+&lt;!-- For the examples here I am using two different terminals.  Since the students will at least start programming using the Linux termanal running the Python environment, all of the direct examples that they are expected to complete will use that.  GIMP can create screenshots which may t
+hen be directly exported to PNG format and uploaded to the hosted images repository on GitHub.  For those which may just be examples of ideas I am using PyCharm since it color codes the text.  At some point, it might be worth exploring other ways of doing this. --&gt;
+
+# Python Programming
+
+Finally!  We are going to start learning how to make the Raspberry Pi control components like lights and motors and receive input from sensors.  This is what will make your creations become real robots.  For this unit we will refer to the &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;course programming text&lt;/a&gt; quite often.  Many of the programming problems come from the Downey text as well.  For all of your assignments in this section you will start here though.  Learn the basic concepts of that assignment, read more about it on the course text, go to GitHub Classroom to practice the program and finally, transfer what you have learned to the Raspberry Pi.
+
+Let&#39;s get started by setting up the Pi and learning more about Python and it&#39;s wide range of applications.
+
+## Setting up the Raspberry Pi
+
+These procedures are for students in the &lt;i&gt;Robotics Engineering&lt;/i&gt; course at Windsor High School.  As such, some of the initial steps required in setting up a Raspberry Pi have already been completed.  If you are using a new, out of the box, Pi refer to one of the many tutorials online.
+
+&lt;b&gt;Equipment Needed:&lt;/b&gt;
+&lt;ul&gt;
+  &lt;li&gt;Raspberry Pi 3B+&lt;/li&gt;
+  &lt;li&gt;5V | 2.5A power supply&lt;/li&gt;
+  &lt;li&gt;32GB Micro SD card with pre-installed Linux based OS&lt;/li&gt;
+  &lt;li&gt;Monitor&lt;/li&gt;
+  &lt;li&gt;HDMI cable&lt;/li&gt;
+  &lt;li&gt;Keyboard&lt;/li&gt;
+  &lt;li&gt;Mouse&lt;/li&gt;
+  &lt;li&gt;Optional: Windows, iOS or Linux Computer (not a Chromebook)&lt;/li&gt;
+  &lt;li&gt;Connection to a LAN.  In the lab this is &quot;Mechlab&quot;.  At home it is your router.&lt;/li&gt;
+&lt;/ul&gt;&lt;br&gt;
+NOTE: For the initial setup we will use the monitor, keyboard and mouse.  Eventually, we will only use the command line functions which will allow you to eliminate those components and control the Pi from your laptop remotely if you choose.  If not, you can use the Pi as a computer itself but just enter the command line controls of the Linux terminal.  Eventually, you will need to be able to do this though as we will disconnect the Pi from all physical I/O devices and make it the brains of a self-sufficient robotic system.&lt;br&gt;
+
+### Putting the Pi Together
+
+To begin, assemble the Pi by putting the SD card in the slot.  Connect the monitor to the HDMI port, and the keyboard and mouse to the USB ports.  Plug in the power cord and turn it on.&lt;br&gt;
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/raspberry-pi%20-%20Hardware%20installation.png?raw=true&quot;&gt;&lt;br&gt;
+
+(Create a custom background for the RPi and install all of the programs needed for the class.)
+
+### Controlling the Pi with SSH
+
+For many, it may be easiest just to use the Raspberry Pi as a standalone computer.  In order to do this one just needs to keep the Pi connected to a monitor, keyboard and mouse.  One of the main advantages of this is that one can just turn on the Pi, wait for the boot sequence to finish and start programming using the terminal.  Another advantage is that other programming interfaces may be used such as Notepad++ which has built in code highlighting and markup functions that make programming in Python, and other languages, easier.  More advanced users might even choose to install an interface like PyCharm which has even more functions aimed at enhancing the programming experience and may be connected to Git or an online code repository like GitHub.  Maybe the biggest advantage of programming from the Pi desktop environment is that a web browser may be easily used alongside the command line terminal or programming interface.
+
+Eventually though, we will all need to sever our connection to the peripherals.  Imagine trying to test out a mobile robot system with the monitor still attached.  When we make the switch we start interacting with the Pi through SSH (Secure Shell).  This concept is not as difficult to understand as one might think.  Essentially you are accessing the terminal window for the Pi through another computer using a piece of software like Putty.  When both devices are connected to the same router, this is a fairly simple process.   While we will not require this yet, it is strongly recommended that every student go over this process which is detailed in the section titled [Controlling the Raspberry Pi Remotely] in the last chapter of this book sometime in the first semester.  The Capstone project will require this so we might as well get used to it now.  Most will probably switch back and forth between using the Pi as a desktop computer and accessing it via SSH.
+
+## The parts of the RPi and Pinout
+
+Let&#39;s examine the parts of this tiny computer that you will be using for the rest of the year...it is really quite amazing how much can be packed on the small device.
+&lt;br&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/stcline/Hosted_Images/master/Robotics_Engineering/RPi3_basic.png&quot;&gt;&lt;br&gt;
+
+There are several things worth noting here about the Pi:
+&lt;ul&gt;
+  &lt;li&gt;While it is possible to power the device with a micro USB power supply that provides only 1A of current (older Android phones use this), it is best to use the full 2-2.5A power supply, especially when we start hooking up components to the GPIO pins&lt;/li&gt;
+  &lt;li&gt;Be careful not to short two GPIO pins together or connect an external DC power supply incorrectly to one of the GPIO pins.  These actions can damage essential components of the Pi.&lt;/li&gt;
+  &lt;li&gt;TBC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+A powerful feature of the Raspberry Pi is the row of GPIO (general-purpose input/output) pins along the top edge of the board.  There are 40 pins which we can use for a wide range of robotics applications.
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/GPIO-Pinout-Diagram-2.png?raw=true&quot;&gt;
+&lt;br&gt;
+It is important to remember which pins are which as the locations do not represent the GPIO labels.  If you forget or cannot find this diagram, use the command line in the terminal.  
+
+This is as good a place as any to start using the terminal.  Before the introduction of the Apple Lisa with a graphical user interface (GUI), all computers used something like the terminal as the interface with humans.  All computers still contain a terminal.  The Raspberry Pi OS we are using is based on the Linux kernel so we will use Linux commands but the procedure is similar for other systems such as Windows and macOS.  With the Raspberry Pi powered on press CTRL+ALT+T to open a terminal session. 
+
+
+After the terminal opens, type the following command: ```pinout```
+
+You should see something like this in the terminal:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/gpiozero-pinout.png?raw=true&quot;&gt;
+
+Any of the GPIO pins can be designated (in software) as an input or output pin and used for a wide range of purposes.  We will use them to send and receive electrical signals.  Two 5V pins and two 3V3 pins are present on the board, as well as a number of ground pins (0V), which are unconfigurable. The remaining pins are all general purpose 3V3 pins, meaning outputs are set to 3V3 and inputs are 3V3-tolerant.
+
+A GPIO pin designated as an output pin can be set to high (3V3) or low (0V).  In addition pins GPIO12, GPIO13, GPIO18, GPIO19 may also be used with Pulse Width Modulation (PWM).  A GPIO pin designated as an input pin can be read as high (3V3) or low (0V). This is made easier with the use of internal pull-up or pull-down resistors. Pins GPIO2 and GPIO3 have fixed pull-up resistors, but for other pins this can be configured in software.
+
+It is possible to control GPIO pins using a number of programming languages and tools.  For this course we will use Bash, the scripting language of Linux, and Python.
+
+&lt;b&gt;&lt;i&gt;NOTE: Before you start your first programming assignment realize that in order to progress in this course you must fully learn the information in the text.  If you skim or rush through you might be able to get many answers on the chapter quiz correct but you will miss many of the points.  Programming is hard and learning to program is as well.  It does not mean it is impossible.  It just requires work.  Take your time and make sure you are understanding what you read.  If not, do the following:
+&lt;ol&gt;
+  &lt;li&gt;Re-read the section.&lt;/li&gt;
+  &lt;li&gt;Ask someone else in the class for clarification.&lt;/li&gt;
+  &lt;li&gt;Google your question&lt;/li&gt;
+  &lt;li&gt;Ask your instructor&lt;/li&gt;
+&lt;/ol&gt;
+This is good advice for all courses, especially the further you go in school.  Many of you will go so far in college that you basically stop taking classes and just learn on your own for the sake of understanding something.&lt;/b&gt;&lt;/i&gt;
+
+&lt;b&gt;Assignment 5.2&lt;/b&gt;&lt;br&gt;
+For this assignment you will learn some basic commands and functions in Linux and how to find out how to use them.
+Open up a terminal on your Raspberry Pi as before.  
+
+Type the following:
+&lt;br&gt;```help```&lt;br&gt;
+
+This is a list of all the built in functions that come with this version of Linux.  As you add more packages and create your own functions this list will get larger.  If you scroll to the top your see this message:
+```Type &#39;help name&#39; to find out more about the function &#39;name&#39;.```
+Let&#39;s try it.  One of the functions you will use fairy often is ```cd```.  
+
+Type ```help cd``` and answer the following questions from the information on the screen:
+&lt;ol&gt;&lt;i&gt;
+  &lt;li&gt;In your own words that you understand, what does this function do? (You may need to Google some of the terms like &quot;directory&quot; to understand what that term means in Linux)&lt;/li&gt;
+  &lt;li&gt;If you type&lt;/i&gt; ```cd Desktop``` &lt;i&gt;what do you think will happen?&lt;/li&gt;
+&lt;/i&gt;&lt;/ol&gt;
+
+Now call up the help information for the function ```if```.&lt;br&gt;
+&lt;i&gt;Why would we ever use this function?  Again, you might need to do a little research to understand the vocabulary here.&lt;/i&gt;
+
+Write down or type your answers so we can discuss them in class next time.
+
+
+## Why Python?
+
+It is worth spending a little time discussing the reasons why Python will be the chosen operating system for this course.  Prior to Fall 2020, the course utilized the Arduino UNO as the microprocessor for the robotics systems.  The Arduino is also a versatile, fully programmable microcomputer with input and output pins capable of producing and detecting low DC voltages. It utilizes the C++ programming language.  There were a few limitations, however, with the Arduino UNO.  
+
+The biggest advantage of the Pi is the programming interface.  Since the Pi is essentially a small Linux computer, applications and environments that function on Linux also function on the Pi.  The default scripting language on Linux is called Bash.  When you called up the ```pinout``` for the Raspberry Pi earlier, you were using Bash.  It is a powerful command line interface.  Why not just use Bash instead of learning another language within the Linux shell?  The main reason for this is Python&#39;s usefulness outside of this class.  We know from past experience that almost all of our Robotics Engineering students will go on to some kind of technical field of study in college.  While those do not all go in to robotics, they all need to learn new languages.  Python is about the most useful language one can learn in high school if planning to go on to a technical degree in college like engineering, computer science, data science or machine learning as well as almost any natural science field of study.  It is powerful, easy to learn and widely used.  The most recent StackOverflow survey ranked Python 3rd most popular among users.  By learning this language, you will be more prepared to take on the challenges of a field of study in college related to robotics.  Since one of the main objectives of our program is to help students prepare for post-secondary STEM fields of study, Python is an easy choice.
+
+Python is also an interpreted language instead of a compiled language.  What is the difference?  In order to get a compiled language to run on a computer, the additional step of compiling it into machine code must take place before the device will run the commands of the program.  With an interpreted language, a program or virtual machine running on the device (In this case, the Python environment installed on the Raspberry Pi OS) interprets the script written by the programmer directly into machine code.  This is a faster process than running a compiled language like C++.  Other interpreted languages include Ruby, Java and Perl and good old BASIC (Which many of us adult programmers learned when we were younger on our Commodore 64 or Apple IIe computers).  This structure makes Python faster to learn.
+
+There are other advantages to the switch to the Pi.  The first advantage that the Pi has over the UNO is an onboard wireless internet connection.  The Pi can connect to other devices using either 2.4GHz or 5GHz frequencies as well as Bluetooth.  The current version also includes a Power over Ethernet (PoE) capability.  Making the switch to the Raspberry Pi will allow for more seamless IOT (Internet of Things) activities without the need for an additional board.  Second, the Raspberry Pi can actually function like a computer.  We can modify the OS easily by modifying the micro SD card used as RAM on the computer.  
+
+## Hello, World...and a Little More
+
+It is a tradition in in programming to test out one&#39;s ability to program in any language by creating a program called &quot;Hello, World!&quot;.  This dates back to 1974 at Bell Labs.  The actual C language code that was written was:
+
+```main( ) {
+        printf(&quot;hello, world\n&quot;);
+}```
+
+In our case, we will do something very similiar.  The first program we write will do the same as that one written in 1974.  Open a terminal window by pressing CTRL+ALT+T.  This will open a window that looks like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/terminal.png?raw=true&quot;&gt;
+
+In order to run a command in Python through the terminal we need to set up the Python environment.  Type this command into the terminal:
+
+```python3```
+
+This will show a message like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/pyprompt.PNG?raw=true&quot;&gt;
+
+You know that you are able use Python commands when you get the ```&gt;&gt;&gt;``` prompt.  This is universal for all Python editors and the specific prompt for Python.  We will try two methods of the &quot;Hello, World!&quot; program.  First, we will use the print command.  Type the following command into the interpreter:
+
+```print (&quot;Hello, World!&quot;)```
+
+The quotation marks signify that we want to literally display what is directed by the ```print``` statement.  Try it without the quotes to see what happens.  This should produce something like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/synerror.PNG?raw=true&quot;&gt;
+
+This is your first error message.
+
+&lt;b&gt;Assignment 5.4&lt;/b&gt;&lt;br&gt;
+Read the chapter from &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt; titled, &quot;Chapter 1 - The way of the program&quot;.  While you read the chapter open the Python environment through the Linux terminal on your Raspberry Pi as before.  Follow along with the examples from the text as you go.  This will help you learn Python more quickly.   When you are done reading the chapter complete exercises 1 and 2 at the end of the chapter on your own to make sure you understand what you read.  If not, see the Note above.
+
+## Functions
+
+As &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt; states, 
+
+&gt;In the context of programming, a function is a named sequence of statements that performs a computation. When you define a function, you specify the name and the sequence of statements. Later, you can “call” the function by name.  
+
+Let&#39;s take a look at this sequentially:
+
+&lt;b&gt;First&lt;/b&gt;, &lt;i&gt;define&lt;/i&gt; a function.  &lt;b&gt;Second&lt;/b&gt;, &lt;i&gt;call&lt;/i&gt; the function.
+
+What does this look like?
+
+Open the Python environment window and &lt;i&gt;define&lt;/i&gt; your function like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/function.png?raw=true&quot;&gt;
+
+Then we &lt;i&gt;call&lt;/i&gt; the function like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/function_call.png?raw=true&quot;&gt;
+
+So, what happened here?  We &lt;i&gt;defined&lt;/i&gt; the function ```say_hello()``` .  Then, we &lt;i&gt;called&lt;/i&gt; the function and passed a &lt;i&gt;parameter&lt;/i&gt; into the function.  Can you tell what the parameter is?
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/function_def_call.png?raw=true&quot;&gt;
+
+Why do we need to know how to use functions?  
+
+The first reason is that the standard Python 3 library is filled with functions.  When you type the command ```print (&quot;Hello, World!&quot;)``` you are calling the built in Python ```print()``` function.  As you read through the chapter on functions you will see that there are many other examples of useful functions packed into Python.
+
+The second reason is to make your programs easier to use.  For example, let&#39;s say you make a robot that needs to follow this pattern as it drives alone a course.  There are many reasons why you might need to do something like this.  Maybe the problem to solve is navigating around obstacles.  Maybe the robot needs to map a facility that humans cannot get into because of hazardous conditions like radiation.  Maybe your robotics teacher just wants you to demonstrate you can use functions.  At any rate, functions will make your job as a programmer eaiser.  Here is the path the robot will take:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/COURSE.png?raw=true&quot;&gt;
+
+How many times does the robot need to make a 90 degree left turn? (nine)  Here is an example of how we could execute that turn using Python and our Raspberry Pi (Don&#39;t worry about the syntax now, we will get there.)
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/left_turn.png?raw=true&quot;&gt;
+
+As you will learn, there are other commands that need to be used to set up this program but these four lines are what actually make the Raspberry Pi control the left and right wheels of the robot so that the right wheel moves forward for two seconds while the left wheel stays fixed.  This will make the robot turn left.  If the two seconds is the correct amount of time, it will make a 90 degree turn.
+
+Think about writing the program to just make the robot drive around.  You would need to replicate this code nine times.  You probably would not retype it nine times.  Instead you would copy and paste it.  This is known as &lt;a href=&quot;https://www.pcmag.com/encyclopedia/term/brute-force-programming&quot; target =&quot;_blank&quot;&gt;brute force programming&lt;/a&gt;.  There are many reasons not to do this.  The biggest reason has to do with the third line in our left turn program.  What if two seconds is not exactly right?  If that is a slight overturn then the robot will go off course with every turn which means we need to go back in and change that value on every ```sleep()``` function.  What if the battery on the robot is at a different charge level from one day to the next?  Again, we will need to change nine lines of code.  Remember, we humans are not very good at repetitive tasks.  That is what we use computers for - to do things over and over.  Why not let the computer do the repetitive stuff?
+
+Instead, let&#39;s make a function called ```left_turn()``` like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/def_left_turn_.png?raw=true&quot;&gt;
+
+And call it nine times throughout the program with the command ```left_turn(2)``` .  If we found that it actually takes three seconds instead of two to execute a 90 degree turn then we would just need to change the parameter we pass to the function, represented by the variable ```sleep_time```.
+
+In that case, the call would look like this: ```sleep_time(3)```.  We could even make things simpler yet by defining a variable at the beginning of the program to represent the number of seconds we want to sleep during the turn - something like ```turn_sleep_time = 2``` .  Then, we would call the function like this:
+
+```left_turn(turn_sleep_time)```
+
+Now, every time we change the variable ```turn_sleep_time```  we are changing the parameter passed to the function everywhere in the program.  We have gone from changing nine different lines of code to changing just one.  This gets really impressive when we think about all the right turns we have to make as well.  See how functions are an integral part of robotics?  Every modern programming language uses functions.  Once you learn it for Python you can use it in other languages as well with only minor changes to syntax.
+
+If we write programs that need to repeat a process nine times, functions save us a lot of work and potential errors.  If we need our robot to do something nine &lt;i&gt;hundred&lt;/i&gt; times or nine &lt;i&gt;million&lt;/i&gt; times we have to use them.  Now let&#39;s spend some time learning more about the functions built in to Python using &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt;:
+
+&lt;b&gt;Assignment 5.5&lt;/b&gt;&lt;br&gt;
+Read the chapter from &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt; titled, &quot;Chapter 3 - Functions&quot;.  While you read the chapter open the Python environment through the Linux terminal on your Raspberry Pi as before.  Follow along with the examples from the text as you go.  This will help you learn Python more quickly.   When you are done reading the chapter complete exercises 1, 2 and 3 at the end of the chapter on your own to make sure you understand what you read.  If not, see the Note above.
+
+## Conditionals
+
+Besides completing repetitive tasks for us humans, robots need to be able to make decisions based on the condition of their environment.  Later, we will learn how to use sensors to understand what is happening in a robot&#39;s environment.  First, we will learn how conditional statements work in Python.  If you have not already done so, it might be helpful to get a little background on computer logic.  The inventor of the logical system we use in robotics was George Boole.  There is a video in the [Supplemental Videos] section of this book about his contributions to the field.
+
+For now, we will concern ourselves with some basic &lt;i&gt;logical&lt;/i&gt; or &lt;i&gt;Boolean&lt;/i&gt; operators.  These are different than mathematical operators.  When we write the following statement using mathematical operators: 
+
+```x = 6```
+
+we are making a statement that the variable ```x``` is &lt;i&gt;equal to&lt;/i&gt; the integer 6.  By contrast, when we use the same operator (=) in logical math we are &lt;i&gt;asking&lt;/i&gt; &quot;Is one equal to the other?&quot;  We script that questions like this:
+
+```x == 6```
+
+Notice that we use 2 = signs instead of one.  This is not a typo.  In fact, it is universal across many programming languages.  Instead of declaring &lt;i&gt;x is equal to 6&lt;/i&gt;, it is asking &lt;i&gt;Is x equal to 6?&lt;/i&gt;  What are the possible answers to this question?  For the answer, read section 5.2 of &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt;.
+
+Notice that there are many other &lt;i&gt;logical (aka relational)&lt;/i&gt; operators.  We can use these operators which return a value of true or false to help our robots make decisions.  To do this we use functions like the ```if()``` statement.  Let&#39;s try it out using another Python function ```len()```.  We will create a function that determines if a word is longer than seven letters.  If so, a message will be displayed saying so.  If not, a different message will be displayed.  Before you read how to do this, see if you can figure it out.  Follow these steps using the textbook as a guide:
+&lt;ol&gt;
+  &lt;li&gt;Define your function and pass a parameter through that is the word you are going to test.&lt;/li&gt;
+  &lt;li&gt;Write a conditional statement using the ```len()``` Python function to determine the length of the word.&lt;/li&gt;
+  &lt;li&gt;Use the ```print()``` function to return a statement that says if it is or is not a long word (greater than seven letters long).&lt;/li&gt;
+  &lt;li&gt;See if you can include the word in the message returned by the function&lt;/li&gt;
+&lt;/ol&gt;
+
+Here is one way to do it:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/conditional_long_word.png?raw=true&quot;&gt;
+
+Notice that we pass the word to the function by using the parameter ```word``` which then stores the string representing our word as a variable.  The if statement checks the length of the word using the ```len()``` function which returns an integer equal to the number of alphanumeric characters in a string (our word).  If that value is &lt;i&gt;greater than or equal to&lt;/i&gt; nine, one message is printed.  Since the only other possibility for the length of this word (if it is not greater than or equal to nine) is that it is less than nine letters, we can use the ```else``` function to print a different message.  Try it out now by typing this function into the terminal under the Python environment and calling the function using different words.  You will probably get some &quot;Traceback&quot; errors the first time you do but stick with it.  When you are done compare your result to the results below:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/long_word_call.png?raw=true&quot;&gt;
+
+Think of the possibilities now.  What could your robot do with this new power!  If we go back to our example in the previous section in which our robot had to navigate around obstacles by turning 90 degrees at a time we can see some interesting solutions.  If we could use a compass sensor to determine the angle of our robot in relation to magnetic north, we could use conditional statments to turn the robot.  Instead of trying to figure out exactly how long it takes for the robot to turn 90 degrees, we could write a script that waited until the angle in relation to magnetic north changed by 90 degrees.  We could even do this with one function.  It might look something like this:
+
+&lt;!-- This needs to be fixed for logical errors --&gt;
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/turn_90_deg.PNG?raw=true&quot;&gt;
+
+This is a lot to take in for a new programmer so let&#39;s briefly go over this function.  When it is called we put in a value for direction.  The possible correct values are &quot;left&quot; and &quot;right&quot;.  If the direction is &quot;right&quot; the left wheel moves until the angle of the robot is equal to the desired angle.  If &quot;right&quot; is passed to the function the opposite happens.  Just in case the human mispells the word or puts something else in a third print statement is used to tell them that their input is not valid.  We will get to this process later in the course.
+
+&lt;b&gt;Assignment 5.6&lt;/b&gt;&lt;br&gt;
+Read the chapter from &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt; titled, &quot;Chapter 5 - Conditionals&quot;.  While you read the chapter open the Python environment through the Linux terminal on your Raspberry Pi as before.  Follow along with the examples from the text as you go.  This will help you learn Python more quickly.   When you are done reading the chapter complete exercises 1, 2 and 3 at the end of the chapter on your own to make sure you understand what you read.  If not, see the Note above.
+
+## Iteration
+
+There are many reasons to use iteration in programming.  The most straightforward reason is to do a spedified action a certain number of times.  Imagine you are designing a robotic NASCAR driver.  This would be the perfect place for iteration.  In a NASCAR race the driver makes the same left turns hundreds of times.  Considering one of the advantages of robots is that they can perform tasks that humans find boring or too repetitive, our robot NASCAR driver would thrive in this environment making the same left turns over and over for hours.
+
+We will approach iteration by learning two programming concepts: ```for``` loops and ```while``` statements.  Each is useful in various situations.  Sometimes they are interchangable depending on the problem being solved.  One uses Boolean logic and the other does not.  Let&#39;s start with the ```for``` loop.
+
+### ```for``` Loops
+
+Unitl now, everything we have done, we have done once.  Most of the time though, our robots will need to do things repeatedly until a desired outcome is reached.  An example could be that our robots collect data from a website over the course of several hours.  One of my home automation projects was to build a solar powered garden watering system for my wife&#39;s garden.  This is very much a robotics application as we wanted to make sure water is delivered consistently every day even when we were gone on vacation.  One of the challenges though was that sometimes it rains in the summer, ususally at night.  If it rains enough the night before there is no need to water the next morning.  As humans we would just think, &quot;How much did it rain yesterday (if it did at all)?&quot; and make our decision to water that morning.  A robot needs clear rules though to follow.  In this case, after a lot of trial and error, I decided that it was best to check the weather conditions between 4:00 pm and the time the watering system came on in the morning.  That way, if enough rain had fallen there was no need to water the garden.  I decided to check the weather forcast using &lt;a href=&quot;https://openweathermap.org/&quot; target =&quot;_blank&quot;&gt;openweathermap.org&lt;/a&gt;.  Every 15 minutes between 4:00 pm and 8:00 am the Raspberry Pi would &quot;scrape&quot; the current weather data off the website, &quot;parse&quot; out the current weather condition and record it in a csv file.  To do this I used something that looked like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/collect_weather.PNG?raw=true&quot;&gt;
+
+Don&#39;t worry too much about the details of this function called ```collect_weather()```.  Instead focus on the line that begins with the word ```for```.  This is one way to use a ```for``` loop to iterate a process (checking the weather).  I know that I want to check the weather over the course of 15 hours every 15 minutes (four times an hour).  This loop will start at 4:00 pm and run 60 times.  During the loop, the Pi checks the weather and records the data in a file then sleeps for 15 minutes (900 seconds). This is a very complicated script so let&#39;s try something simpler using our Raspberry Pi and the Python environment.
+
+Open a ternminal and start the Python environment as before.  Type the following lines:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/for_loop.png?raw=true&quot;&gt;
+
+This ```for``` loop will count to five, updating the value of ```x``` each time and print ```x```.  Try it out by hitting enter to get this result:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/for_loop_result.png?raw=true&quot;&gt;
+
+Notice that, while the loop ran five times, the value of ```x``` was not five at the end.  You can see why.  In computer science we generally start counting at zero instead of one.  As a result the ```range()``` function used in a ```for``` loop ends its final iteration at one less than the value passed to the function, in this case four instead of five.  Remember this for future scripts.
+
+There are other ways to use ```for``` like iterating over lists.  We will get to those later in our course.  For now, explore this method by completing the next assignment.
+
+&lt;b&gt;Assignment 5.7.1&lt;/b&gt;&lt;br&gt;
+Read sections 1-3 of chapter 4 from &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt;.  While you read the chapter open the Python environment through the Linux terminal on your Raspberry Pi as before.  Follow along with the examples from the text as you go.  This will help you learn Python more quickly.   When you are done reading the chapter complete exercises in section 4.3 on your own to make sure you understand what you read.  If not, see the Note above.
+
+### ```while``` Loops
+
+Our last introductory programming concept is a different kind of loop.  Sometimes, the programmer does not know how many iterations will be necessary to solve the problem.  For example, from the previous description of a Raspberry Pi based watering system for a garden, I did not know when I would stop using the system.  At the end of the season after the first freeze we would have no more need to water.  At that point, we would just shut it down and take the electronics in for the winter.  Until then, I needed it to keep going.  As a result, I used one of the simplest loops which is written like this:
+
+```while True:```
+
+```while``` loops run as long as the condition being tested is true.  In this case, I am saying do everything in the loop as long as true is true.  This will be true forever (or until I unplug the Raspberry Pi for the season).  There are many other ways to use ```while``` loops but the basic concept is the same - keep doing these things until the condition is no longer true.  For example, let&#39;s say you are building that robotic NASCAR system mentioned earlier.  If you wanted to keep the car going until the end of the race you could say something like this:
+
+&lt;img src=&quot;https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/while_NASCAR.png?raw=true&quot;&gt;
+
+This extremely oversimplified script basically says, we start the race at zero laps.  ```if``` we do something that means we have completed a lap, add one to the total laps.  So, after the finish line is crossed the first time, laps gets increased by one.  ```while``` laps is less than or equal to 500 (the end) keep driving.
+
+To understand this more, complete the next assignment.
+
+&lt;b&gt;Assignment 5.7.2&lt;/b&gt;&lt;br&gt;
+Read the chapter from &lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target=&quot;_blank&quot;&gt;our text&lt;/a&gt; titled, &quot;Chapter 7 - Iteration&quot;.  While you read the chapter open the Python environment through the Linux terminal on your Raspberry Pi as before.  Follow along with the examples from the text as you go.  This will help you learn Python more quickly.   When you are done reading the chapter complete exercises 1 and 2 at the end of the chapter on your own to make sure you understand what you read.  If not, see the Note above.
+
+&lt;!-- ## Sensing the Environment --&gt;
+
+&lt;!--chapter:end:04-programming.Rmd--&gt;
+
+# Robotic Systems
+
+A fundamental qustion in mechatronics is, &quot;what is a robot?&quot;  Over the course of this year, you should be able to come up with some answers for this question.  This short section is aimed at helping us understand that before moving on to our final project.  Now that you have learned basics of electronics, mechanics and programming, you may begin to explore the larger field of robotics applications.  For this assignment we will begin with background from some experts to supplement what you have already learned.
+
+To begin, let&#39;s take a look at some of the most recent robotics development using a very thorough BBC documentary:
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/hRuBZLe8vfs&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+Make a list of your own criteria that make something a robot.  This list may include anything you like.  Give a justification for each criteria.
+
+Read &lt;a href=&quot;https://robots.ieee.org/learn/what-is-a-robot/#&quot; targe =&quot;_blank&quot;&gt;this page&lt;/a&gt; from the IEEE which attempts to help us decide what a robot is and is not.  How does this change your list?  Be sure to listen to the speakers on the page.
+
+&lt;b&gt;Assignment 6.0&lt;/b&gt;&lt;br&gt;
+Choose one of the robot types from &lt;a href=&quot;https://robots.ieee.org/learn/types-of-robots/&quot; target =&quot;_blank&quot;&gt;this page&lt;/a&gt;.  Conduct your own reaserch and create a 5-10 minute presentation demonstrating the characteristics and applications of your chosen robot type.  Provide video descriptions of these real-world robots as well as the educational pathways needed to work with these robot types.
+
+&lt;!--chapter:end:05-robots.Rmd--&gt;
+
+# Capstone Project
+
+The stone placed at the very top of an archway which holds the rest of the arch in place is known as the &lt;a href=&quot;https://commons.wikimedia.org/wiki/File:Arch_voussoirs.svg&quot; target =&quot;_blank&quot;&gt;capstone&lt;/a&gt;.  Just like mason placing that last stone, you are ready to demonstrate your learning.  For the last four months of this course you will complete a capstone project.
+
+You, and a partner if you choose, will complete a complex robotics project using everything you have learned this year.  
+
+&lt;b&gt;Overview:&lt;/b&gt;
+
+Each group/person must design, build, test, and demonstrate a device controlled by one or more microcontrollers (e.g. Arduino, Raspberry Pi, ESP 8266, etc.).  The device should have functioning elements in all five categories listed below. The device will be rated (graded) based on the level of functionality achieved in each category. There will also be grading adjustments for qualitative attributes.
+
+You are allowed to use circuits and code you find on the Internet or in other books, but make sure you have a full understanding of what the code or circuit does. You should also &quot;add value&quot; to what you use by incorporating it into your system creatively and effectively.  Also, make sure you cite in your report, your poster and in your final code sketches any sources of any code or circuits you use.
+
+&lt;u&gt;The materials used for this project must meet the following requirements:&lt;/u&gt;
+&lt;ul&gt;
+&lt;li&gt;Any materials from the Arduino Super Starter kit for class may be used including sensors, motors, wires, lights, displays and resistive devices&lt;/li&gt;
+&lt;li&gt;Any approved components available in the lab (i.e. sensors on loan, stepper motors, structural parts, etc.)&lt;/li&gt;
+&lt;li&gt;Up to 200g of ABS filament (for entire project, including prototypes).&lt;/li&gt;
+&lt;li&gt;Up to $75 in pre-approved student purchased parts (per project, not per student).  It is up to the student to order these components although I will help you find them, if needed.  Be careful here, qualitative deductions will be made for expensive and/or unnecessary component selection (i.e. using a Raspberry Pi where an Arduino UNO will work, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+NOTE - the choice of your project concept could have a large impact on the grade you receive; so please evaluate your alternative concepts carefully, based on the grading criteria below.
+
+Each of you will receive a &lt;a href=&quot;https://docs.google.com/document/d/1Ap9XnDHmlUpDhtRLOVqSsqf3xh5cZPlc8qJfAl380MQ/edit?usp=sharing&quot; target =&quot;_blank&quot;&gt;detailed set of instructions&lt;/a&gt; for this project.
+
+&lt;!--chapter:end:06-capstone.Rmd--&gt;
+
+# Going Further with Robotics
+
+## Robotics in Higher Education
+
+You are taking this course because you are interested in learning about robots, obviously.  You may want to pursue this subject after you leave high school as well.  What does it mean to be a robotic engineer or roboticist?  This is more than having an enthusiasm for the field.  It means pursuing an educational path that prepares you for a profession in robotics.  It also looks different depending on what you want to do with robotics.  Robotics engineering is a standalone field within mechatronics.  However, many fields benefit from this area of study even if it not the primare goal.  One of our recent alumns, Katie Schutt, summs up her path through robotics at Windsor High School and how it helped her get to Aeronautical Engineering:
+
+&gt;WHS robotics was the high school program that probably best prepared me for life and education in college, especially as an incoming engineering student. I learned technical skills around designing and testing under the pressure of requirements and a deadline, and the necessary programming logic and proficiency. Equally important, I developed skills in public speaking, documenting the proposals and then progress of my projects, and the ability to constructively work with a team. All of these skills were heavily emphasized and required to succeed in my first semester at CU, and robotics provided the foundation for those skills to be built upon. 
+
+Katie is working to become an astronaut with the goal of traveling to other planets in our solar system.  The technical skills she is building will give her opportunities like this.  It began in her robotics classroom at WHS.
+
+You may not know where you want to take robotics yet.  There are hundred of &lt;a href=&quot;https://en.wikipedia.org/wiki/Outline_of_robotics#Branches_of_robotics&quot; target =&quot;_blank&quot;&gt;branches of robotics&lt;/a&gt;.  All of them have some common threads.  In high school some of these skills may be learned to prepare students for university level robotics:
+&lt;ul&gt;
+  &lt;li&gt;Math&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Algebra&lt;/li&gt;
+      &lt;li&gt;Geometry&lt;/li&gt;
+      &lt;li&gt;Trigonometry&lt;/li&gt;
+      &lt;li&gt;Calculus&lt;/li&gt;
+    &lt;/ul&gt;  
+  &lt;li&gt;Physics&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Dynamics&lt;/li&gt;
+      &lt;li&gt;Kinematics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;li&gt;Computer Science&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Programming languages&lt;/li&gt;
+      &lt;li&gt;Computation logic&lt;/li&gt;
+      &lt;li&gt;Cloud Computing&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;li&gt;Engineering&lt;/li&gt;
+  &lt;li&gt;Language Arts&lt;/li&gt;
+&lt;/ul&gt;
+
+To get on this path be sure to talk to your counselor about your goals.  Feel free to ask me about this as well.  We have many former students who have pursued this field and are attending colleges all over the United States.  An excellent way to learn more is to attend an engineering day at &lt;a href=&quot;https://www.engr.colostate.edu/future-students/engineering-exploration-day/&quot; target =&quot;_blank&quot;&gt;Colorado State University&lt;/a&gt; or &lt;a href=&quot;https://www.colorado.edu/engineering/admissions/visit-us#block-bean-block-section-prospective-even-0&quot; target =&quot;_blank&quot;&gt;the University of Colorado in Boulder&lt;/a&gt;.  Most high school students find that a visit to campus makes the potential college experience more attainable and realistic.
+
+## Supplemental Videos
+
+&lt;caption&gt;&lt;h3&gt;The Genius of George Boole&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/Hljir_TyTEw&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;caption&gt;&lt;h3&gt;Shakey:Experiments in Robotic Planning and Learning (1972)&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/GmU7SimFkpU&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;caption&gt;&lt;h3&gt;BBC Documentary - Hyper Evolution : Rise Of The Robots (Part 1)&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/hRuBZLe8vfs&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;caption&gt;&lt;h3&gt;BBC Documentary - Hyper Evolution : Rise Of The Robots (Part 2)&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/9SA2WLDB65A&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;caption&gt;&lt;h3&gt;BBC Documentary - Hyper Evolution : Rise Of The Robots (Part 3)&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/D22UOL-ncgw&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;caption&gt;&lt;h3&gt;Robots that fly ... and cooperate | Vijay Kumar&lt;/h3&gt;&lt;/caption&gt;
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/4ErEBkj_3PY&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+&lt;!--chapter:end:07-further.Rmd--&gt;
+
+# Course Materials and Instructions
+
+&lt;!-- Needs big overhaul next year: --&gt;
+&lt;!-- - Modify all slides for new design including Python --&gt;
+
+## Course Lecture Notes
+
+### Introduction
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vT4jnAHDMRO-QzWOQ3x5Es62wg_Em63Fihhex3J7k6oLnMfuzETdQE5RT96Vfx1456XSIMQWC8wMLoE/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vSw1VXOK7r--gGSLi7eWLw8EaB2y7StapOXW0rm9UOlSKL7r51209oeqbIxmJlz2TnY7Ma_ZxqrlMbT/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+### Electronics
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vSEjxyPxzFJU6y28LAbj3HSnTGe9CXTa3c5JQG9q6oBjkdYUtCY7hozz7Gnva8QQ5crFKtlkHmc1NUk/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vTdZs-DXUbMi11kVVFpqlkTi-hNSS_ei4Vk7HSFm6ybmo66IyNIr-6nZ7LQEnIl1ZSRIK6-v8h0DF71/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vTkPybM5iIUJL6iby7RTB2c1rh57flGegr1XFNLteVu1HPehf-wCb-jrosMQpnKE8GXCuaj-Sr1s_4X/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+### Programming
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vT2nBB_vLg7bmY_dF2KbQs0j5YPt7vO8Ga3ub8TuNiKwVnMfjwvD4vIWgVfjzcNFSOpO_HEcKCqmvII/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vSJ6q8VwyJ49YFMxVgykFavlL3WBofZFAKATJtRj2xTjz_h0KocZuu7uU7bOf_6LfSbx4lAlM-TfkRo/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vTgOpTzaupnEeDpJyOju6giAvbsneuoxmH4XIeyft5NhjP4hNJ5g2PKnyQFFZrJk49ZEGmfkIM_WJ_j/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vS468nCHEwXvO1HEhBvfBjRSvpWs-Jr6OW7_Vzv7u82lq9EYrbC_-ucElIiWjiufG98yvG20XE9ZOGk/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vQW7MxA_kZhqhW-GNN76RAHJQlCCR8N7dADHvNHtjJTUOaFqsFn8p_tZkM45fHmhWAIqgUsdFoaQXjN/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+### Robotics Concepts
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vQjT6mVlWS4sknQALgTlLC27Iqtg3UH7lnU5AJcG1ngif1y9pa59Ox1QZursP2NqwJOjGxujYXnTDaH/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vQjT6mVlWS4sknQALgTlLC27Iqtg3UH7lnU5AJcG1ngif1y9pa59Ox1QZursP2NqwJOjGxujYXnTDaH/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vRyOy0qo61nh1nBiGR7Te1ZJg1_jYcwTz_SJv8A107ig1p8g3M3aL3i7gUAhHeIA0nYB8D-TCMcyyqT/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vTGDZsK800Pdu97WIOdwa7Yvq3l5fUtTd7KHkZGIHRzZe-fdNgDFPC4zXmNuuh5UNH7jC_dx9zbat5d/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vQ7Kn90aomOHNGlgSaUEKlkpYyU-_wu_3AZuITylFyWVLvSLeNuaua5Pr-hcen2S3CskRE8oTdJroYg/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/e/2PACX-1vSjHJ5k7iVgiohde9tW5e7vEW250xiYiemmFTYPmKSi2VD3aGSlHvv1MU6vVYxW_MNEzQvThDl95bwG/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;480&quot; height=&quot;299&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+&lt;!-- ## Follow the Course YouTube Channel --&gt;
+
+## Using GitHub
+
+For this couse we will store all Python and Bash scripts on GitHub.  This will alllow us to utilize the version control system Git and work from an online repository instead of storing all code on a single device.  In doing so, you will be able to collaborate with others more easily and use multible devices on the same project such as a PC at school, a Mac at home and a Raspberry Pi that travels with you.
+
+&lt;u&gt;Sign up for a GitHub account&lt;/u&gt;
+Go to &lt;a href=&quot;https://github.com/&quot; target =&quot;_blank&quot;&gt;GitHub&lt;/a&gt; and choose &quot;Sign up&quot;.  Create and verify your account.  Be sure to record your credentials somewhere for later.
+
+To understand what GitHub is and how we can use it with any programming language complete &lt;a href=&quot;https://guides.github.com/activities/hello-world/&quot; target = &quot;_blank&quot;&gt;the Hello World Tutorial&lt;/a&gt;.  You should also watch this introductory video as well:
+
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;
+src=&quot;https://www.youtube.com/embed/sz6zfrQpCQg&quot;&gt;
+&lt;/iframe&gt;
+&lt;br&gt;
+
+
+## Think Python Textbook
+Our course programming text is called &lt;i&gt;&lt;a href=&quot;https://greenteapress.com/wp/think-python-2e/&quot; target =&quot;_blank&quot;&gt;Think Python&lt;/a&gt;&lt;/i&gt; by Allen B. Downey.  It will most likely be easiest to use the HTML version but there is also a PDF download at the site as well.
+
+&lt;img src=&quot;http://greenteapress.com/thinkpython2/think_python2_medium.jpg&quot;&gt;
+
+
+## All About Circuits Textbook
+
+Our course electronics text is Volume I of &lt;i&gt;&lt;a href=&quot;https://www.allaboutcircuits.com/textbook/&quot; target =&quot;_blank&quot;&gt;All About Circuits&lt;/a&gt;&lt;/i&gt;.  This online text will focus on Direct Current (DC) electricity.
+
+&lt;img src=&quot;https://www.allaboutcircuits.com/images/site/AAClogo.png&quot;&gt;
+
+&lt;!-- ## Download and Install PyCharm --&gt;
+
+&lt;!-- ## Jupyter Notebooks --&gt;
+
+## OnShape Account Setup
+
+&lt;a href=&quot;https://www.onshape.com&quot; target =&quot;_blank&quot;&gt;OnShape&lt;/a&gt; offers a powerful online CAD solution.  Students in secondary education can receive a free student account which includes all of the features of the paid account and the learning center.  This makes it an outstanding CAD alternative.
+
+&lt;img src=&quot;https://www.xperdi.com/img/partners/onshape_1.png&quot;&gt;
+
+Go to the &lt;a href=&quot;https://www.onshape.com&quot; target =&quot;_blank&quot;&gt;OnShape website&lt;/a&gt; to sign up for a free account.  Be sure to use your school email address in the process.
+
+## Controlling the Raspberry Pi Remotely
+
+Using a remote shell, one can control a Raspberry Pi with another computer.  You can do this through the linux command line or with a GUI using a service like Tight VNC.  Learning how to do this will allow our robots to become less tethered to a specific location.  This concept, more broadly is known as the Internet of Things (IoT).  Devices with internet connections can interact with one another over that connection.  Many of you probably already have some IoT devices in your homes like thermostats that interact with each other to maintain the most energy-efficient comfort in your house or security cameras that may be accessed on a mobile device from anywhere.  In short, our robots will not be fully robots until we learn to do this.  As a result, the Capstone project for this course in semester two requires this.
+
+In all cases one thing is assumed.  The Raspberry Pi and the device using the Secure Shell are connected to the same router.  In our lab, we will use the MechLab wifi network.  At home, students will need to make sure to connect the pi to their home router which the computer is using.
+
+:::: {.notebox .note data-latex=&quot;&quot;}
+::: {.left data-latex=&quot;&quot;}
+**TAKE NOTE!**
+:::
+
+The Raspberry Pi cannot connect to all types of wifi networks.  In places like schools and offices it is common for WPA2 enterprise networks to be in use.  At WHS, the &quot;waccess&quot; and &quot;wchrome&quot; networks are both this type.  These networks have an extra layer of security to them.  What this means for you, is your device needs a digital certificate identifying it as your device and you as a registered user.  This cannot be done with a Raspberry Pi.  As a result we cannot use those networks.  Instead, we will use the &quot;mechlab&quot; network while in school in most cases.  You may also use the &quot;wsdguest&quot; netword to connect at school but SSH is more challenging with that network.
+::::
+
+Using SSH with a wireless connection will work on your Chromebook with only one slight modification to the IP address you use with your SSH application.  To accomplish this, rather than use the IP address to the tethered device, you will find IP address of the Raspberry Pi after it is connected to a local network.  Follow these steps to complete this process.
+
+code `blocks` do not seem to be working.
+</code></pre>
+<p>What about this?
+````</p>
+<p>a computer running Windows, MacOS or Linux.</p>
+<div id="setting-up-ssh-for-windows" class="section level3">
+<h3><span class="header-section-number">0.0.1</span> Setting up SSH for Windows</h3>
+<b>Complete the following steps to create a secure shell connection with a computer running Windows:</b>
+<ol>
+<li>
+Be sure the Raspberry Pi is turned on and connected to router.
+</li>
+<li>
+Be sure the computer is connected to the same network.
+</li>
+<li>
+Open a terminal window on the Pi and type <code>ip address show</code>.
+</li>
+<p>You will see something like this:</p>
+<li>
+Make a note of this address, this is the address of the Pi on the network. The computer will also have an ip address on the network. To see that address open Windows PowerShell and type <code>ipconfig</code>. The “IPv4 Address” is the address of the computer. If both are on the same network, the first three numbers should be the same. If not, they are not connected to the same network and a SSH connection cannot be made.
+</li>
+<li>
+Download and install <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target=_blank>Putty</a> (Most will choose the 64 bit Windows Installer file).
+</li>
+<li>
+Open Putty.
+</li>
+<li>
+In the “Host Name (IP address)” box, type in the address of the Raspberry Pi.
+</li>
+<li>
+Click “Yes” at the warning.
+</li>
+<li>
+Enter the username and password for the device.
+</li>
+</ol>
+<p>You are now connected to the Pi via SSH to the command line.</p>
+<p>If you would like to set up a graphical user interface (GUI) for use with SSH you can try using <a href="https://www.tightvnc.com/download.php" target ="_blank">TightVNC</a>. This <a href="https://www.howtogeek.com/141157/how-to-configure-your-raspberry-pi-for-remote-shell-desktop-and-file-transfer/" target ="_blank">HowToGeek Guide</a> shows you how to do it.</p>
+</div>
+<div id="setting-up-ssh-for-mac-or-linux" class="section level3">
+<h3><span class="header-section-number">0.0.2</span> Setting up SSH for Mac or Linux</h3>
+<p>In case you need to use Mac or Linux for your host computer, the process is very similar for each. Follow <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/unix.md" target = "_blank">this guide</a> to set it up.</p>
+<!-- ### Setting up SSH for Mac -->
+<!-- ### Setting up SSH for Linux -->
+</div>
+<div id="references" class="section level3">
+<h3><span class="header-section-number">0.0.3</span> References</h3>
+<!-- Put list from Zotero Here -->
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/%s",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Robotics_Engineering.pdf", "Robotics_Engineering.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

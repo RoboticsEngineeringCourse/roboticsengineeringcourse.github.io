@@ -1,0 +1,58 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.center {
+  display: block;
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+capt {
+  text-align: center;
+}
+
+.assignmentbox {
+  padding: 1em 1em 1em 4em;
+  color: #bf9000;
+  margin-bottom: 10px;
+  border: 4px solid #d9d9d9;
+  border-radius: 10px;
+  background: #660000 10px center/3em no-repeat;
+  font-family: Consolas, monaco, monospace;
+}
+
+.left {
+  display: block;
+}
+
+.homework {
+  background-image: url("images/hw_icon.png");
+}
+
+.note {
+  background-image: url("images/take_note.png");
+}
+
+.notebox {
+  padding: 1em 1em 1em 4em;
+  color: #660000;
+  margin-bottom: 10px;
+  border: 4px solid #d9d9d9;
+  border-radius: 10px;
+  background: #bf9000 10px center/3em no-repeat;
+  font-family: Courier New, Courier, Monospace;
+}

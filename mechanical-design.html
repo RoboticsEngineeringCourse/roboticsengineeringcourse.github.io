@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Section 4 Mechanical Design | Robotics Engineering</title>
+  <meta name="description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Section 4 Mechanical Design | Robotics Engineering" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Section 4 Mechanical Design | Robotics Engineering" />
+  
+  <meta name="twitter:description" content="During your particpation in the Robotics Engineering Course here at Windsor High School, you will use this online book as a guide through the content." />
+  
+
+<meta name="author" content="Steve Cline" />
+
+
+<meta name="date" content="2021-07-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="electrical-concepts.html"/>
+<link rel="next" href="python-programming.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<div>  </div>
+<img src="WHSROBO.png" style="width:230px;height:260px;" class="center">
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#a-brief-overview-of-the-course"><i class="fa fa-check"></i><b>2.1</b> A Brief Overview of the Course</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#history-of-robotics"><i class="fa fa-check"></i><b>2.2</b> History of Robotics</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#the-metric-system"><i class="fa fa-check"></i><b>2.3</b> The Metric System</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#controlling-the-raspberry-pi-with-your-chromebook-and-a-usb-cable"><i class="fa fa-check"></i><b>2.4</b> Controlling the Raspberry Pi with Your Chromebook and a USB Cable</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="intro.html"><a href="intro.html#add-the-ssh-application-and-connect-to-the-pi"><i class="fa fa-check"></i><b>2.4.1</b> Add the SSH Application and Connect to the Pi</a></li>
+<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#test-the-connection-with-your-first-python-script"><i class="fa fa-check"></i><b>2.4.2</b> Test the connection with your first Python Script</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="electrical-concepts.html"><a href="electrical-concepts.html"><i class="fa fa-check"></i><b>3</b> Electrical Concepts</a><ul>
+<li class="chapter" data-level="3.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#circuits"><i class="fa fa-check"></i><b>3.1</b> Circuits</a></li>
+<li class="chapter" data-level="3.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#voltage-and-current"><i class="fa fa-check"></i><b>3.2</b> Voltage and Current</a></li>
+<li class="chapter" data-level="3.3" data-path="electrical-concepts.html"><a href="electrical-concepts.html#resistance"><i class="fa fa-check"></i><b>3.3</b> Resistance</a></li>
+<li class="chapter" data-level="3.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#ohms-law"><i class="fa fa-check"></i><b>3.4</b> Ohm’s Law</a></li>
+<li class="chapter" data-level="3.5" data-path="electrical-concepts.html"><a href="electrical-concepts.html#using-a-digital-multimeter"><i class="fa fa-check"></i><b>3.5</b> Using a Digital Multimeter</a></li>
+<li class="chapter" data-level="3.6" data-path="electrical-concepts.html"><a href="electrical-concepts.html#basic-soldering"><i class="fa fa-check"></i><b>3.6</b> Basic Soldering</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="mechanical-design.html"><a href="mechanical-design.html"><i class="fa fa-check"></i><b>4</b> Mechanical Design</a><ul>
+<li class="chapter" data-level="4.1" data-path="mechanical-design.html"><a href="mechanical-design.html#parts-of-a-robotic-system"><i class="fa fa-check"></i><b>4.1</b> Parts of a Robotic System</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="mechanical-design.html"><a href="mechanical-design.html#power-supply"><i class="fa fa-check"></i><b>4.1.1</b> Power Supply</a></li>
+<li class="chapter" data-level="4.1.2" data-path="mechanical-design.html"><a href="mechanical-design.html#actuators"><i class="fa fa-check"></i><b>4.1.2</b> Actuators</a></li>
+<li class="chapter" data-level="4.1.3" data-path="mechanical-design.html"><a href="mechanical-design.html#sensors"><i class="fa fa-check"></i><b>4.1.3</b> Sensors</a></li>
+<li class="chapter" data-level="4.1.4" data-path="mechanical-design.html"><a href="mechanical-design.html#control-systems"><i class="fa fa-check"></i><b>4.1.4</b> Control Systems</a></li>
+<li class="chapter" data-level="4.1.5" data-path="mechanical-design.html"><a href="mechanical-design.html#structural-parts"><i class="fa fa-check"></i><b>4.1.5</b> Structural Parts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="mechanical-design.html"><a href="mechanical-design.html#mechanisms-and-motion"><i class="fa fa-check"></i><b>4.2</b> Mechanisms and Motion</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="mechanical-design.html"><a href="mechanical-design.html#inputs-and-outputs"><i class="fa fa-check"></i><b>4.2.1</b> Inputs and Outputs</a></li>
+<li class="chapter" data-level="4.2.2" data-path="mechanical-design.html"><a href="mechanical-design.html#types-of-motion"><i class="fa fa-check"></i><b>4.2.2</b> Types of Motion</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="mechanical-design.html"><a href="mechanical-design.html#levers"><i class="fa fa-check"></i><b>4.3</b> Levers</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="mechanical-design.html"><a href="mechanical-design.html#classes-and-categories"><i class="fa fa-check"></i><b>4.3.1</b> Classes and Categories</a></li>
+<li class="chapter" data-level="4.3.2" data-path="mechanical-design.html"><a href="mechanical-design.html#mechanical-advantage"><i class="fa fa-check"></i><b>4.3.2</b> Mechanical Advantage</a></li>
+<li class="chapter" data-level="4.3.3" data-path="mechanical-design.html"><a href="mechanical-design.html#efficiency"><i class="fa fa-check"></i><b>4.3.3</b> Efficiency</a></li>
+<li class="chapter" data-level="4.3.4" data-path="mechanical-design.html"><a href="mechanical-design.html#moments"><i class="fa fa-check"></i><b>4.3.4</b> Moments</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="mechanical-design.html"><a href="mechanical-design.html#rotary-motion"><i class="fa fa-check"></i><b>4.4</b> Rotary Motion</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="mechanical-design.html"><a href="mechanical-design.html#pulleys-sprockets-and-gears"><i class="fa fa-check"></i><b>4.4.1</b> Pulleys, Sprockets and Gears</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="mechanical-design.html"><a href="mechanical-design.html#linear-motion"><i class="fa fa-check"></i><b>4.5</b> Linear Motion</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="mechanical-design.html"><a href="mechanical-design.html#rack-and-pinion-systems"><i class="fa fa-check"></i><b>4.5.1</b> Rack and Pinion Systems</a></li>
+<li class="chapter" data-level="4.5.2" data-path="mechanical-design.html"><a href="mechanical-design.html#lead-screws"><i class="fa fa-check"></i><b>4.5.2</b> Lead Screws</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="mechanical-design.html"><a href="mechanical-design.html#drive-systems"><i class="fa fa-check"></i><b>4.6</b> Drive Systems</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="mechanical-design.html"><a href="mechanical-design.html#factors-to-consider"><i class="fa fa-check"></i><b>4.6.1</b> Factors to Consider</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="mechanical-design.html"><a href="mechanical-design.html#computer-aided-design"><i class="fa fa-check"></i><b>4.7</b> Computer Aided Design</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="python-programming.html"><a href="python-programming.html"><i class="fa fa-check"></i><b>5</b> Python Programming</a><ul>
+<li class="chapter" data-level="5.1" data-path="python-programming.html"><a href="python-programming.html#setting-up-the-raspberry-pi"><i class="fa fa-check"></i><b>5.1</b> Setting up the Raspberry Pi</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="python-programming.html"><a href="python-programming.html#putting-the-pi-together"><i class="fa fa-check"></i><b>5.1.1</b> Putting the Pi Together</a></li>
+<li class="chapter" data-level="5.1.2" data-path="python-programming.html"><a href="python-programming.html#controlling-the-pi-with-ssh"><i class="fa fa-check"></i><b>5.1.2</b> Controlling the Pi with SSH</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="python-programming.html"><a href="python-programming.html#the-parts-of-the-rpi-and-pinout"><i class="fa fa-check"></i><b>5.2</b> The parts of the RPi and Pinout</a></li>
+<li class="chapter" data-level="5.3" data-path="python-programming.html"><a href="python-programming.html#why-python"><i class="fa fa-check"></i><b>5.3</b> Why Python?</a></li>
+<li class="chapter" data-level="5.4" data-path="python-programming.html"><a href="python-programming.html#hello-worldand-a-little-more"><i class="fa fa-check"></i><b>5.4</b> Hello, World…and a Little More</a></li>
+<li class="chapter" data-level="5.5" data-path="python-programming.html"><a href="python-programming.html#functions"><i class="fa fa-check"></i><b>5.5</b> Functions</a></li>
+<li class="chapter" data-level="5.6" data-path="python-programming.html"><a href="python-programming.html#conditionals"><i class="fa fa-check"></i><b>5.6</b> Conditionals</a></li>
+<li class="chapter" data-level="5.7" data-path="python-programming.html"><a href="python-programming.html#iteration"><i class="fa fa-check"></i><b>5.7</b> Iteration</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="python-programming.html"><a href="python-programming.html#for-loops"><i class="fa fa-check"></i><b>5.7.1</b> <code>for</code> Loops</a></li>
+<li class="chapter" data-level="5.7.2" data-path="python-programming.html"><a href="python-programming.html#while-loops"><i class="fa fa-check"></i><b>5.7.2</b> <code>while</code> Loops</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="robotic-systems.html"><a href="robotic-systems.html"><i class="fa fa-check"></i><b>6</b> Robotic Systems</a></li>
+<li class="chapter" data-level="7" data-path="capstone-project.html"><a href="capstone-project.html"><i class="fa fa-check"></i><b>7</b> Capstone Project</a></li>
+<li class="chapter" data-level="8" data-path="going-further-with-robotics.html"><a href="going-further-with-robotics.html"><i class="fa fa-check"></i><b>8</b> Going Further with Robotics</a><ul>
+<li class="chapter" data-level="8.1" data-path="going-further-with-robotics.html"><a href="going-further-with-robotics.html#robotics-in-higher-education"><i class="fa fa-check"></i><b>8.1</b> Robotics in Higher Education</a></li>
+<li class="chapter" data-level="8.2" data-path="going-further-with-robotics.html"><a href="going-further-with-robotics.html#supplemental-videos"><i class="fa fa-check"></i><b>8.2</b> Supplemental Videos</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html"><i class="fa fa-check"></i><b>9</b> Course Materials and Instructions</a><ul>
+<li class="chapter" data-level="9.1" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#course-lecture-notes"><i class="fa fa-check"></i><b>9.1</b> Course Lecture Notes</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#introduction"><i class="fa fa-check"></i><b>9.1.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.1.2" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#electronics"><i class="fa fa-check"></i><b>9.1.2</b> Electronics</a></li>
+<li class="chapter" data-level="9.1.3" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#programming"><i class="fa fa-check"></i><b>9.1.3</b> Programming</a></li>
+<li class="chapter" data-level="9.1.4" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#robotics-concepts"><i class="fa fa-check"></i><b>9.1.4</b> Robotics Concepts</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#using-github"><i class="fa fa-check"></i><b>9.2</b> Using GitHub</a></li>
+<li class="chapter" data-level="9.3" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#think-python-textbook"><i class="fa fa-check"></i><b>9.3</b> Think Python Textbook</a></li>
+<li class="chapter" data-level="9.4" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#all-about-circuits-textbook"><i class="fa fa-check"></i><b>9.4</b> All About Circuits Textbook</a></li>
+<li class="chapter" data-level="9.5" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#onshape-account-setup"><i class="fa fa-check"></i><b>9.5</b> OnShape Account Setup</a></li>
+<li class="chapter" data-level="9.6" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#controlling-the-raspberry-pi-remotely-over-wifi"><i class="fa fa-check"></i><b>9.6</b> Controlling the Raspberry Pi Remotely Over Wifi</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-chrome-os"><i class="fa fa-check"></i><b>9.6.1</b> Setting up SSH for Chrome OS</a></li>
+<li class="chapter" data-level="9.6.2" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-windows"><i class="fa fa-check"></i><b>9.6.2</b> Setting up SSH for Windows</a></li>
+<li class="chapter" data-level="9.6.3" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-mac-or-linux"><i class="fa fa-check"></i><b>9.6.3</b> Setting up SSH for Mac or Linux</a></li>
+<li class="chapter" data-level="9.6.4" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#references"><i class="fa fa-check"></i><b>9.6.4</b> References</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Robotics Engineering</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mechanical-design" class="section level1">
+<h1><span class="header-section-number">Section 4</span> Mechanical Design</h1>
+<p>The inspiration for this course at Windsor High School is actually a course in the Engineering College at Colorado State Unversity called <a href="https://www.engr.colostate.edu/~dga/courses/mech307/" target ="_blank">Mechatronics and Measurement Systems</a>. That course is meant to be one of the capstone courses in the mechanical engineering degree at CSU. In order to complete our capstone project, we will all need to have a solid understanding of the parts of a mechatronic or robotic system.</p>
+<div id="parts-of-a-robotic-system" class="section level2">
+<h2><span class="header-section-number">4.1</span> Parts of a Robotic System</h2>
+<p>We need to be able to determine what components will be necessary in our robot design. To do this, an overview of the various part types is necessary. We will define the numerous mechanisms that may be used in our designs as well as the component systems that make a robot. At the end of this section, you will create a design on <a href="https://www.onshape.com/" target ="_blank">OnShape</a> which will serve as the basis for your capstone project next semester. Use this as an opportunity to start thinking about what you will do in creating a robotic system.</p>
+<u>Steps to prepare for this work</u>
+<ol>
+<li>
+Start thinking about a problem you might like to solve. Is there something at home that could be improved? For example, last year I built a solar powered Raspberry Pi controlled garden watering system. Something like that has a definite use and provides a solution for my wife and I. Now that it works, when we go on vacation we don’t worry that our garden gets watered.
+</li>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/watering_system.jpg?raw=true" alt="Solar powered water system" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.? - A solar powered robotic watering system.</b></i>
+</figcaption>
+</figure>
+</p>
+<li>
+Look for other examples. A good place to start is the <a href="https://video-demos.colostate.edu/robotics-controls/mechatronics/projects/" target ="_blank">Student Examples from the MECH 307 Course at CSU</a>. Other good sources of inspiration are listed below:
+<ul>
+<li>
+<a href="https://www.sparkfun.com/tutorials/category/4" target ="_blank">SparkFun Projects Examples</a><br />
+
+<li>
+<a href="https://www.digikey.com/en/maker/blogs/2019/top-10-diy-robot-designs" target ="_blank">DigiKey Top 10 DIY Robot Designs</a>
+<li>
+<a href="https://create.arduino.cc/projecthub/projects/tags/robot" target ="_blank">Arduino Project Hub</a><br />
+
+<li>
+<a href="https://projects.raspberrypi.org/en/projects/?interests[]=robotics" target ="_blank">Raspberry Pi Robotics Projects</a>
+<li>
+In additon, there are many websites that have Raspberry Pi ideas. Your project will need to be unique but you are welcome to draw inspirations, borrow and repurpose code and integrate designs into yours. Even if an online example uses a different control system, it can still be helpful in developing your project.
+</ul>
+<li>
+Think about what makes you excited to do this project. What would you have fun doing for four months next semester?
+</li>
+</ol>
+<p>Write down some ideas so that, you may come back to them later as you learn more.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.0: Capstone Project Launch</strong></p>
+</div>
+<p>Spend some time researching how you might be able to create your capstone project (You will work on this project in the Spring). To get the ball rolling on this project complete the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Read over the <a href = "https://docs.google.com/document/d/1Ap9XnDHmlUpDhtRLOVqSsqf3xh5cZPlc8qJfAl380MQ/edit?usp=sharing" target = "_blank">full assignment requirements</a>.</li>
+<li>Log in to your Github Account and create a new repository for keeping all of your files. Name the Repo “Capstone Project”. In the README.md file write a full paragraph description of what you intend to create. You will definitely revise this as time goes on but this file may be used as a notepad for now.</li>
+<li>Complete the <a href = "https://docs.google.com/forms/d/e/1FAIpQLSdJWRUWtkAAdcBtCdayQPgfjS2zF48ND2OKUYnIv5BgGCKshg/viewform?usp=sf_link" target = "_blank">Capstone Project Launch Form</a>.</li>
+</ol>
+</div>
+<p><em>Now that we have some ideas, let’s learn about the various types of parts available to us.</em></p>
+<div id="power-supply" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Power Supply</h3>
+<p>A major consideration is power. Most of the systems we design need to be efficient in their use of power. We are not always able to connect to an outlet. For example, home surveillance cameras are small and easy to install in many different locations. However, if we had to connect them to an AC power source, the list of possible locations for installation could be greatly reduced. The solution is a battery pack. How do we decide which battery though? A surveillance camera might need to run for weeks at a time without changing the battery. As a result, a high quality lithium ion source would probably make the most sense. The drawback to this compact and powerful design is, of course, price. These are the types of trade-offs we must consider.</p>
+<u>Power Supplies might include:</u>
+<ul>
+<li>
+<a href="https://www.amazon.com/Raspberry-Power-Supply-Adapter-Charger/dp/B0719SX3GC/ref=sxts_sxwds-bia-wc-drs1_0?cv_ct_cx=raspberry+pi+power+supply&dchild=1&keywords=raspberry+pi+power+supply&pd_rd_i=B0719SX3GC&pd_rd_r=cfe19aaa-1ab3-4e25-a2bb-71db90ddbdd2&pd_rd_w=UmEqs&pd_rd_wg=lWUzP&pf_rd_p=055f7364-94db-4b93-80d6-346300592c66&pf_rd_r=TX0AEE71D4WXCBYK3ZSB&psc=1&qid=1595873393&sr=1-1-f7123c3d-6c2e-4dbe-9d7a-6185fb77bc58" target ="_blank">DC Wall adapters</a>
+</li>
+<li>
+<a href ="https://www.amazon.com/ML7-12-Battery-Mighty-Brand-Product/dp/B00K8V30D0/ref=sr_1_7?crid=FP86ZQ8RCZIV&dchild=1&keywords=sla+battery+12v&qid=1626716491&sprefix=sla+battery%2Caps%2C313&sr=8-7" target ="_blank">Sealed Lead Acid Batteries</a>
+</li>
+<li>
+<a href="https://www.robotshop.com/en/nimh-2000mah-battery-pack-hitec-connector.html" target ="_blank">Pre-built battery packs</a>
+</li>
+<li>
+<a href="https://www.amazon.com/Adafruit-Medium-Volt-Solar-Panel/dp/B01BKA1YSK" target = "_blank">Solar panels</a>
+</li>
+</ul>
+<p>As we see, there are many options and considerations. Only by determining total power needs, space and weight constraints and budget can we select the correct source. For now, consider power needs first. As you get closer to the start of your project you can narrow down your choices.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.1: Capstone Power Supply Considerations</strong></p>
+</div>
+<p>Let’s examine our options for power supplies in regards to the Capstone Project:</p>
+<ol style="list-style-type: decimal">
+<li>Read over the article, <a href = "https://www.seeedstudio.com/blog/2021/01/22/how-to-power-supply-for-projects/" target = "_blank">How To Choose a Power Supply for Electronic Projects</a>.</li>
+<li>Read over <a href = "https://www.circuito.io/blog/arduino-power-supply/" target = "_blank">How To Plan Your Circuit With Power Consumption In Mind</a>.</li>
+<li>Complete the <a href = "https://docs.google.com/forms/d/e/1FAIpQLScGjCx5DtXJ_Qan4EAkMBbQxF7kZklDiTRPN7m1bGsZfgZ5-Q/viewform?usp=sf_link" target = "_blank">Power Supply Selection Form</a>.</li>
+</ol>
+</div>
+</div>
+<div id="actuators" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Actuators</h3>
+<div class="notebox note">
+<div class="left">
+<p><strong>TAKE NOTE!</strong></p>
+</div>
+<p>In the next two sections, you will be running some code on your Raspberry Pi in order to test out the actuators and sensors. If you have not done so already, review the section of this text titled <a href="intro.html#controlling-the-raspberry-pi-with-your-chromebook-and-a-usb-cable">Controlling the Raspberry Pi with Your Chromebook and a USB Cable</a>.</p>
+</div>
+<p>Most robots move and interact with the physical world. We will not make that distinction here although there are many who believe that this is a requirement. A robotic car system has many actuation systems. The most notable of these is the drive system. Through the wheels and transmission the motor interacts with the surface the robot is on to propel the robot. Any device creating motion in this way is an actuator. Like power supplies, actuator selection meets many criteria. A look at the <a href="https://www.robotshop.com/en/motors-actuators.html" target =_blank">RobotShop Actuator Page</a> reveals hundreds of possibilities.</p>
+<ul>
+<li>
+DC Motors
+</li>
+<li>
+Servos
+</li>
+<li>
+Stepper Motors
+</li>
+<li>
+Linear Slides
+</li>
+</ul>
+<p>From these fours types of actuators, most robotic systems may develop a way of interacting with the environment.</p>
+<div id="dc-motors" class="section level4">
+<h4><span class="header-section-number">4.1.2.1</span> DC Motors</h4>
+<p>The simplest actuator we have is a DC motor. A Direct Current (DC) motor is a motor that turns energy from a direct current and turns this into mechanical energy. The first DC motor was developed around the 1830’s-1840s. They were commercially unsuccessful, because these motors were battry powered and batteries were still very expensive and the quality was low. When the electrical grid was created and the rechargeable batteries were invented in the late 1800s this all changed. The first commercially viable DC motors entered the market. DC motors have been improved continuously, but other types of motors, like the BLDC motor, have been developed in the meantime too. As a result, the use of brushed Direct Current motors in several applications is limited today.</p>
+<p><strong>How a DC Motor Actually Works</strong></p>
+<p>The rotor is normally located on the inside of the motor, while the stator is located on the outside. The rotor contains coil windings that are powered by the DC current and the stator contains either permanent magnets or electromagnetic windings. When the motor is powered by DC current, a magnetic field is created within the stator, attracting and repelling the magnets on the rotor. This causes the rotor to start rotating. To keep the rotor rotating, the motor has a commutator. When the rotor aligns with the magnetic field, it would stop spinning, but in this case the commutator would reverse the current through the stator and this way reverse the magnetic field. This way the rotor can keep spinning.</p>
+<p>
+<figure>
+<img src="https://www.magneticinnovations.com/wp-content/uploads/2019/11/dcmotor-e1591177747592.png" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.? - A Direct Current (DC) Motor.</b></i>
+</figcaption>
+</figure>
+</p>
+<p><strong>Advantages and Disadvantages of a DC Motor</strong></p>
+<p>When it comes to starting and regulating speed, brushed DC motors have a good performance. The torque density is relatively high for these motors. A Direct Current motor runs smoothly and the range of speed regulation is wide. The overload capability is strong and the electromagnetic interference is small. A disadvantage of the DC motor is the structure. There is a sliding contact between the commutator and the brush. This causes sparks and mechanical wear. Direct Current motors have relatively short life expectancy because of this and the motor has high maintenance cost. It also raises reliability concerns.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.2: Controlling a DC Motor</strong></p>
+</div>
+<p>This simple group assignment demonstrates basic control of a DC motor using an alternate power source. Be sure you have all of the required components:</p>
+<ul>
+<li>
+DC Motor with power leads
+</li>
+<li>
+Power Supply with alligator clips connected to the appropriate posts
+</li>
+<li>
+Digital multimeter
+</li>
+</ul>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Lab - DC Motor Control</span></strong>.</p>
+</div>
+</div>
+<div id="servos" class="section level4">
+<h4><span class="header-section-number">4.1.2.2</span> Servos</h4>
+<p>Servo motors have been around for a long time and are utilized in many applications. They are small in size but pack a big punch and are very energy-efficient. These features allow them to be used to operate remote-controlled or radio-controlled toy cars, robots and airplanes. Servo motors are also used in industrial applications, robotics, in-line manufacturing, pharmaceutics and food services.</p>
+<p>The servo circuitry is built right inside the motor unit and has a positionable shaft, which usually is fitted with a gear. The motor is controlled with an electric signal which determines the amount of movement of the shaft.</p>
+<p><strong>What’s inside the servo?</strong></p>
+<p>To fully understand how the servo works, you need to take a look under the hood. Inside there is a pretty simple set-up: a small DC motor, potentiometer, and a control circuit. The motor is attached by gears to the control wheel. As the motor rotates, the potentiometer’s resistance changes, so the control circuit can precisely regulate how much movement there is and in which direction.</p>
+<p>When the shaft of the motor is at the desired position, power supplied to the motor is stopped. If not, the motor is turned in the appropriate direction. The desired position is sent via electrical pulses through the signal wire. The motor’s speed is proportional to the difference between its actual position and desired position. So if the motor is near the desired position, it will turn slowly, otherwise it will turn fast. This is called proportional control. This means the motor will only run as hard as necessary to accomplish the task at hand.</p>
+<p>
+<figure>
+<img src="https://robu.in/wp-content/uploads/2020/04/Servo-motor-constructons.png" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.? - The construction of a servo motor</b></i>
+</figcaption>
+</figure>
+</p>
+<p>Servos are controlled by sending an electrical pulse of variable width, or pulse width modulation (PWM), through the control wire. There is a minimum pulse, a maximum pulse, and a repetition rate. A servo motor can usually only turn 90° in either direction for a total of 180° movement. The motor’s neutral position is defined as the position where the servo has the same amount of potential rotation in the both the clockwise or counter-clockwise direction. The PWM sent to the motor determines position of the shaft, and based on the duration of the pulse sent via the control wire; the rotor will turn to the desired position. The servo motor expects to see a pulse every 20 milliseconds (ms) and the length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90° position. Shorter than 1.5ms moves it in the counter clockwise direction toward the 0° position, and any longer than 1.5ms will turn the servo in a clockwise direction toward the 180° position.</p>
+<p>
+<figure>
+<img src="https://www.jameco.com/Jameco/workshop/Howitworks/how-servo-motors-work-fig3.jpg" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.? - Variable Pulse width control servo position.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>When these servos are commanded to move, they will move to the position and hold that position. If an external force pushes against the servo while the servo is holding a position, the servo will resist from moving out of that position. The maximum amount of force the servo can exert is called the torque rating of the servo. Servos will not hold their position forever though; the position pulse must be repeated to instruct the servo to stay in position.</p>
+<p><strong>Advantages and Disadvantages of a Servo</strong></p>
+<p>Because servo motors have an integrated circuit with logic controls they will increase the amount of current drawn as the load on the coil so there is no “out-of-step” condition. This also allows for high speed operation of the motor. Servos can tend to lag in their rotation so high precision control is not likely. Servos also are not suitable for loads that are as heavy as comparable simple DC and stepper motors. When stopped, the motor’s rotor continues to move back and forth one pulse. So that, it is not suitable if you need to prevent vibration.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.3: Controlling a Servo</strong></p>
+</div>
+<p>For this assignment you will learn some basic servo control through the Python environment on your Raspberry Pi. You will need your servo motor and three m-f jumper wires (red, black and one other color).</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Raspberry Pi Lab - Servo Control</span></strong>.</p>
+</div>
+</div>
+<div id="stepper-motors" class="section level4">
+<h4><span class="header-section-number">4.1.2.3</span> Stepper Motors</h4>
+<p><strong>How a Stepper Motor Actually Works</strong></p>
+<p>Stepper motors are DC motors that move in discrete steps. They have multiple coils that are organized in groups called “phases”. By energizing each phase in sequence, the motor will rotate, one step at a time. With a computer controlled stepping you can achieve very precise positioning and/or speed control. For this reason, stepper motors are the motor of choice for many precision motion control applications. Stepper motors come in many different sizes and styles and electrical characteristics.</p>
+<p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif" style="width:50%">
+<figcaption>
+<p><b><i>Fig. 4.? - Animation of a simplified stepper motor (unipolar)</p>
+<p>Frame 1: The top electromagnet (1) is turned on, attracting the nearest teeth of the gear-shaped iron rotor. With the teeth aligned to electromagnet 1, they will be slightly offset from right electromagnet (2).</p>
+<p>Frame 2: The top electromagnet (1) is turned off, and the right electromagnet (2) is energized, pulling the teeth into alignment with it. This results in a rotation of 3.6° in this example.</p>
+<p>Frame 3: The bottom electromagnet (3) is energized; another 3.6° rotation occurs.</p>
+Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When the top electromagnet (1) is again enabled, the rotor will have rotated by one tooth position; since there are 25 teeth, it will take 100 steps to make a full rotation in this example..</b></i>
+</figcaption>
+</figure>
+</p>
+<p><strong>Advantages and Disadvantages of a Stepper Motor</strong></p>
+<p>Since the percentage step error does not accumulate as the motor rotates, it is able to run at wide range of speeds and ranges, including very slow speeds without reduction gearing. Stepper motor provide excellent response during start, stop and reverse mode. They are highly reliable since no brushes or commutators are used. Stepper motor control circuits are simple and low cost. However, Resonance occurs if it is not properly controlled and progressive loss of torque at high speeds may occur. Hence it is not easy to operate at extremely high speeds.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.4: Controlling a Stepper Motor</strong></p>
+</div>
+<p>Make a lab for the Stepper motor.</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Raspberry Pi Lab - Stepper Motor Control</span></strong>.</p>
+</div>
+</div>
+<div id="linear-actuators-and-lead-screws" class="section level4">
+<h4><span class="header-section-number">4.1.2.4</span> Linear Actuators and Lead Screws</h4>
+<p>A linear actuator is an actuator that creates motion in a straight line, in contrast to the circular motion of a conventional electric motor. Linear actuators are used in machine tools and industrial machinery, in computer peripherals such as disk drives and printers, in valves and dampers, and in many other places where linear motion is required. Hydraulic or pneumatic cylinders inherently produce linear motion.</p>
+<p>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Linear_actuator_basic.gif" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.? - Conceptual design of a basic traveling-nut linear actuator. Note that in this example the lead screw (gray) rotates while the lead nut (yellow) and tube (red) do not.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+</div>
+<div id="sensors" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Sensors</h3>
+<p>There are even more sensor types than there are actuator types. If we browse the <a href="https://www.adafruit.com/category/35" target ="_blank">Adafruit Sensor Page</a> we see how limitless these possibilities are. For any type of sensor application there is, someone has though of a way to build it.</p>
+<p>As this <a href="http://www.cs.cmu.edu/~rasc/Download/AMRobots4.pdf" target = "_blank">excerpt from a robotics text</a> explains, sensors are either proprioceptive or exteroceptive and, at the same time, either passive or active. This chart is taken from that text:</p>
+<p>
+<figure>
+<img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Sensor%20Classifications.png?raw=true" alt="Sensor Classification" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.1 - Table Illustrating Classifications of Robotics Sensors.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>A <strong><em>passive sensor</em></strong> is one which just ‘listens’ to what is happening. Examples include:
+- A light sensor which detects if a light is shining on it
+- An infra-red sensor which detects the temperature of an object</p>
+<p>Sensors that send information to the environment and receive a response from that signal are known as <strong><em>active sensors</em></strong>.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.1.?: Comparing Sensor Types</strong></p>
+</div>
+<p>From your kit select the following sensors:</p>
+<ul>
+<li>
+<a href = "https://i.stack.imgur.com/emufv.jpg" target = "_blank">Limit switch</a>
+</li>
+<li>
+<a href = "https://cdn.sparkfun.com//assets/parts/1/3/5/0/8/15569-Ultrasonic_Distance_Sensor_-_HC-SR04-01a.jpg" target = "_blank">Ultrasonic sensor</a>
+</li>
+<li>
+<a href = "https://m.media-amazon.com/images/I/41+EOhGDWeL._SX342_.jpg" target = "_blank">Humiture sensor</a>
+</li>
+</ul>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Raspberry Pi Lab - Comparing Sensors</span></strong>.</p>
+</div>
+</div>
+<div id="control-systems" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Control Systems</h3>
+<p>For most students, the Raspberry Pi will function as the control system for the course. This is basically because we are learning to use it in class. Students learn to interact with the Pi using the command line and Python. In addition, the Raspberry Pi offers many advantages over other microprocessors like Arduinos. One of the main advantages is the built in wifi capabilities. This allows for remote programming and true Internet of Things (IoT) capabilites. Still, some may choose a different processor, maybe even a different version of the Pi.</p>
+<p>A <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/" target ="_blank">Raspberry Pi Zero W</a> is an extremely compact and low cost alternative to the Rapberry Pi 4 we use in class. It is made for low-power, compact IoT applicaitons and should be considered. While the processor speed is slower than larger Pis, it might be just the fit for your project. The Raspberry Pi Foundation released a new microcontroller in the last year called the <a href="https://www.raspberrypi.org/products/raspberry-pi-pico/" target = "_blank">Pico</a>. It is a great alternative if a full OS is not needed on your project. If you can just flash the memory and let it run, a microcontroller may be a good choice - not to mention, they are very inexpensive. Other control options, like the world famous Arduino, are available as well. <a href="https://en.wikipedia.org/wiki/Comparison_of_single-board_microcontrollers" target ="_blank">This list</a> is quite extensive and should be considered.</p>
+<p>A third option is to build a control system from the ground up using a microprocessor and adding the necessary components to it. While this option is less likely, some students may find this as a requirement in a future college class so it is good to understand what this option involves. The reading below discusses these devices.</p>
+<p>Now it is time to start thinking about how you will eventually control your project by evaluating your options.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.?.?: Control Systems Overview</strong></p>
+</div>
+<p>View <a href = "https://www.youtube.com/watch?v=IUemdFZoDB4" target = "_blank">this video</a>. This is a video of a lecture given. While it is a little dry, it is an exceptional overview of MCUs and SBCs.</p>
+<p>Make a chart which lists all the major MCU and SBCs from the blog article above. (Use the template that has been shared with you) Complete the chart by researching the differences between them all.</p>
+<p>Write a summary of why you would use each one with examples. Finally, make a guess as to which one you think you will use for your capstone project next semester.</p>
+</div>
+</div>
+<div id="structural-parts" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Structural Parts</h3>
+<p>The skeleton of the robotic system determines the physical constraints on the design. For years now, our robotics team has dealth with this issue. Several years ago they were presented with a challenge in the competition which required their robot to climb a mountain:</p>
+<p>
+<figure>
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3cmpHSRe6rGTt-MiIm45DNvdX5LnQPqjeFoMLTcRDMEe-jTS-R-VCHQpOXHaIDewV3isya2OqOclK3ttuJrw_SZFTdhtLex9lYP1k0KlGzc5bqn2ezhGXwOkCdMWfAII_uaL7MYbPUcI6blbrHRMNBy=w787-h904-no?authuser=0" alt="Climbing a mountain" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.2 - WHS Robotics Team members analyze the challenge in the 2015 season.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>As we can see from the photograph, the mountain was quite daunting. The previous year, the team had advanced to the world championships and found that their robot, while the best design in Colorado, was not suited to compete with the heavier robots beyond the state. As a result they had been pushed around a bit and not been very successful. The solution to this was to weld a steel frame together and build the robot off of that. The result was a 70 pound robot! Without thinking more deeply about the design of the current year, they had hampered themselves by dealing with the previous yesr’s challenge in mind. The robot was robust and strong but could not climb the mountain. Instead, every tread system they tried to use to climb was under so much strain that it eventually broke. They would even 3D print treads made out of high strength plastics that still could not hold up to the strain. In this case, the structural parts let them down. What a great learning experience that was. All three of those students in the photo are in science and engineering programs currently in college. The one on the right, Mitchell Watson, is literally going to be a rocket scientist when he graduates for Cal Tech. Understanding these concepts of mechanical design are not only fundamental to robotics, they can lead to many great opportunities.</p>
+<p>There are many options for structural parts. Over the years, we have accumulated a wealth of parts in our program which may be checked out. In addition, we have plenty of scrap material (we hated that mountain so much that we cut it up at the end of the season and have been using it for scrap since then). After you learn how to use CAD later in this unit, you will be able to design and print your own custom parts as well.</p>
+<p>The type of material matters. Begin with <a href="https://www.societyofrobots.com/materials.shtml" target="_blank">this materials guide</a> in selecting your parts. Consider using pre-built kits or components. Here is a list of companies that provide robotics parts:</p>
+<ul>
+<li>
+<a href="https://www.pitsco.com/" target = "_blank">Pitsco Education</a>: Many different types of parts from a long-time vendor
+</li>
+<li>
+<a href="https://www.revrobotics.com/" target = "_blank">REV Robotics</a>: Higher quality aluminum and high grade plastic parts
+</li>
+<li>
+<a href="https://www.gobilda.com/" target = "_blank">GoBilda</a>: Awesome parts for large applications
+</li>
+<li>
+<a href="https://8020.net/?SID=0iar947e93r0f4tpr4p5dd79g5/" target = "_blank">80/20 Inc.</a>: Incredibly versitile structural systems
+</li>
+<li>
+<a href="https://www.robotshop.com/en/robot-kits.html" target = "_blank">RobotShop</a>: If you are looking for a kit, to get started
+</li>
+<li>
+<a href="https://www.sparkfun.com/categories/31?filter_option%5Bsubcategory%5D%5B%5D=category_155&filter_price_floor=&filter_price_ceil=" target = "_blank">SparkFun</a>: Based in Niwot, you can go visit them and pick up your parts or take the tour to get some ideas
+</li>
+</ul>
+<p><br><b><i>NOTE: For any vendors, check before you buy. We have educational discounts with most all of them.</b></i></p>
+</div>
+</div>
+<div id="mechanisms-and-motion" class="section level2">
+<h2><span class="header-section-number">4.2</span> Mechanisms and Motion</h2>
+<p>Mechanisms can be used to change the speed, direction or force required to do something. Mechanisms may be able to help you but they cannot do it on their own.</p>
+<div id="inputs-and-outputs" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Inputs and Outputs</h3>
+<p>Machines need energy and someone or something to operate them. In mechatronics we utilze actuators attached to a control system for the source of the energy. The energy that is used by a machine is called the <strong><em>input</em></strong>. The result of this energy input is called the <strong><em>output</em></strong>. While it is not a robotic system, a mechanism such as a bicycle can be explained with the diagram below.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/input_output.png?raw=true" alt="Input and Output" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.? - A bicycle as a mechanical system.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+<div id="types-of-motion" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Types of Motion</h3>
+<p>Mechanisms are concerned with motion. There are four main types of motion. These can be illustrated by means of human body movements.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/types_motion.png?raw=true" alt="Types of Motion" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - Examples of various types of motion.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>Motion that is transferred along a line is known as <strong><em>linear motion</em></strong>. Utilizing this system allows robotic designs to extend reach in all directions but is mainly used in attaining more height or reaching horizontally. Motion which is a repetitive up-and-down or back-and-forth linear motion is known as <strong><em>reciprocating motion</em></strong>. This movement is commonly used in pumps. <strong><em>Rotary motion</em></strong> is a circular movement of an object around a center (or point) of rotation and is the most commonly used motion in robotic systems. Drive systems are usually based in rotary motion but other systems utilize it as well including lifting and collecting mechanisms. Pendulums represent one application of <strong><em>oscillating motion</em></strong> which are used in robotics systems.</p>
+</div>
+</div>
+<div id="levers" class="section level2">
+<h2><span class="header-section-number">4.3</span> Levers</h2>
+<p>One of the oldest mechanisms is the <strong><em>lever</em></strong>. Stone Age people used them to move large objects.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/stone_age.png?raw=true" alt="Stone age lever" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - Using a lever to move a heavy object.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>A lever can be described as a long rigid object with a pivot point somewhere along its length. The pivot is a fixed point about which the lever rotates. The pivot is also known as the <strong><em>fulcrum</em></strong>. Levers are used to do two things: they can move a large load with only a little effort, or they can increase or amplify movement. A seesaw is a simple example of a lever.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/seesaw.png?raw=true" alt="seesaw" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A seesaw is an example of a simple lever.</b></i>
+</figcaption>
+</figure>
+</p>
+<div id="classes-and-categories" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Classes and Categories</h3>
+<p>Levers are classified by the relative positions of the <strong><em>fulcrum</em></strong> (the point of <strong><em>fixed pivot</em></strong>), <strong><em>effort</em></strong> (the <strong><em>input force</em></strong>) and <strong><em>resistance</em></strong> (or <strong><em>load</em></strong>). It is common to call the input force the effort and the output force the load or the resistance. This allows the identification of three classes of levers by the relative locations of the fulcrum, the resistance and the effort.</p>
+<p>With a <strong><em>class one lever</em></strong>, the fulcrum is between the effort and resistance. The effort is applied on one side of the fulcrum and the resistance (or load) on the other side, for example, a seesaw, a crowbar or a pair of scissors, a common balance , a claw hammer. Mechanical advantage may be greater than, less than, or equal to 1.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_1.png?raw=true" alt="class one lever" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A class one lever and example.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>A <strong><em>class two lever</em></strong> places resistance (or load) between the effort and fulcrum. The effort is applied on one side of the resistance and the fulcrum is located on the other side, e.g. in a wheelbarrow, a nutcracker, a bottle opener or the brake pedal of a car, the load arm is smaller than the effort arm, and the mechanical advantage is always greater than one. It is also called force multiplier lever.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_2.png?raw=true" alt="class two lever" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A class two lever and example.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>Utilizing a <strong><em>class three lever</em></strong> places the effort between the fulcrum and resistance. The resistance (or load) is on one side of the effort and the fulcrum is located on the other side, for example, a pair of tweezers, a hammer, a pair of tongs, fishing rod, common balance or the mandible of our skull. The effort arm is smaller than the load arm. Mechanical advantage is always less than 1. It is also called speed multiplier lever.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_3.png?raw=true" alt="class three lever" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A class three lever and example.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+<div id="mechanical-advantage" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Mechanical Advantage</h3>
+<p>We use levers every day because they make it is easier to get work done. They give us <strong><em>mechanical advantage</em></strong> (MA) which means that you can move a large load using a small effort. The MA in the example below is found by comparing the weight of the load with the effort needed to move it. (Remember 1kg = 10 Newton)</p>
+<p><span class="math display">\[MA=(Load/Effort)=300N/100N=3:1 = 3\]</span></p>
+<p>If you look at wheelbarrow example again you will see that the distance the effort has to move is much further that that of the load. By comparing the two distances you get the velocity ratio (VR).</p>
+<p><span class="math display">\[VR=(D_2/D_1)=400mm/100mm=4:1=4\]</span></p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Wheel_barrow.png?raw=true" alt="Wheel barrow example" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A wheel barrow used to lift a heavy load.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+<div id="efficiency" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Efficiency</h3>
+<p>Mechanisms are not always 100% efficient due to factors such as parts that bend, friction etc.
+The scientific formula for the calculation of the efficiency of a mechanism is as follows:</p>
+<p><span class="math display">\[Efficiency = (MA/VR)*100\%\]</span>
+For the example of the wheel barrow above we can calculate efficiency using this formula.</p>
+<p><span class="math display">\[Efficiency=(3/4)*100\%=75\%\]</span></p>
+</div>
+<div id="moments" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> Moments</h3>
+<p>If a seesaw is not moving but remains level, it is said to be <strong><em>balanced</em></strong>. The forces on either side of the fulcrum are equal and opposite. If the force on one end of the seesaw is greater than the other, or if the fulcrum is not in the center, then the seesaw will rotate around the fulcrum. This turning force is known as a <strong><em>moment</em></strong>.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_seesaw.png?raw=true" alt="seesaw as a moment" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - The turning of the seesaw about the fulcrum illustrates a moment.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>Moments can be used to work out unknown weights or distances of movement. The figure below shows how to calculate the moment for a very large spanner.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_wrench.png?raw=true" alt="wrench as a moment" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - A spanner wrench used to calculate a moment.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>We can calculate ways to create a balanced situation by applying these principles. Consider the seesaw example here:</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/balanced.png?raw=true" alt="balanced seesaw" style="width:70%">
+<figcaption>
+<b><i>Fig. 4.? - The system here is balanced by moving the fulcrum to the correct position.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+</div>
+<div id="rotary-motion" class="section level2">
+<h2><span class="header-section-number">4.4</span> Rotary Motion</h2>
+<div id="pulleys-sprockets-and-gears" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Pulleys, Sprockets and Gears</h3>
+<p>Pulleys, sprockets and gears are used to transfer rotary motion from one place to another. All are wheels. Pulleys are wheels with grooves in the rims, in which a belt or rope can run. Pulleys can transfer rotary motion from one shaft to another or can be used to lift heavy loads. Gears are wheels with teeth evenly spaced around the rims. Several gears can be placed, so that their teeth interlock, or mesh. When two or more gears are used together, they form what is called a gear train. Gears can be used to change the speed and direction in which something rotates. When chains are used to connect the “gears”, a chain and sprocket system is formed, for example on bicycles and motorcycles. Sprocket systems share properties of both of the other systems.</p>
+In figure 4.3 the direction of rotation of the pulleys is the same for each pulley. The <strong><em>driver pulley</em></strong> is attached to the drive system while the <strong><em>driven pulley</em></strong> is attached to the actuational output. The mechanical advantage is gained by the variation in the size (diameter) of the pulleys. This mechanical advantage may be used to increase either velocity of rotation or <strong><em>torque</em></strong> (rotational force).
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/simple_pulley.png?raw=true" alt="Simple Pulley" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.3 - Simple Pulley System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>
+Figure 4.4 illustrates a pulley system which switches the direction of each pulley. All calculations made on a twisted pulley are the same as a simple pulley system.
+</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/twisted_pulley.png?raw=true" alt="Twisted Pulley" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.4 - Twisted Pulley System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>Unlike pulleys, the <strong><em>driven gear</em></strong> which is attached to the actuation device rotates in the opposite direction as the <strong><em>driver gear</em></strong>.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/two_gears.png?raw=true" alt="Two Gears" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.6 - Simple Gear System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>By placing an <strong><em>idler gear</em></strong> of the same size as either of the other two gears, the direction of the driven gear may be reversed so that it rotates in the same way as the driver gear.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_train.png?raw=true" alt="Gear Train" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.7 - Gear Train System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>This configureation is known as a <strong><em>gear train</em></strong>.</p>
+<p>In order to increase the velocity ratio or mechanical advantage of a pulley or gear system, compound pulley and gear trains may be constructed.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_pulley.png?raw=true" alt="Compound Pulley" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.5 - Compound Pulley System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_gears.png?raw=true" alt="Compound Gear" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.8 - Compound Gear System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p><strong>A NOTE ABOUT SPROCKETS AND CHAINS:</strong> As previously mentioned, sprockets and chains combine characteristics of the both gears and pulleys. While the <strong><em>driver sprocket</em></strong> and the <strong><em>driven sprocket</em></strong> move in the same direction like pulleys, they have teeth which a chain can fit into to provide added stregth to the system, as in the case of gears. Considerations for choosing the correct system for your application are below:</p>
+<p>Advantages of tooth gears and chains:</p>
+<ul>
+<li>Greater forces can be transferred</li>
+<li>Chains do not slip/slide</li>
+<li>Chains can be disassembled for removal</li>
+</ul>
+<p>Advantages of pulleys and belts:</p>
+<ul>
+<li>Belts are not noisy</li>
+<li>Belts can be stretched for fitting and for removal</li>
+<li>Crossed belts can change the direction of rotation</li>
+</ul>
+<p>All of the formulas in the next section are the same for sprockets as for pulleys and gears. Typically, the number of teeth on the sprocket are used to calculate the velocity ratio as in the case of gears.</p>
+<p>The illustration below shows gears fixed to parallel shafts, forming a simple gear train. The gear fixed on the drive shaft is called the driver gear and is connected to the driven gear. The shafts will turn in opposite directions and, because the gears have different sizes, they will turn at different speeds.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_systems.png?raw=true" alt="Driver and Driven Gears" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.12 - Driver and Driven Gears in a Simple Gear System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>The difference in their speeds (velocity ratio) can be calculated from the number of teeth on the driver gear (Teeth<sub>1</sub>) compared to the driven gear (Teeth<sub>2</sub>).</p>
+<p><span class="math display">\[VR = (Teeth_2/Teeth_1) = (40/20) = 2:1\]</span>
+The <strong><em>velocity ratio</em></strong> (VR) in this example may be expressed as 2:1 (say “two to one”) or simply as 2. This means that in this case the driver shaft must turn twice for the driven shaft to complete one turn.</p>
+<p>Similarly, the velocity ratio of a pulley system may be calculated with essentially the same formula. Pulley systems use a belt to transmit motion and force from the driver shaft to the driven shaft. Cars use a pulley system with V-belts running in grooves on the pulley wheels. Speed changes are made by using different sizes of pulleys on the driver and driven shafts respectively. By comparing the sizes of the two pulleys you can calculate the velocity ratio (VR) of the system. Instead of using the number of teeth, the difference in pulley speeds can be calculated by comparing the diameter of the driver pulley (Size<sub>1</sub>) to the diameter of the driven pulley (Size<sub>2</sub>).</p>
+<p><span class="math display">\[VR = (Size_2/Size_1)=(25/100)=1:4\]</span>
+The velocity ration in this example is expressed as 1:4. This means that one turn of the driver shaft will give four turns of the driven shaft.</p>
+<p>Once we know the velocity ratio of the gears we are working with, we can begin to predict <strong><em>output speed</em></strong> (S<sub>O</sub>) for a given <strong><em>input speed</em></strong> (S<sub>I</sub>).</p>
+<p><span class="math display">\[S_O=(S_I/VR)=(2000rpm/3:1)=6000rpm\]</span>
+In this case the velocity ratio is 3:1 and the input speed is 2000 <strong><em>revolutions per minute</em></strong> (rpm). The resulting output speed is 6,000 rpm.</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/rack_pinion.png?raw=true" alt="Rack and Pinion" style="width:80%">
+<figcaption>
+<b><i>Fig. 4.9 - Rack and Pinion System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/worm_gear.png?raw=true" alt="Simple Pulley" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.10 - Worm Gear System.</b></i>
+</figcaption>
+</figure>
+</p>
+<p>
+<figure>
+<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/bevel_gears.png?raw=true" alt="Bevel Gears" style="width:60%">
+<figcaption>
+<b><i>Fig. 4.11 - Bevel Gear System.</b></i>
+</figcaption>
+</figure>
+</p>
+</div>
+</div>
+<div id="linear-motion" class="section level2">
+<h2><span class="header-section-number">4.5</span> Linear Motion</h2>
+<div id="rack-and-pinion-systems" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Rack and Pinion Systems</h3>
+</div>
+<div id="lead-screws" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Lead Screws</h3>
+</div>
+</div>
+<div id="drive-systems" class="section level2">
+<h2><span class="header-section-number">4.6</span> Drive Systems</h2>
+<p>The purpose of the drivetrain is to facilitate the movement of the robot, and thus is crucial to the overall function of the robot. If the drivetrain doesn’t work, the rest of the robot won’t work either. When building any mechanism, it is wise to list some necessities or desired features.</p>
+<div id="factors-to-consider" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Factors to Consider</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong><em>Reliability</em></strong>: Reliability starts with the drivetrain, the foundation to any robot. One aspect of reliability to consider is the type of motor and gearbox that is used in the drivetrain. One should always consider how much load will be placed on the system and select accordingly.</p></li>
+<li><p><strong><em>Agility</em></strong>: There are many factors to agility: top speed, acceleration, turning radius, turn speed, and ability to strafe. Note that turning radius is an often overlooked feature that is critical to the overall agility of the drivetrain.</p></li>
+<li><p><strong><em>Traction/Pushing Power</em></strong>: While this feature is often overemphasized, it is still very important. Pushing power describes a drivetrain’s ability to endure defense/engage in defense. In addition, traction will be important if the drivetrain must traverse obstacles or some sort of terrain. Many factors affect the pushing power of a drivetrain, including wheel type, motor gearing, and overall weight of the robot.</p></li>
+<li><p><strong><em>Powering the drivetrain</em></strong>: Generally, there are four options for power transmission: direct drive, chain, gear, and belt. Direct drive systems place the wheel directly on the motor shaft. This has the disadvantage of subjecting that gearbox to unusual amounts of stress. If possibel, indirect transmissions such as belts and chains are preferred.</p></li>
+</ol>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENTs 4.6.?: Examining Drivetrain Systems</strong></p>
+</div>
+<p>Since many students will chose to build a mobile robotic platform at some point, it is useful to examine the various mobile systems. One organization which competes in the First Tech Challenge has compiled an overview of many types of drivetrains. We will use that resource as the basis for our study of drivetrain systems.</p>
+<p>Take a look at these various drivetrain systems commonly used on robots:</p>
+<ul>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html" target = "_blank">Tank (Skid-Steer) Drivetrains</a>
+<ul>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#wheel-drive-pushbot-drive" target = "_blank">2 Wheel Drive (Pushbot Drive)</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#wheel-drive" target = "_blank">4 Wheel Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#wheel-drive" target = "_blank">4 Wheel Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#wheel-drive-6wd" target = "_blank">6 Wheel Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#id6" target = "_blank">8 Wheel Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/tank.html#tread-drive" target = "_blank">Tread Drive</a></li>
+</ul></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/holonomic.html" target = "_blank">Holonomic Drivetrains</a>
+<ul>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/holonomic.html#mecanum-drive" target = "_blank">Mecanum Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/holonomic.html#x-drive" target = "_blank">X-Drive</a></li>
+<li><a class="reference internal" href="https://gm0.org/en/stable/docs/robot-design/drivetrains/holonomic.html#h-drive" target = "_blank">H-Drive</a></li>
+</ul></li>
+</ul>
+<p>Pick the two that are most interesting to you. In two well-developed paragraphs, describe the drivetrains and explain the advantages and disadvantages of those drive systems. Compare the various applications which would make one or the other more desirable. Include correct usage of the four “factors to consider” listed above in your paragraph in order to demonstrate your understanding of those concepts.</p>
+</div>
+</div>
+</div>
+<div id="computer-aided-design" class="section level2">
+<h2><span class="header-section-number">4.7</span> Computer Aided Design</h2>
+<p>The concepts learned in this unit require planning and modeling to implement effectively. It is useful to “tinker” with mechanical parts in order to be able to visualize the system itself. All engineering, however, includes a significant design element. In most cases, we need to sketch out our design on a piece of paper or board to give the solution to our problem some conceptual scale.</p>
+<p>Once you have your design down on paper, it is time to create it like a real mechatronics engineer. For this section you will learn to use <a href="https://www.onshape.com/" target ="_blank">OnShape</a>, a modern and full-scale computer aided design (CAD) system. OnShape was founded by two engineers at SolidWorks which is still considered the gold standard of CAD. SolidWorks comes with a hefty price tag, even for students. OnShape is free to secondary schools. As a result, we will use it. Once year learn this tool, switching to other CAD software will be relatively painless. In addition, it is entirely web based so you can use it as long as you have an internet connection and a web browser.</p>
+<p>If you have not done so already, head to the <a href="course-materials-and-instructions.html#onshape-account-setup">OnShape Account Setup</a> section of the course book. Follow those instructions. After you have done this, log on to your account and follow these instructions:</p>
+<p><u>Click on the “Learning Center Button”</u></p>
+<p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_lc.PNG?raw=true"></p>
+<p><u>Select “Self-Paced Courses &gt; Learning Pathways”</u></p>
+<p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_lp.PNG?raw=true"></p>
+<p><u>Select “OnShape Fundamentals: CAD”</u></p>
+<p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_fun.PNG?raw=true"></p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENTs 4.7.?: CAD Fundamentals</strong></p>
+</div>
+<p>For this part of our course you may move at your own pace to complete these assignments. Each one requires you to work through the CAD concepts and skills listed in the OnShape courses below.</p>
+Complete the first five courses in this learning pathway:
+<ol>
+<li>
+Navigating Onshape
+</li>
+<li>
+Introduction to Sketching
+</li>
+<li>
+Part Design Using Part Studios
+</li>
+<li>
+Multi-Part Part Studios
+</li>
+<li>
+Onshape Assemblies
+</li>
+</ol>
+</div>
+
+<!-- For the examples here I am using two different terminals.  Since the students will at least start programming using the Linux termanal running the Python environment, all of the direct examples that they are expected to complete will use that.  GIMP can create screenshots which may t
+hen be directly exported to PNG format and uploaded to the hosted images repository on GitHub.  For those which may just be examples of ideas I am using PyCharm since it color codes the text.  At some point, it might be worth exploring other ways of doing this. -->
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="electrical-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="python-programming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-mechanics.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Robotics_Engineering.pdf", "Robotics_Engineering.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
