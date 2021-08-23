@@ -24,7 +24,7 @@
 <meta name="author" content="Steve Cline" />
 
 
-<meta name="date" content="2021-08-20" />
+<meta name="date" content="2021-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -197,14 +197,13 @@
 <li>
 Start thinking about a problem you might like to solve. Is there something at home that could be improved? For example, last year I built a solar powered Raspberry Pi controlled garden watering system. Something like that has a definite use and provides a solution for my wife and I. Now that it works, when we go on vacation we don’t worry that our garden gets watered.
 </li>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/watering_system.jpg?raw=true" alt="Solar powered water system" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.? - A solar powered robotic watering system.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/watering_system.jpg?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/watering_system.jpg?raw=true" alt="Solar powered water system" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A solar powered robotic watering system.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <li>
 Look for other examples. A good place to start is the <a href="https://video-demos.colostate.edu/robotics-controls/mechatronics/projects/" target ="_blank">Student Examples from the MECH 307 Course at CSU</a>. Other good sources of inspiration are listed below:
 <ul>
@@ -298,14 +297,13 @@ Linear Slides
 <p>The simplest actuator we have is a DC motor. A Direct Current (DC) motor is a motor that turns energy from a direct current and turns this into mechanical energy. The first DC motor was developed around the 1830’s-1840s. They were commercially unsuccessful, because these motors were battry powered and batteries were still very expensive and the quality was low. When the electrical grid was created and the rechargeable batteries were invented in the late 1800s this all changed. The first commercially viable DC motors entered the market. DC motors have been improved continuously, but other types of motors, like the BLDC motor, have been developed in the meantime too. As a result, the use of brushed Direct Current motors in several applications is limited today.</p>
 <p><strong>How a DC Motor Actually Works</strong></p>
 <p>The rotor is normally located on the inside of the motor, while the stator is located on the outside. The rotor contains coil windings that are powered by the DC current and the stator contains either permanent magnets or electromagnetic windings. When the motor is powered by DC current, a magnetic field is created within the stator, attracting and repelling the magnets on the rotor. This causes the rotor to start rotating. To keep the rotor rotating, the motor has a commutator. When the rotor aligns with the magnetic field, it would stop spinning, but in this case the commutator would reverse the current through the stator and this way reverse the magnetic field. This way the rotor can keep spinning.</p>
-<p>
-<figure>
-<img src="https://www.magneticinnovations.com/wp-content/uploads/2019/11/dcmotor-e1591177747592.png" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.? - A Direct Current (DC) Motor.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://www.magneticinnovations.com/wp-content/uploads/2019/11/dcmotor-e1591177747592.png" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://www.magneticinnovations.com/wp-content/uploads/2019/11/dcmotor-e1591177747592.png" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A Direct Current (DC) Motor.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p><strong>Advantages and Disadvantages of a DC Motor</strong></p>
 <p>When it comes to starting and regulating speed, brushed DC motors have a good performance. The torque density is relatively high for these motors. A Direct Current motor runs smoothly and the range of speed regulation is wide. The overload capability is strong and the electromagnetic interference is small. A disadvantage of the DC motor is the structure. There is a sliding contact between the commutator and the brush. This causes sparks and mechanical wear. Direct Current motors have relatively short life expectancy because of this and the motor has high maintenance cost. It also raises reliability concerns.</p>
 <div class="assignmentbox homework">
@@ -334,23 +332,21 @@ Digital multimeter
 <p><strong>What’s inside the servo?</strong></p>
 <p>To fully understand how the servo works, you need to take a look under the hood. Inside there is a pretty simple set-up: a small DC motor, potentiometer, and a control circuit. The motor is attached by gears to the control wheel. As the motor rotates, the potentiometer’s resistance changes, so the control circuit can precisely regulate how much movement there is and in which direction.</p>
 <p>When the shaft of the motor is at the desired position, power supplied to the motor is stopped. If not, the motor is turned in the appropriate direction. The desired position is sent via electrical pulses through the signal wire. The motor’s speed is proportional to the difference between its actual position and desired position. So if the motor is near the desired position, it will turn slowly, otherwise it will turn fast. This is called proportional control. This means the motor will only run as hard as necessary to accomplish the task at hand.</p>
-<p>
-<figure>
-<img src="https://robu.in/wp-content/uploads/2020/04/Servo-motor-constructons.png" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.? - The construction of a servo motor</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://robu.in/wp-content/uploads/2020/04/Servo-motor-constructons.png" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://robu.in/wp-content/uploads/2020/04/Servo-motor-constructons.png" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - The construction of a servo motor</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>Servos are controlled by sending an electrical pulse of variable width, or pulse width modulation (PWM), through the control wire. There is a minimum pulse, a maximum pulse, and a repetition rate. A servo motor can usually only turn 90° in either direction for a total of 180° movement. The motor’s neutral position is defined as the position where the servo has the same amount of potential rotation in the both the clockwise or counter-clockwise direction. The PWM sent to the motor determines position of the shaft, and based on the duration of the pulse sent via the control wire; the rotor will turn to the desired position. The servo motor expects to see a pulse every 20 milliseconds (ms) and the length of the pulse will determine how far the motor turns. For example, a 1.5ms pulse will make the motor turn to the 90° position. Shorter than 1.5ms moves it in the counter clockwise direction toward the 0° position, and any longer than 1.5ms will turn the servo in a clockwise direction toward the 180° position.</p>
-<p>
-<figure>
-<img src="https://www.jameco.com/Jameco/workshop/Howitworks/how-servo-motors-work-fig3.jpg" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.? - Variable Pulse width control servo position.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://www.jameco.com/Jameco/workshop/Howitworks/how-servo-motors-work-fig3.jpg" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://www.jameco.com/Jameco/workshop/Howitworks/how-servo-motors-work-fig3.jpg" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - Variable Pulse width control servo position.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>When these servos are commanded to move, they will move to the position and hold that position. If an external force pushes against the servo while the servo is holding a position, the servo will resist from moving out of that position. The maximum amount of force the servo can exert is called the torque rating of the servo. Servos will not hold their position forever though; the position pulse must be repeated to instruct the servo to stay in position.</p>
 <p><strong>Advantages and Disadvantages of a Servo</strong></p>
 <p>Because servo motors have an integrated circuit with logic controls they will increase the amount of current drawn as the load on the coil so there is no “out-of-step” condition. This also allows for high speed operation of the motor. Servos can tend to lag in their rotation so high precision control is not likely. Servos also are not suitable for loads that are as heavy as comparable simple DC and stepper motors. When stopped, the motor’s rotor continues to move back and forth one pulse. So that, it is not suitable if you need to prevent vibration.</p>
@@ -370,7 +366,7 @@ Digital multimeter
 <figure>
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/StepperMotor.gif" style="width:50%">
 <figcaption>
-<p><b><i>Fig. 4.? - Animation of a simplified stepper motor (unipolar)</p>
+<p><b><i>Animation of a simplified stepper motor (unipolar)</p>
 <p>Frame 1: The top electromagnet (1) is turned on, attracting the nearest teeth of the gear-shaped iron rotor. With the teeth aligned to electromagnet 1, they will be slightly offset from right electromagnet (2).</p>
 <p>Frame 2: The top electromagnet (1) is turned off, and the right electromagnet (2) is energized, pulling the teeth into alignment with it. This results in a rotation of 3.6° in this example.</p>
 <p>Frame 3: The bottom electromagnet (3) is energized; another 3.6° rotation occurs.</p>
@@ -395,7 +391,7 @@ Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When 
 <figure>
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Linear_actuator_basic.gif" style="width:60%">
 <figcaption>
-<b><i>Fig. 4.? - Conceptual design of a basic traveling-nut linear actuator. Note that in this example the lead screw (gray) rotates while the lead nut (yellow) and tube (red) do not.</b></i>
+<b><i>Conceptual design of a basic traveling-nut linear actuator. Note that in this example the lead screw (gray) rotates while the lead nut (yellow) and tube (red) do not.</b></i>
 </figcaption>
 </figure>
 </p>
@@ -405,14 +401,13 @@ Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When 
 <h3><span class="header-section-number">4.1.3</span> Sensors</h3>
 <p>There are even more sensor types than there are actuator types. If we browse the <a href="https://www.adafruit.com/category/35" target ="_blank">Adafruit Sensor Page</a> we see how limitless these possibilities are. For any type of sensor application there is, someone has though of a way to build it.</p>
 <p>As this <a href="http://www.cs.cmu.edu/~rasc/Download/AMRobots4.pdf" target = "_blank">excerpt from a robotics text</a> explains, sensors are either proprioceptive or exteroceptive and, at the same time, either passive or active. This chart is taken from that text:</p>
-<p>
-<figure>
-<img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Sensor%20Classifications.png?raw=true" alt="Sensor Classification" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.1 - Table Illustrating Classifications of Robotics Sensors.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Sensor%20Classifications.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Sensor%20Classifications.png?raw=true" alt="Sensor Classification" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.1 - Table Illustrating Classifications of Robotics Sensors.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>A <strong><em>passive sensor</em></strong> is one which just ‘listens’ to what is happening. Examples include:
 - A light sensor which detects if a light is shining on it
 - An infra-red sensor which detects the temperature of an object</p>
@@ -454,14 +449,13 @@ Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When 
 <div id="structural-parts" class="section level3">
 <h3><span class="header-section-number">4.1.5</span> Structural Parts</h3>
 <p>The skeleton of the robotic system determines the physical constraints on the design. For years now, our robotics team has dealth with this issue. Several years ago they were presented with a challenge in the competition which required their robot to climb a mountain:</p>
-<p>
-<figure>
-<img src="https://lh3.googleusercontent.com/pw/ACtC-3cmpHSRe6rGTt-MiIm45DNvdX5LnQPqjeFoMLTcRDMEe-jTS-R-VCHQpOXHaIDewV3isya2OqOclK3ttuJrw_SZFTdhtLex9lYP1k0KlGzc5bqn2ezhGXwOkCdMWfAII_uaL7MYbPUcI6blbrHRMNBy=w787-h904-no?authuser=0" alt="Climbing a mountain" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.2 - WHS Robotics Team members analyze the challenge in the 2015 season.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://lh3.googleusercontent.com/pw/ACtC-3cmpHSRe6rGTt-MiIm45DNvdX5LnQPqjeFoMLTcRDMEe-jTS-R-VCHQpOXHaIDewV3isya2OqOclK3ttuJrw_SZFTdhtLex9lYP1k0KlGzc5bqn2ezhGXwOkCdMWfAII_uaL7MYbPUcI6blbrHRMNBy=w787-h904-no?authuser=0" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://lh3.googleusercontent.com/pw/ACtC-3cmpHSRe6rGTt-MiIm45DNvdX5LnQPqjeFoMLTcRDMEe-jTS-R-VCHQpOXHaIDewV3isya2OqOclK3ttuJrw_SZFTdhtLex9lYP1k0KlGzc5bqn2ezhGXwOkCdMWfAII_uaL7MYbPUcI6blbrHRMNBy=w787-h904-no?authuser=0" alt="Climbing a mountain" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.2 - WHS Robotics Team members analyze the challenge in the 2015 season.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>As we can see from the photograph, the mountain was quite daunting. The previous year, the team had advanced to the world championships and found that their robot, while the best design in Colorado, was not suited to compete with the heavier robots beyond the state. As a result they had been pushed around a bit and not been very successful. The solution to this was to weld a steel frame together and build the robot off of that. The result was a 70 pound robot! Without thinking more deeply about the design of the current year, they had hampered themselves by dealing with the previous yesr’s challenge in mind. The robot was robust and strong but could not climb the mountain. Instead, every tread system they tried to use to climb was under so much strain that it eventually broke. They would even 3D print treads made out of high strength plastics that still could not hold up to the strain. In this case, the structural parts let them down. What a great learning experience that was. All three of those students in the photo are in science and engineering programs currently in college. The one on the right, Mitchell Watson, is literally going to be a rocket scientist when he graduates for Cal Tech. Understanding these concepts of mechanical design are not only fundamental to robotics, they can lead to many great opportunities.</p>
 <p>There are many options for structural parts. Over the years, we have accumulated a wealth of parts in our program which may be checked out. In addition, we have plenty of scrap material (we hated that mountain so much that we cut it up at the end of the season and have been using it for scrap since then). After you learn how to use CAD later in this unit, you will be able to design and print your own custom parts as well.</p>
 <p>The type of material matters. Begin with <a href="https://www.societyofrobots.com/materials.shtml" target="_blank">this materials guide</a> in selecting your parts. Consider using pre-built kits or components. Here is a list of companies that provide robotics parts:</p>
@@ -494,79 +488,79 @@ Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When 
 <div id="inputs-and-outputs" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Inputs and Outputs</h3>
 <p>Machines need energy and someone or something to operate them. In mechatronics we utilze actuators attached to a control system for the source of the energy. The energy that is used by a machine is called the <strong><em>input</em></strong>. The result of this energy input is called the <strong><em>output</em></strong>. While it is not a robotic system, a mechanism such as a bicycle can be explained with the diagram below.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/input_output.png?raw=true" alt="Input and Output" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.? - A bicycle as a mechanical system.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/input_output.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/input_output.png?raw=true" alt="Input and Output" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A bicycle as a mechanical system.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 </div>
 <div id="types-of-motion" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Types of Motion</h3>
 <p>Mechanisms are concerned with motion. There are four main types of motion. These can be illustrated by means of human body movements.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/types_motion.png?raw=true" alt="Types of Motion" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - Examples of various types of motion.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/types_motion.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/types_motion.png?raw=true" alt="Types of Motion" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - Examples of various types of motion.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>Motion that is transferred along a line is known as <strong><em>linear motion</em></strong>. Utilizing this system allows robotic designs to extend reach in all directions but is mainly used in attaining more height or reaching horizontally. Motion which is a repetitive up-and-down or back-and-forth linear motion is known as <strong><em>reciprocating motion</em></strong>. This movement is commonly used in pumps. <strong><em>Rotary motion</em></strong> is a circular movement of an object around a center (or point) of rotation and is the most commonly used motion in robotic systems. Drive systems are usually based in rotary motion but other systems utilize it as well including lifting and collecting mechanisms. Pendulums represent one application of <strong><em>oscillating motion</em></strong> which are used in robotics systems.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.2.0: Mechanisms in Motion</strong></p>
+</div>
+<p>Creating robotic motion begins with an understanding of the various types of motion. For this assignment you will seek out unique, robotic applications which illustrate the four types of mechanical motion discussed in this section.</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Mechanical Motion Overview</span></strong>.</p>
+</div>
 </div>
 </div>
 <div id="levers" class="section level2">
 <h2><span class="header-section-number">4.3</span> Levers</h2>
 <p>One of the oldest mechanisms is the <strong><em>lever</em></strong>. Stone Age people used them to move large objects.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/stone_age.png?raw=true" alt="Stone age lever" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - Using a lever to move a heavy object.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/stone_age.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/stone_age.png?raw=true" alt="Stone age lever" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - Using a lever to move a heavy object.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>A lever can be described as a long rigid object with a pivot point somewhere along its length. The pivot is a fixed point about which the lever rotates. The pivot is also known as the <strong><em>fulcrum</em></strong>. Levers are used to do two things: they can move a large load with only a little effort, or they can increase or amplify movement. A seesaw is a simple example of a lever.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/seesaw.png?raw=true" alt="seesaw" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A seesaw is an example of a simple lever.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/seesaw.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/seesaw.png?raw=true" alt="seesaw" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A seesaw is an example of a simple lever.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <div id="classes-and-categories" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Classes and Categories</h3>
 <p>Levers are classified by the relative positions of the <strong><em>fulcrum</em></strong> (the point of <strong><em>fixed pivot</em></strong>), <strong><em>effort</em></strong> (the <strong><em>input force</em></strong>) and <strong><em>resistance</em></strong> (or <strong><em>load</em></strong>). It is common to call the input force the effort and the output force the load or the resistance. This allows the identification of three classes of levers by the relative locations of the fulcrum, the resistance and the effort.</p>
 <p>With a <strong><em>class one lever</em></strong>, the fulcrum is between the effort and resistance. The effort is applied on one side of the fulcrum and the resistance (or load) on the other side, for example, a seesaw, a crowbar or a pair of scissors, a common balance , a claw hammer. Mechanical advantage may be greater than, less than, or equal to 1.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_1.png?raw=true" alt="class one lever" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A class one lever and example.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_1.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_1.png?raw=true" alt="class one lever" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A class one lever and example.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>A <strong><em>class two lever</em></strong> places resistance (or load) between the effort and fulcrum. The effort is applied on one side of the resistance and the fulcrum is located on the other side, e.g. in a wheelbarrow, a nutcracker, a bottle opener or the brake pedal of a car, the load arm is smaller than the effort arm, and the mechanical advantage is always greater than one. It is also called force multiplier lever.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_2.png?raw=true" alt="class two lever" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A class two lever and example.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_2.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_2.png?raw=true" alt="class two lever" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A class two lever and example.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>Utilizing a <strong><em>class three lever</em></strong> places the effort between the fulcrum and resistance. The resistance (or load) is on one side of the effort and the fulcrum is located on the other side, for example, a pair of tweezers, a hammer, a pair of tongs, fishing rod, common balance or the mandible of our skull. The effort arm is smaller than the load arm. Mechanical advantage is always less than 1. It is also called speed multiplier lever.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_3.png?raw=true" alt="class three lever" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A class three lever and example.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_3.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/class_3.png?raw=true" alt="class three lever" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A class three lever and example.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 </div>
 <div id="mechanical-advantage" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Mechanical Advantage</h3>
@@ -574,14 +568,13 @@ Frame 4: The left electromagnet (4) is energized, rotating again by 3.6°. When 
 <p><span class="math display">\[MA=(Load/Effort)=300N/100N=3:1 = 3\]</span></p>
 <p>If you look at wheelbarrow example again you will see that the distance the effort has to move is much further that that of the load. By comparing the two distances you get the velocity ratio (VR).</p>
 <p><span class="math display">\[VR=(D_2/D_1)=400mm/100mm=4:1=4\]</span></p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Wheel_barrow.png?raw=true" alt="Wheel barrow example" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A wheel barrow used to lift a heavy load.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Wheel_barrow.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Wheel_barrow.png?raw=true" alt="Wheel barrow example" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A wheel barrow used to lift a heavy load.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 </div>
 <div id="efficiency" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Efficiency</h3>
@@ -594,95 +587,95 @@ For the example of the wheel barrow above we can calculate efficiency using this
 <div id="moments" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> Moments</h3>
 <p>If a seesaw is not moving but remains level, it is said to be <strong><em>balanced</em></strong>. The forces on either side of the fulcrum are equal and opposite. If the force on one end of the seesaw is greater than the other, or if the fulcrum is not in the center, then the seesaw will rotate around the fulcrum. This turning force is known as a <strong><em>moment</em></strong>.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_seesaw.png?raw=true" alt="seesaw as a moment" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - The turning of the seesaw about the fulcrum illustrates a moment.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_seesaw.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_seesaw.png?raw=true" alt="seesaw as a moment" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - The turning of the seesaw about the fulcrum illustrates a moment.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>Moments can be used to work out unknown weights or distances of movement. The figure below shows how to calculate the moment for a very large spanner.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_wrench.png?raw=true" alt="wrench as a moment" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - A spanner wrench used to calculate a moment.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_wrench.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/moment_wrench.png?raw=true" alt="wrench as a moment" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - A spanner wrench used to calculate a moment.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>We can calculate ways to create a balanced situation by applying these principles. Consider the seesaw example here:</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/balanced.png?raw=true" alt="balanced seesaw" style="width:70%">
-<figcaption>
-<b><i>Fig. 4.? - The system here is balanced by moving the fulcrum to the correct position.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/balanced.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/balanced.png?raw=true" alt="balanced seesaw" style="width:70%"> -->
+<!--   <figcaption><b><i>Fig. 4.? - The system here is balanced by moving the fulcrum to the correct position.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.3.0: Lever Design</strong></p>
+</div>
+<p>Mechanical advantage may be attained by utilizing one of the oldest machines in human history, the lever. For this assighment you and your partner will build several levers, calculate mechanical advantage for each one and then test your results. Finally, you will consider real-world applications of these systems.</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Gaining the Advantage with Levers</span></strong>.</p>
+</div>
 </div>
 </div>
 <div id="rotary-motion" class="section level2">
 <h2><span class="header-section-number">4.4</span> Rotary Motion</h2>
+<p>A rotation is a circular movement of an object around a center (or point) of rotation. The geometric plane along which the rotation occurs is called the rotation plane, and the imaginary line extending from the center and perpendicular to the rotation plane is called the rotation axis. A three-dimensional object can always be rotated about an infinite number of rotation axes.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Rotating_Sphere.gif" /></p>
 <div id="pulleys-sprockets-and-gears" class="section level3">
 <h3><span class="header-section-number">4.4.1</span> Pulleys, Sprockets and Gears</h3>
-<p>Pulleys, sprockets and gears are used to transfer rotary motion from one place to another. All are wheels. Pulleys are wheels with grooves in the rims, in which a belt or rope can run. Pulleys can transfer rotary motion from one shaft to another or can be used to lift heavy loads. Gears are wheels with teeth evenly spaced around the rims. Several gears can be placed, so that their teeth interlock, or mesh. When two or more gears are used together, they form what is called a gear train. Gears can be used to change the speed and direction in which something rotates. When chains are used to connect the “gears”, a chain and sprocket system is formed, for example on bicycles and motorcycles. Sprocket systems share properties of both of the other systems.</p>
-In figure 4.3 the direction of rotation of the pulleys is the same for each pulley. The <strong><em>driver pulley</em></strong> is attached to the drive system while the <strong><em>driven pulley</em></strong> is attached to the actuational output. The mechanical advantage is gained by the variation in the size (diameter) of the pulleys. This mechanical advantage may be used to increase either velocity of rotation or <strong><em>torque</em></strong> (rotational force).
+<p>Pulleys, sprockets and gears are used to transfer rotary motion from one place to another. All are wheels. <strong><em>Pulleys</em></strong> are wheels with grooves in the rims, in which a belt or rope can run. Pulleys can transfer rotary motion from one shaft to another or can be used to lift heavy loads. <strong><em>Gears</em></strong> are wheels with teeth evenly spaced around the rims. Several gears can be placed, so that their teeth interlock, or mesh. When two or more gears are used together, they form what is called a gear train. Gears can be used to change the speed and direction in which something rotates. When chains are used to connect the “gears”, a chain and <strong><em>sprocket</em></strong> system is formed, for example on bicycles and motorcycles. Sprocket systems share properties of both of the other systems.</p>
+<p>In the figure below, the direction of rotation of the pulleys is the same for each pulley. The <strong><em>driver pulley</em></strong> is attached to the drive system (input) while the <strong><em>driven pulley</em></strong> is attached to the actuational output. The mechanical advantage is gained by the variation in the size (diameter) of the pulleys. This mechanical advantage may be used to increase either velocity of rotation or <strong><em>torque</em></strong> (rotational force).</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/simple_pulley.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/simple_pulley.png?raw=true" alt="Simple Pulley" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.3 - Simple Pulley System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/simple_pulley.png?raw=true" alt="Simple Pulley" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.3 - Simple Pulley System.</b></i>
-</figcaption>
-</figure>
+The next figure illustrates a pulley system which switches the direction of each pulley. All calculations made on a twisted pulley are the same as a simple pulley system.
 </p>
-<p>
-Figure 4.4 illustrates a pulley system which switches the direction of each pulley. All calculations made on a twisted pulley are the same as a simple pulley system.
-</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/twisted_pulley.png?raw=true" alt="Twisted Pulley" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.4 - Twisted Pulley System.</b></i>
-</figcaption>
-</figure>
-</p>
-<p>Unlike pulleys, the <strong><em>driven gear</em></strong> which is attached to the actuation device rotates in the opposite direction as the <strong><em>driver gear</em></strong>.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/two_gears.png?raw=true" alt="Two Gears" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.6 - Simple Gear System.</b></i>
-</figcaption>
-</figure>
-</p>
-<p>By placing an <strong><em>idler gear</em></strong> of the same size as either of the other two gears, the direction of the driven gear may be reversed so that it rotates in the same way as the driver gear.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_train.png?raw=true" alt="Gear Train" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.7 - Gear Train System.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/twisted_pulley.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/twisted_pulley.png?raw=true" alt="Twisted Pulley" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.4 - Twisted Pulley System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<p>Unlike pulleys, the <strong><em>driven gear</em></strong> which is attached to the actuation device (input) rotates in the opposite direction as the <strong><em>driver gear</em></strong> which is attached to the acutational output.</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/two_gears.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/two_gears.png?raw=true" alt="Two Gears" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.6 - Simple Gear System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<p>By placing an <strong><em>idler gear</em></strong> of the same size as either of the other two gears, the direction of the driven gear may be reversed so that it rotates in the same way as the driver gear without changing the rotational speed or torque of the output.</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_train.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_train.png?raw=true" alt="Gear Train" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.7 - Gear Train System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>This configureation is known as a <strong><em>gear train</em></strong>.</p>
 <p>In order to increase the velocity ratio or mechanical advantage of a pulley or gear system, compound pulley and gear trains may be constructed.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_pulley.png?raw=true" alt="Compound Pulley" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.5 - Compound Pulley System.</b></i>
-</figcaption>
-</figure>
-</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_gears.png?raw=true" alt="Compound Gear" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.8 - Compound Gear System.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_pulley.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_pulley.png?raw=true" alt="Compound Pulley" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.5 - Compound Pulley System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_gears.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/compound_gears.png?raw=true" alt="Compound Gear" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.8 - Compound Gear System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p><strong>A NOTE ABOUT SPROCKETS AND CHAINS:</strong> As previously mentioned, sprockets and chains combine characteristics of the both gears and pulleys. While the <strong><em>driver sprocket</em></strong> and the <strong><em>driven sprocket</em></strong> move in the same direction like pulleys, they have teeth which a chain can fit into to provide added stregth to the system, as in the case of gears. Considerations for choosing the correct system for your application are below:</p>
 <p>Advantages of tooth gears and chains:</p>
 <ul>
@@ -698,14 +691,13 @@ Figure 4.4 illustrates a pulley system which switches the direction of each pull
 </ul>
 <p>All of the formulas in the next section are the same for sprockets as for pulleys and gears. Typically, the number of teeth on the sprocket are used to calculate the velocity ratio as in the case of gears.</p>
 <p>The illustration below shows gears fixed to parallel shafts, forming a simple gear train. The gear fixed on the drive shaft is called the driver gear and is connected to the driven gear. The shafts will turn in opposite directions and, because the gears have different sizes, they will turn at different speeds.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_systems.png?raw=true" alt="Driver and Driven Gears" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.12 - Driver and Driven Gears in a Simple Gear System.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_systems.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/gear_systems.png?raw=true" alt="Driver and Driven Gears" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.12 - Driver and Driven Gears in a Simple Gear System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 <p>The difference in their speeds (velocity ratio) can be calculated from the number of teeth on the driver gear (Teeth<sub>1</sub>) compared to the driven gear (Teeth<sub>2</sub>).</p>
 <p><span class="math display">\[VR = (Teeth_2/Teeth_1) = (40/20) = 2:1\]</span>
 The <strong><em>velocity ratio</em></strong> (VR) in this example may be expressed as 2:1 (say “two to one”) or simply as 2. This means that in this case the driver shaft must turn twice for the driven shaft to complete one turn.</p>
@@ -715,39 +707,61 @@ The velocity ration in this example is expressed as 1:4. This means that one tur
 <p>Once we know the velocity ratio of the gears we are working with, we can begin to predict <strong><em>output speed</em></strong> (S<sub>O</sub>) for a given <strong><em>input speed</em></strong> (S<sub>I</sub>).</p>
 <p><span class="math display">\[S_O=(S_I/VR)=(2000rpm/3:1)=6000rpm\]</span>
 In this case the velocity ratio is 3:1 and the input speed is 2000 <strong><em>revolutions per minute</em></strong> (rpm). The resulting output speed is 6,000 rpm.</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/rack_pinion.png?raw=true" alt="Rack and Pinion" style="width:80%">
-<figcaption>
-<b><i>Fig. 4.9 - Rack and Pinion System.</b></i>
-</figcaption>
-</figure>
-</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/worm_gear.png?raw=true" alt="Simple Pulley" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.10 - Worm Gear System.</b></i>
-</figcaption>
-</figure>
-</p>
-<p>
-<figure>
-<img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/bevel_gears.png?raw=true" alt="Bevel Gears" style="width:60%">
-<figcaption>
-<b><i>Fig. 4.11 - Bevel Gear System.</b></i>
-</figcaption>
-</figure>
-</p>
+<p><strong>The Bevel Gear</strong></p>
+<p>A special class of gears known as <strong><em>bevel gears</em></strong> may be used to change the axis of rotation of a rotary motion system. Bevel gears may be used where the axes of the two shafts intersect and the tooth-bearing faces of the gears themselves are conically shaped. Bevel gears are most often mounted on shafts that are 90 degrees apart, but can be designed to work at other angles as well. The pitch surface of bevel gears is a cone.</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/bevel_gears.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/bevel_gears.png?raw=true" alt="Bevel Gears" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.11 - Bevel Gear System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<p>Common applications of this may be seen in automobies. The easiest to recognise is the rear differential as seen below.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Transmission_diagram.JPG/220px-Transmission_diagram.JPG" /></p>
+<p><strong>Worm Drives</strong></p>
+<p>A <strong><em>worm drive</em></strong> is a gear arrangement in which a <strong><em>worm</em></strong> (which is a gear in the form of a screw) meshes with a <strong><em>worm wheel</em></strong> (which is similar in appearance to a spur gear). The two elements are also called the worm screw and worm gear.</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/worm_gear.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/worm_gear.png?raw=true" alt="Simple Pulley" style="width:60%"> -->
+<!--   <figcaption><b><i>Fig. 4.10 - Worm Gear System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.4.0: Rotary Advantage</strong></p>
+</div>
+<p>Learning to utilize various rotary motion systems can allow us to leverage the laws of physics. In this assignment we will explore various rotational force systems to increase both speed and torgue.</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Pulleys-Sprockets-Gears in Action</span></strong>.</p>
+</div>
 </div>
 </div>
 <div id="linear-motion" class="section level2">
 <h2><span class="header-section-number">4.5</span> Linear Motion</h2>
+<p>Linear motion is the most basic of all motion. According to Newton’s first law of motion, objects that do not experience any net force will continue to move in a straight line with a constant velocity until they are subjected to a net force. Under everyday circumstances, external forces such as gravity and friction can cause an object to change the direction of its motion, so that its motion cannot be described as linear.</p>
+<p>A unique challenge in a robotic system is converting rotary motion to linear motion. There are two mahory systmes for accomplishing this task as outlined below.</p>
 <div id="rack-and-pinion-systems" class="section level3">
 <h3><span class="header-section-number">4.5.1</span> Rack and Pinion Systems</h3>
+<p>A <strong><em>rack and pinion</em></strong> is a type of linear actuator that comprises a circular gear <strong><em>(the pinion)</em></strong> engaging a linear gear <strong><em>(the rack)</em></strong>, which operate to translate rotational motion into linear motion. Driving the pinion into rotation causes the rack to be driven linearly. Driving the rack linearly will cause the pinion to be driven into a rotation. A rack and pinion drive can use both straight and helical gears. Helical gears are preferred due to their quieter operation and higher load bearing capacity. The maximum force that can be transmitted in a rack and pinion mechanism is determined by the tooth pitch and the size of the pinion.</p>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/rack_pinion.png?raw=true" /></p>
+<!-- <p> -->
+<!-- <figure> -->
+<!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/rack_pinion.png?raw=true" alt="Rack and Pinion" style="width:80%"> -->
+<!--   <figcaption><b><i>Fig. 4.9 - Rack and Pinion System.</b></i></figcaption> -->
+<!-- </figure> -->
+<!-- </p> -->
 </div>
 <div id="lead-screws" class="section level3">
 <h3><span class="header-section-number">4.5.2</span> Lead Screws</h3>
+<p>A <strong><em>lead screw</em></strong>, also known as a power screw or translation screw, is a screw used as a linkage in a machine, to translate turning motion into linear motion. Because of the large area of sliding contact between their male and female members, screw threads have larger frictional energy losses compared to other linkages. They are not typically used to carry high power, but more for intermittent use in low power actuator and positioner mechanisms. Lead screws are commonly used in linear actuators, machine slides (such as in machine tools), vises, presses, and jacks. Lead screws are a common component in electric linear actuators.</p>
+<p>The <strong><em>linear actuator</em></strong> described above utilizes a lead screw to turn rotational force into linear force.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 4.5.0: Potential Linear Motion Applications</strong></p>
+</div>
+<p>Learning to utilize various rotary motion systems can allow us to leverage the laws of physics. In this assignment we will explore various rotational force systems to increase both speed and torgue.</p>
+<p>Follow the instructions in the assignment titiled <strong><span style="color: silver;">Applyting Linear Motion</span></strong>.</p>
+</div>
 </div>
 </div>
 <div id="drive-systems" class="section level2">
@@ -763,7 +777,7 @@ In this case the velocity ratio is 3:1 and the input speed is 2000 <strong><em>r
 </ol>
 <div class="assignmentbox homework">
 <div class="left">
-<p><strong>ASSIGNMENTs 4.6.?: Examining Drivetrain Systems</strong></p>
+<p><strong>ASSIGNMENTs 4.6.0: Examining Drivetrain Systems</strong></p>
 </div>
 <p>Since many students will chose to build a mobile robotic platform at some point, it is useful to examine the various mobile systems. One organization which competes in the First Tech Challenge has compiled an overview of many types of drivetrains. We will use that resource as the basis for our study of drivetrain systems.</p>
 <p>Take a look at these various drivetrain systems commonly used on robots:</p>
@@ -801,7 +815,7 @@ In this case the velocity ratio is 3:1 and the input speed is 2000 <strong><em>r
 <p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/onshape_fun.PNG?raw=true"></p>
 <div class="assignmentbox homework">
 <div class="left">
-<p><strong>ASSIGNMENTs 4.7.?: CAD Fundamentals</strong></p>
+<p><strong>ASSIGNMENTs 4.7.0: CAD Fundamentals</strong></p>
 </div>
 <p>For this part of our course you may move at your own pace to complete these assignments. Each one requires you to work through the CAD concepts and skills listed in the OnShape courses below.</p>
 Complete the first five courses in this learning pathway:
