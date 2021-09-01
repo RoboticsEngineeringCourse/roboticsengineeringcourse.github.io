@@ -24,7 +24,7 @@
 <meta name="author" content="Steve Cline" />
 
 
-<meta name="date" content="2021-08-22" />
+<meta name="date" content="2021-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -163,7 +163,8 @@
 <li class="chapter" data-level="9.6.1" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-chrome-os"><i class="fa fa-check"></i><b>9.6.1</b> Setting up SSH for Chrome OS</a></li>
 <li class="chapter" data-level="9.6.2" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-windows"><i class="fa fa-check"></i><b>9.6.2</b> Setting up SSH for Windows</a></li>
 <li class="chapter" data-level="9.6.3" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#setting-up-ssh-for-mac-or-linux"><i class="fa fa-check"></i><b>9.6.3</b> Setting up SSH for Mac or Linux</a></li>
-<li class="chapter" data-level="9.6.4" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#references"><i class="fa fa-check"></i><b>9.6.4</b> References</a></li>
+<li class="chapter" data-level="9.6.4" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#what-to-do-if-your-raspberry-pi-needs-a-new-os"><i class="fa fa-check"></i><b>9.6.4</b> What to do if Your Raspberry Pi Needs a New OS</a></li>
+<li class="chapter" data-level="9.6.5" data-path="course-materials-and-instructions.html"><a href="course-materials-and-instructions.html#references"><i class="fa fa-check"></i><b>9.6.5</b> References</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -982,6 +983,14 @@ a
 </ol>
 <p>If everything works, the Linux version will be displayed along with the last login date and IP address. The last line displays the terminal prompt for the device. It looks like this:</p>
 <p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/screenshot_terminal.jpg?raw=true" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Finally, you need to change your password. Type <code>sudo raspi-config</code> in the terminal. Enter the default password if requested. You will get a screen that looks like this:</li>
+</ol>
+<p><img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/Raspi-Config.png?raw=true" /></p>
+<ol start="11" style="list-style-type: decimal">
+<li>Choose option 1 and press enter. Arrow down to “S3 Password” and press enter. Press enter to select “OK”. Enter your new password and confirm. Press enter to select “OK”. Arrow down to “Finish” and press enter.</li>
+<li>Its always a good idea to reboot after changes like this so type <code>sudo reboot</code> and press enter. You will lose the SSH connection until the pi reboots (~60 seconds). You may reconnect after that time and use your new password.</li>
+</ol>
 <!-- <p> -->
 <!-- <figure> -->
 <!--   <img src="https://github.com/WHS-Robotics-Test-Org/Robotics_Engineering_Book/blob/master/Images/screenshot_terminal.jpg?raw=true" alt="The Linux Terminal" style="width:80%"> -->
