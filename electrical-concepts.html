@@ -24,7 +24,7 @@
 <meta name="author" content="Steve Cline" />
 
 
-<meta name="date" content="2021-09-01" />
+<meta name="date" content="2021-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,13 +92,15 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="electrical-concepts.html"><a href="electrical-concepts.html"><i class="fa fa-check"></i><b>3</b> Electrical Concepts</a><ul>
-<li class="chapter" data-level="3.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#circuits"><i class="fa fa-check"></i><b>3.1</b> Circuits</a></li>
-<li class="chapter" data-level="3.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#voltage-and-current"><i class="fa fa-check"></i><b>3.2</b> Voltage and Current</a></li>
-<li class="chapter" data-level="3.3" data-path="electrical-concepts.html"><a href="electrical-concepts.html#resistance"><i class="fa fa-check"></i><b>3.3</b> Resistance</a></li>
-<li class="chapter" data-level="3.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#ohms-law"><i class="fa fa-check"></i><b>3.4</b> Ohm’s Law</a></li>
-<li class="chapter" data-level="3.5" data-path="electrical-concepts.html"><a href="electrical-concepts.html#transistors"><i class="fa fa-check"></i><b>3.5</b> Transistors</a></li>
-<li class="chapter" data-level="3.6" data-path="electrical-concepts.html"><a href="electrical-concepts.html#capacitance"><i class="fa fa-check"></i><b>3.6</b> Capacitance</a></li>
-<li class="chapter" data-level="3.7" data-path="electrical-concepts.html"><a href="electrical-concepts.html#using-a-digital-multimeter"><i class="fa fa-check"></i><b>3.7</b> Using a Digital Multimeter</a></li>
+<li class="chapter" data-level="3.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#schematics"><i class="fa fa-check"></i><b>3.1</b> Schematics</a></li>
+<li class="chapter" data-level="3.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#using-a-digital-multimeter"><i class="fa fa-check"></i><b>3.2</b> Using a Digital Multimeter</a></li>
+<li class="chapter" data-level="3.3" data-path="electrical-concepts.html"><a href="electrical-concepts.html#circuits"><i class="fa fa-check"></i><b>3.3</b> Circuits</a></li>
+<li class="chapter" data-level="3.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#voltage-and-current"><i class="fa fa-check"></i><b>3.4</b> Voltage and Current</a></li>
+<li class="chapter" data-level="3.5" data-path="electrical-concepts.html"><a href="electrical-concepts.html#resistance"><i class="fa fa-check"></i><b>3.5</b> Resistance</a></li>
+<li class="chapter" data-level="3.6" data-path="electrical-concepts.html"><a href="electrical-concepts.html#ohms-law"><i class="fa fa-check"></i><b>3.6</b> Ohm’s Law</a></li>
+<li class="chapter" data-level="3.7" data-path="electrical-concepts.html"><a href="electrical-concepts.html#transistors"><i class="fa fa-check"></i><b>3.7</b> Transistors</a></li>
+<li class="chapter" data-level="3.8" data-path="electrical-concepts.html"><a href="electrical-concepts.html#capacitance"><i class="fa fa-check"></i><b>3.8</b> Capacitance</a></li>
+<li class="chapter" data-level="3.9" data-path="electrical-concepts.html"><a href="electrical-concepts.html#logic-gates"><i class="fa fa-check"></i><b>3.9</b> Logic Gates</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="mechanical-design.html"><a href="mechanical-design.html"><i class="fa fa-check"></i><b>4</b> Mechanical Design</a><ul>
 <li class="chapter" data-level="4.1" data-path="mechanical-design.html"><a href="mechanical-design.html#parts-of-a-robotic-system"><i class="fa fa-check"></i><b>4.1</b> Parts of a Robotic System</a><ul>
@@ -199,7 +201,8 @@ Direct current (also known as DC) is the flow of charged particles in one unchan
 <p>
 We will begin exploring a number of concepts relating to electricity as we will essentially be using electrons as our modes of information processing. From the electrons that flow through a button or distance sensor to be read by the microprocessor to those which supply the power for our motors and servos, we are heavily dependent on electricity. Before we get into this, we need to go over some very important concepts. Take out your Raspberry Pi and follow along with the video below.
 </p>
-Video here
+<iframe width="420" height="315" src="https://www.youtube.com/embed/eZ74x6dVYes">
+</iframe>
 <br>
 <br>
 <b>Rules of this course in regards to electricity:</b>
@@ -217,46 +220,38 @@ Only use the components listed in the laboratory activity on which you are worki
 Keep your work area clean and uncluttered. Do not keep beverages on your workstation.
 </li>
 </ol>
-<p><b>Using EasyEDA for circuit design</b></p>
-<p>There are many useful tools available to help with circuit design. During this course we will need to learn to use some of them. Circuit schematics make it easy for us to design and interpret circuits to communicate our project. For this class we will use EasyEDA. We can run it in a web browser. It allows us to save projects to a free account and share them for submission. If you learn how to use it well enough you may also use it to design your own printed circuit boards (PCB) to make your own components.</p>
-<p>Go to the <a href="https://easyeda.com/editor" target ="_blank">EasyEDA editor website</a>. Create an account. While you may be able to just start using it and learn through trial and error, here are a few tutorials that will become useful which may be found in the <a href="https://docs.easyeda.com/en/FAQ/Editor/index.html" target ="_blank">Tutorials</a> section of the app:</p>
-<ul>
-<li>
-Introduction to EasyEDA
-</li>
-<li>
-UI Introduction
-</li>
-<li>
-Create a New Project or File
-</li>
-<li>
-Schematic Capture
-</li>
-<li>
-Basic Skills
-</li>
-</ul>
-<p>You should spend some time learning how to use this app. We will begin using it soon and you will learn how to read an electronics schematic, by designing them yourself. Once you have set up your account and learned some basics, complete the following assignment:</p>
-<p><b>Assignment 3.0</b><br></p>
-<p>Using your newly discovered schematic design skills, you will make your own basic schematic. Watch this <a href="https://www.youtube.com/watch?v=9cps7Q_IrX0" target ="_blank">short tutorial explaining schematics</a>. Create and save a schematic in EasyEDA with the following components in a circuit:</p>
-<ul>
-<li>
-5V power supply
-</li>
-<li>
-220 Ohm Resistor
-</li>
-<li>
-Blue LED
-</li>
-<li>
-Ground
-</li>
-</ul>
+<div id="schematics" class="section level2">
+<h2><span class="header-section-number">3.1</span> Schematics</h2>
+<p>Electronics schematics are our map to designing, building, and troubleshooting circuits. Understanding how to read and follow schematics is an important skill for any electronics engineer. Once some basic components are explained, understanding the relationship between these drawings and real circuits becomes easier.</p>
+<p>To help us better understand what schematic symbols are, lets start with an overview from our online textboot. Read over <a href="https://www.allaboutcircuits.com/technical-articles/understanding-schematics/">Understanding Schematics</a> from All About Circuits. Then, watch the video below that explains these ideas.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/9cps7Q_IrX0">
+</iframe>
+<p>Using your newly discovered schematic design skills, you will make your own basic schematic. A great online tool for circuit design is <a href="https://chrome.google.com/webstore/detail/circuit-simulator-and-edi/aflgegpbgampmbljlimbdhcmmkdfhdmd?hl=en-US">Circuit Simulator and Editor</a>. This is a very straightforward app that allows us to build and save schematics on Google Drive or in a simple text file. Spend some time learning the basics of the interface including, adding components, checking for continuity, saving circuits in text files and sharing circuits.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.1.0 - Schematic Design</strong></p>
+</div>
+<p>The electronics schematic is a fundamental piece of robotic design. Since we will be reading and writing schematics quite a bit this year now is a good time to start. After teaching yourself the basics of this app you will build your own schematic of a simple circuit and save it to your assignment repository on GitHub.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.1.0 - Schematic Design</span></strong>.</p>
+</div>
+</div>
+<div id="using-a-digital-multimeter" class="section level2">
+<h2><span class="header-section-number">3.2</span> Using a Digital Multimeter</h2>
+<p>A digital multimeter is a test tool used to measure two or more electrical values—principally voltage (volts), current (amps) and resistance (ohms). It is a standard diagnostic tool for technicians in the electrical/electronic industries. They long ago replaced needle-based analog meters due to their ability to measure with greater accuracy, reliability and increased impedance. Fluke introduced its first digital multimeter in 1977. Digital multimeters combine the testing capabilities of single-task meters—the voltmeter (for measuring volts), ammeter (amps) and ohmmeter (ohms). Often, they include several additional specialized features or advanced options. Technicians with specific needs, therefore, can seek out a model targeted to meet their needs.</p>
+<p>The video below demonstrates how to use a multimeter like those we have in the lab. Feel free to get out the multimeter and try out everything you see here <strong><em>EXCEPT A/C VOLTAGE</em></strong>.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/bF3OyQ3HwfU">
+</iframe>
+<p>In order to expand our understanding of this vital electronics tool, we will look a little deeper into the subject using our online textbook. Read the <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/electric-circuits/" target="_blank">section explaining the multimeter</a>. Complete questions 1-4 on <a href="https://www.allaboutcircuits.com/worksheets/basic-voltmeter-use/">the voltmeter worksheet that goes with the reading</a> and questions 1-4 on <a href="https://www.allaboutcircuits.com/worksheets/basic-ammeter-use/">the ammeter worksheet that goes with the reading</a>. Complete these questions on your own to help ensure you have a basic understanding of the voltmeter and ammeter functions of a digital multimeter. These questions will be similar to those that you will see on your unit exam. Once you understand what is asked, move on to the assignment.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.2.0 - The Digital Multimeter as an Electronics Tool</strong></p>
+</div>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.2.0 - The Digital Multimeter as an Electronics Tool</span></strong>.</p>
+</div>
+</div>
 <div id="circuits" class="section level2">
-<h2><span class="header-section-number">3.1</span> Circuits</h2>
-<p>A basic understanding of circuit electricity is essential going forward. For this section of the course, we will begin using our online textbook. It gives us an excellent overview of electrons, circuits and polarity. Please keep in mind that, in order to begin using the Raspberry Pi (i.e. receiving the power supply) you will need to pass all of the required quizzes with at least a 70%.</p>
+<h2><span class="header-section-number">3.3</span> Circuits</h2>
+<p>A basic understanding of circuit electricity is essential going forward. For this section of the course, we will begin using our <a href="https://www.allaboutcircuits.com/">online textbook</a>. It gives us an excellent overview of electrons, circuits and polarity.</p>
 <p><b>Key Concepts of Section 3.1</b></p>
 <ul>
 <li>
@@ -269,81 +264,84 @@ In order for electrons to flow a <i>closed circuit</i> is required.
 A circuit is <i>open</i> or <i>broken</i> if a complete path for the electrons to flow no longer exists.
 </li>
 </ul>
-<p>Rather than me trying to do a better job than our textbook, you are going to read the <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/electric-circuits/" target="_blank">short section on circuits</a>. These questions will be similar to those that you will see on your unit exam (The one you need at least a 70% on to move on). So…that means that you are not completing this worksheet for a grade. Instead, you are trying to measure how well you learned the concepts in the reading. Much of this year’s content will be delivered this way. Get your head around the idea of learning for the sake of learning.</p>
 <p>To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.</p>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/kYwNj9uauJ4">
 </iframe>
-<br>
-<b>Assignment 3.1</b><br>
-<ol>
-<li>
-After reading the section on circuits, complete the <a href="https://www.allaboutcircuits.com/worksheets/elementary-circuits/online" target="_blank">worksheet</a>
-</li>
-<li>
-Using EasyEDA, design a closed circuit with the following components:
-</li>
-<ul>
-<li>
-5V power supply
-</li>
-<li>
-220 Ohm Resistor
-</li>
-<li>
-Blue LED
-</li>
-<li>
-Ground
-</li>
-</ul>
-</ol>
-<p>Submit the your work on GitHub through Assignment 3.1.</p>
+<p>Rather than me trying to do a better job than our textbook, you are going to read the <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/electric-circuits/" target="_blank">short section on circuits</a>. Complete questions 1-5 on <a href="https://www.allaboutcircuits.com/worksheets/elementary-circuits/">the worksheet that goes with the reading</a> on your own to help ensure you have a basic understanding of circuits. These questions will be similar to those that you will see on your unit exam. Once you understand what is asked, move on to the assignment.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.3.0 - Building Circuits</strong></p>
+</div>
+<p>Closed DC circuits will allow us to create robotic systems which will interact with the world. For this assignment, you both create new and debug existing DC circuits.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.3.0 - Building Circuits</span></strong>.</p>
+</div>
 </div>
 <div id="voltage-and-current" class="section level2">
-<h2><span class="header-section-number">3.2</span> Voltage and Current</h2>
+<h2><span class="header-section-number">3.4</span> Voltage and Current</h2>
 <p>The movement of electrons from one pole to another is what we use in robotics to make our robots work. By altering the volume of electrons moving through the wires connected to a motor we can alter the speed of the wheel attached to the motor. The potential energy coming in to our microprocessor pin over a wire attached to a photoresistor tells us the level of brightness or lumosity in a room. Putting these two concepts together we could create a robotic system that opens the blinds on our lab when the sun sets in the west. That is, of course, if we can program our system to make that decision on its own. We will get to the programming part later. For now, we will examine the concepts of voltage and current which allow us, along with resistance, to receive information through sensor and send information out to an actuation device like a motor.</p>
-<p>Read <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current/" target="_blank">short section on voltage and current</a>. Be sure to review the concepts at the bottom of the page for understanding.</p>
 <p>To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.</p>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/z8qfhFXjsrw">
 </iframe>
 <p><br></p>
+<p>Read <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current/" target="_blank">short section on voltage and current</a>. Be sure to review the concepts at the bottom of the page for understanding.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.4.0 - Voltage Versus Current</strong></p>
+</div>
+<p>Voltage is the potential power of a DC circuit while current represents the actual power at a given moment. Comparing these two concepts will help us better understand them both.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.4.0 - Voltage Versus Current</span></strong>.</p>
+</div>
 </div>
 <div id="resistance" class="section level2">
-<h2><span class="header-section-number">3.3</span> Resistance</h2>
+<h2><span class="header-section-number">3.5</span> Resistance</h2>
 <p>The final concept needed to understand how electricity in a DC circuit may be used to control devices is resistance. One day last year I was sitting in my office upstairs. I had just come from the mechatronics lab and had packed a bunch of supplies from the lab into my backpack so I could do a little work on a demonstration I would be giving later in the week. All of a sudden I smelled smoke. I looked down and it was coming from my backpack! After digging around a bit I found the culprit. I had put a battery pack in my bag like the one here:</p>
 <p><img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/battery_pack_full.jpg?raw=true"></p>
 <p>Can you see the problem? I had left all of the batteries in the pack. When I threw it in my bag, the red and black leads touched and starte what is know as a <a href="https://en.wikipedia.org/wiki/Short_circuit" target ="_blank">short circuit</a>. With no resistance on the flow of electrons through the wires. The by product of this rapid flow was heat which began to melt the inside of my backpack and start it smoking. Remember this example and always pull one battery out of your battery packs when not connected to your device. Also, never connect two poles of a power source without any resistance. It can cause serious injury.</p>
 <p>This problem is prevented by placing a resistive force on the circuit. Small electrical components like LEDs and sensors cannot handle even the two amperes of current available from the Raspberry Pi’s 5V pin. A reisistor is used to prevent the LED from burning up. In order to understand how resistance works, read <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/resistance/" target="_blank">short section on resistance</a>.</p>
-<b>Assignment 3.3</b><br>
-<ol>
-<li>
-After reading the section on circuits, complete the <a href="https://www.allaboutcircuits.com/worksheets/voltage-current-and-resistance" target="_blank">worksheet</a>
-</li>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.5.0 - Modifying Resistance</strong></p>
+</div>
+<p>Resistors come in many formats from simple in-line resistors to more complex rheostats and potentiometers. Additionally, they may be wired in series or parallel to increase and decrease total resistance.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.5.0 - Modifying Resistance</span></strong>.</p>
+</div>
 </div>
 <div id="ohms-law" class="section level2">
-<h2><span class="header-section-number">3.4</span> Ohm’s Law</h2>
+<h2><span class="header-section-number">3.6</span> Ohm’s Law</h2>
 <p>All three of these concepts come together in Ohm’s Law. In the 19th century many scientists were experimenting with electricity in an attempt to understand it. One of these scientists, Georg Ohm, determined that there was a relationship between Voltage, Current and Resistance. This is why an LED burns up (receives too much current) when no resistance is placed on the circuit. If we create resistance on the circuit with a resistor the voltage, or potential energy, remains constant but the current decreases. Ohm’s law is represented by this simple formula:</p>
 <p><span class="math display">\[V = I * R\]</span>
-As we will see, this formula is quite handy. It may be rearranged to solve for any one of the three possible outputs (V-voltage, I-current, R-resistance). In order to understand how resistance works, read <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current-resistance-relate/" target="_blank">short section on Ohm’s Law</a>.</p>
+On a simple circuit with one 5V power supply and two grounds we can visualize the interaction between the three concepts in this way. The animation here represents such a circuit.</p>
+<div class="figure">
+<img src="https://github.com/stcline/Hosted_Images/blob/master/Robotics_Engineering/Ohms_Law.gif?raw=true" alt="" />
+<p class="caption">Ohm’s Law tells us that, if we maintain a constant voltage, current is inversly proportional to resistance.</p>
+</div>
+<p>In the animation above a 5V power source is connected to two different circuits at once. One circuit has a 100 Ohm resistor while the other has a 1,000 Ohm resistor. The result is that the circuit with a resistor that is ten times larger produces a current that is one tenth of the other.</p>
+<p>If we have any two of the components of Ohm’s Law, we can calculate the other. The formula may be adjusted with some simple algebra or by using what is known as the <a href="https://www.electronics-tutorials.ws/wp-content/uploads/2013/08/dcp3.gif">Ohm’s Law Triangle</a></p>
+<p>The video here explains this in more detail.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/QZt0wPlQSQE">
+</iframe>
+<p><br></p>
+<p>As we will see, this formula is quite handy. It may be rearranged to solve for any one of the three possible outputs (V-voltage, I-current, R-resistance). In order to understand how resistance works, read <a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-1/voltage-current-resistance-relate/" target="_blank">short section on Ohm’s Law</a>.</p>
 <p>To help you understand this concept, here is an excellent video from SparkFun Electronics on the topic.</p>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/8jB6hDUqN0Y">
 </iframe>
 <p><br></p>
-<b>Assignment 3.4</b><br>
-<ol>
-<li>
-After reading the section on circuits, complete the <a href="https://www.allaboutcircuits.com/worksheets/ohms-law" target="_blank">worksheet</a>
-</li>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.6.0 - The Fundamentals of Ohm’s Law</strong></p>
+</div>
+<p>Closed DC circuits will allow us to create robotic systems which will interact with the world. For this assignment, you both create new and debug existing DC circuits.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.6.0 - The Fundamentals of Ohm’s Law</span></strong>.</p>
+</div>
 </div>
 <div id="transistors" class="section level2">
-<h2><span class="header-section-number">3.5</span> Transistors</h2>
+<h2><span class="header-section-number">3.7</span> Transistors</h2>
 </div>
 <div id="capacitance" class="section level2">
-<h2><span class="header-section-number">3.6</span> Capacitance</h2>
+<h2><span class="header-section-number">3.8</span> Capacitance</h2>
 </div>
-<div id="using-a-digital-multimeter" class="section level2">
-<h2><span class="header-section-number">3.7</span> Using a Digital Multimeter</h2>
-<p>This section will become active in the event that we are not using remote instruction.</p>
+<div id="logic-gates" class="section level2">
+<h2><span class="header-section-number">3.9</span> Logic Gates</h2>
 
 </div>
 </div>
