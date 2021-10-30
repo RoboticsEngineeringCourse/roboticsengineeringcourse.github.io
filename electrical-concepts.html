@@ -24,7 +24,7 @@
 <meta name="author" content="Steve Cline" />
 
 
-<meta name="date" content="2021-10-21" />
+<meta name="date" content="2021-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -100,7 +100,12 @@
 <li class="chapter" data-level="3.6" data-path="electrical-concepts.html"><a href="electrical-concepts.html#ohms-law"><i class="fa fa-check"></i><b>3.6</b> Ohm’s Law</a></li>
 <li class="chapter" data-level="3.7" data-path="electrical-concepts.html"><a href="electrical-concepts.html#transistors"><i class="fa fa-check"></i><b>3.7</b> Transistors</a></li>
 <li class="chapter" data-level="3.8" data-path="electrical-concepts.html"><a href="electrical-concepts.html#capacitance"><i class="fa fa-check"></i><b>3.8</b> Capacitance</a></li>
-<li class="chapter" data-level="3.9" data-path="electrical-concepts.html"><a href="electrical-concepts.html#logic-gates"><i class="fa fa-check"></i><b>3.9</b> Logic Gates</a></li>
+<li class="chapter" data-level="3.9" data-path="electrical-concepts.html"><a href="electrical-concepts.html#logic-gates"><i class="fa fa-check"></i><b>3.9</b> Logic Gates</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#truth-tables"><i class="fa fa-check"></i><b>3.9.1</b> Truth Tables</a></li>
+<li class="chapter" data-level="3.9.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#basic-logic-gates"><i class="fa fa-check"></i><b>3.9.2</b> Basic Logic Gates</a></li>
+<li class="chapter" data-level="3.9.3" data-path="electrical-concepts.html"><a href="electrical-concepts.html#inverters-and-buffers"><i class="fa fa-check"></i><b>3.9.3</b> Inverters and Buffers</a></li>
+<li class="chapter" data-level="3.9.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#universal-logic-gates"><i class="fa fa-check"></i><b>3.9.4</b> Universal Logic Gates</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="mechanical-design.html"><a href="mechanical-design.html"><i class="fa fa-check"></i><b>4</b> Mechanical Design</a><ul>
 <li class="chapter" data-level="4.1" data-path="mechanical-design.html"><a href="mechanical-design.html#parts-of-a-robotic-system"><i class="fa fa-check"></i><b>4.1</b> Parts of a Robotic System</a><ul>
@@ -336,14 +341,572 @@ On a simple circuit with one 5V power supply and two grounds we can visualize th
 </div>
 <div id="transistors" class="section level2">
 <h2><span class="header-section-number">3.7</span> Transistors</h2>
+<p>A <strong>transistor</strong> is a semiconducting devise that may be used as an electrical switch in order to amplify an electronic signal. They are the singal most important component in modern electronics systems. Most transistors have three terminals which may be connected to an external circuit. Voltage applied to one of the terminals acts as a switch when power is applied to it.</p>
+<p>There are two main types of transistor: <strong>bipolar junction transistors (BJTs)</strong> and <strong>field effect transistors (FETs)</strong>. BJTs are made of doped materials and can be configured as NPN and PNP. A transistor is an active device with three terminals, and these three terminals are known as the Emitter (E), the Base (B), and the Collector (C). The Base is responsible for controlling the transistor while the Collector is the positive lead, and Emitter is the negative lead.</p>
+<p>In small, discrete quantities, transistors can be used to create simple electronic switches, digital logic, and signal amplifying circuits. In quantities of thousands, millions, and even billions, transistors are interconnected and embedded into tiny chips to create computer memories, microprocessors, and other complex ICs. Later in this unit we will cover <strong>integrated circuits</strong> (ICs) in more detail.</p>
+<p>All transistors have three leads. One lead acts as an electronic switch which allows current to flow between the other two. In this way, a small current (as in the case of current from a microcontroller like a Raspberry Pi or an Arduino) may be used to control a larger current (for example, to turn on a motor).</p>
+<p>The first transistor type we will look at is the BJT. BJTs exist as PNP and NPN types, based on the doping types of the three main terminal regions. Examination of the figure below shows a small arrow on each schematic symbol for the transistor. This arrow illustrates the direction of current flow. The base (B) lead is the switch which activates the connection between the other two leads.</p>
+<div class="figure">
+<img src="https://shoptransmitter.com/product_images/uploaded_images/pnp-npn-transistor.png" alt="" />
+<p class="caption">NPN and PNP Transistors</p>
+</div>
+<p>This short video illustrates the function and differences between the two types of BJTs.</p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/R0Uy4EL4xWs">
+</iframe>
+<p><br></p>
+<p>Transistors may also be used to amplify a signal as shown in the diagram below:</p>
+<p>In our class we will utilize BJTs but it is worth noting that there are other types that may be useful as well.</p>
 </div>
 <div id="capacitance" class="section level2">
 <h2><span class="header-section-number">3.8</span> Capacitance</h2>
+<p>The <strong>capacitor</strong> is a component which has the ability or “capacity” to store energy in the form of an electrical charge producing a potential difference (Static Voltage) across its plates, much like a small rechargeable battery.</p>
+<p>There are many different kinds of capacitors available from very small capacitor beads used in resonance circuits to large power factor correction capacitors, but they all do the same thing, they store charge.</p>
+<p>In its basic form, a capacitor consists of two or more parallel conductive (metal) plates which are not connected or touching each other, but are electrically separated either by air or by some form of a good insulating material such as waxed paper, mica, ceramic, plastic or some form of a liquid gel as used in electrolytic capacitors. The insulating layer between a capacitors plates is commonly called the <strong>Dielectric</strong>.</p>
+<p>Due to this insulating layer, DC current can not flow through the capacitor as it blocks it allowing instead a voltage to be present across the plates in the form of an electrical charge.</p>
 </div>
 <div id="logic-gates" class="section level2">
 <h2><span class="header-section-number">3.9</span> Logic Gates</h2>
-<!-- Useful Video: https://www.youtube.com/watch?v=lXWpWNKwYbo -->
+<p>Boolean logic is the fundamental mathematics of the <strong>integrated circuit</strong> (IC). It allows us to build complex computational devices from binary switches. <strong>Logic Gates</strong> are used in engineering projects to build decision making systems. Robotics systems use that decision making aparatus to control the flow of electricity in order to create the desired behaviors of the system. For example, a NAND gate on an IC, which produces current output in all conditions except when its two input pins are receiving a high voltage, may be used to activate a system when any single condition becomes true but not when both are true. For example, let’s say you are a shop owner and have an access gate to your back lot that is used fairly often during the day but very rarely at night. You would like a simple alert tone to sound once first thing in the morning to ensure that the system is activated and then when someone opens the gate at night since that would be an unusual event. During the day when people are frequently open the gate you do not need an alert. In this case if we build this system using the NAND gate we can accomplish this task. This logic gate will only send an output of high to an alarm when either the gate is opened or the light sensor initially senses light (first thing in the morning). If the gate is opened during daylight hours, no alert is created. In this way, we can control the alert system with a simple electronic component like the 7400 IC chip.</p>
+<div id="truth-tables" class="section level3">
+<h3><span class="header-section-number">3.9.1</span> Truth Tables</h3>
+<p>A <strong>truth table</strong> is a mathematical table used in logic—specifically in connection with Boolean algebra, boolean functions, and propositional calculus—which sets out the functional values of logical expressions on each of their functional arguments, that is, for each combination of values taken by their logical variables. In particular, truth tables can be used to show whether a propositional expression is true for all legitimate input values, that is, logically valid.</p>
+<p>A truth table has one column for each input variable (for example, P and Q), and one final column showing all of the possible results of the logical operation that the table represents (for example, P XOR Q). Each row of the truth table contains one possible configuration of the input variables (for instance, P=true Q=false), and the result of the operation for those values.</p>
+<!-- AND Table -->
+<p><strong>The truth table for p AND q (also written as p ∧ q)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ∧ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+</tbody>
+</table>
+<!-- OR Table -->
+<p><strong>The truth table for p OR q (also written as p ∨ q)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ∨ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+</tr>
+</tbody>
+</table>
+<!-- NOT Table -->
+<p><strong>The truth table for NOT p (also written as ¬p)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+¬p
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+</tbody>
+</table>
+<!-- NAND Table -->
+<p><strong>The truth table for p NAND q (also written as p ↑ q)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ↑ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+</tbody>
+</table>
+<!-- NOR Table -->
+<p><strong>The truth table for p NOR q (also written as p ↓ q)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ↓ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+</tbody>
+</table>
+<!-- XOR Table -->
+<p><strong>The truth table for p XOR q (also written as p ⊕ q) </strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ⊕ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+</tbody>
+</table>
+<!-- XNOR Table -->
+<p><strong>The truth table for p XNOR q (also written as p ↔︎ q)</strong></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fqep{background-color:#ffcc67;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  text-align:center;vertical-align:top}
+.tg .tg-8bx1{background-color:#ffcc67;border-color:#ffffff;color:#000000;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-akvw{background-color:#9a0000;border-color:#ffffff;color:#ffffff;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-sh4o{background-color:#ffcc67;border-color:#ffffff;color:#343434;font-family:"Courier New", Courier, monospace !important;;
+  font-size:16px;text-align:center;vertical-align:top}
+.tg .tg-vsvu{background-color:#c0c0c0;border-color:#ffffff;font-family:"Courier New", Courier, monospace !important;;font-size:16px;
+  font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-vsvu">
+p
+</th>
+<th class="tg-vsvu">
+q
+</th>
+<th class="tg-vsvu">
+p ↔︎ q
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+<tr>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-sh4o">
+F
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-8bx1">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+<td class="tg-8bx1">
+F
+</td>
+</tr>
+<tr>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-fqep">
+F
+</td>
+<td class="tg-akvw">
+T
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="basic-logic-gates" class="section level3">
+<h3><span class="header-section-number">3.9.2</span> Basic Logic Gates</h3>
+</div>
+<div id="inverters-and-buffers" class="section level3">
+<h3><span class="header-section-number">3.9.3</span> Inverters and Buffers</h3>
+</div>
+<div id="universal-logic-gates" class="section level3">
+<h3><span class="header-section-number">3.9.4</span> Universal Logic Gates</h3>
 
+</div>
 </div>
 </div>
             </section>
