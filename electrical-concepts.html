@@ -24,7 +24,7 @@
 <meta name="author" content="Steve Cline" />
 
 
-<meta name="date" content="2021-10-29" />
+<meta name="date" content="2021-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,10 +101,11 @@
 <li class="chapter" data-level="3.7" data-path="electrical-concepts.html"><a href="electrical-concepts.html#transistors"><i class="fa fa-check"></i><b>3.7</b> Transistors</a></li>
 <li class="chapter" data-level="3.8" data-path="electrical-concepts.html"><a href="electrical-concepts.html#capacitance"><i class="fa fa-check"></i><b>3.8</b> Capacitance</a></li>
 <li class="chapter" data-level="3.9" data-path="electrical-concepts.html"><a href="electrical-concepts.html#logic-gates"><i class="fa fa-check"></i><b>3.9</b> Logic Gates</a><ul>
-<li class="chapter" data-level="3.9.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#truth-tables"><i class="fa fa-check"></i><b>3.9.1</b> Truth Tables</a></li>
-<li class="chapter" data-level="3.9.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#basic-logic-gates"><i class="fa fa-check"></i><b>3.9.2</b> Basic Logic Gates</a></li>
+<li class="chapter" data-level="3.9.1" data-path="electrical-concepts.html"><a href="electrical-concepts.html#reading-the-ic-number"><i class="fa fa-check"></i><b>3.9.1</b> Reading the IC Number</a></li>
+<li class="chapter" data-level="3.9.2" data-path="electrical-concepts.html"><a href="electrical-concepts.html#truth-tables"><i class="fa fa-check"></i><b>3.9.2</b> Truth Tables</a></li>
 <li class="chapter" data-level="3.9.3" data-path="electrical-concepts.html"><a href="electrical-concepts.html#inverters-and-buffers"><i class="fa fa-check"></i><b>3.9.3</b> Inverters and Buffers</a></li>
-<li class="chapter" data-level="3.9.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#universal-logic-gates"><i class="fa fa-check"></i><b>3.9.4</b> Universal Logic Gates</a></li>
+<li class="chapter" data-level="3.9.4" data-path="electrical-concepts.html"><a href="electrical-concepts.html#basic-logic-gates"><i class="fa fa-check"></i><b>3.9.4</b> Basic Logic Gates</a></li>
+<li class="chapter" data-level="3.9.5" data-path="electrical-concepts.html"><a href="electrical-concepts.html#universal-logic-gates"><i class="fa fa-check"></i><b>3.9.5</b> Universal Logic Gates</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="mechanical-design.html"><a href="mechanical-design.html"><i class="fa fa-check"></i><b>4</b> Mechanical Design</a><ul>
@@ -355,21 +356,95 @@ On a simple circuit with one 5V power supply and two grounds we can visualize th
 </iframe>
 <p><br></p>
 <p>Transistors may also be used to amplify a signal as shown in the diagram below:</p>
-<p>In our class we will utilize BJTs but it is worth noting that there are other types that may be useful as well.</p>
+<div class="figure">
+<img src="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.tutorialspoint.com%2Famplifiers%2Ftransistor_as_an_amplifier.htm&amp;psig=AOvVaw1CHEAWyva62hC5Zjam1fzv&amp;ust=1635729904720000&amp;source=images&amp;cd=vfe&amp;ved=0CAsQjRxqFwoTCLCptfG-8_MCFQAAAAAdAAAAABAD" alt="" />
+<p class="caption">Transistor Amplifier Circuit</p>
+</div>
+<p>In our class we will utilize BJTs but it is worth noting that there are other types that may be useful as well. A very widely used transistor is a <strong>metal–oxide–semiconductor field-effect transistor</strong> (MOSFET) transistor. A key advantage of a MOSFET is that it requires almost no input current to control the load current, when compared with BJTs.</p>
+<div class="figure">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/MOSFET_Structure.png/330px-MOSFET_Structure.png" alt="" />
+<p class="caption">MOSFET</p>
+</div>
+<!-- This assignment has not been made yet -->
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.7.0 - Transistors as Electrical Switches</strong></p>
+</div>
+<p>Practice wiring electrical switches with a simple BJT switch. Be sure to use resistors properly in your circuit to avoid overheading your transistor or other components.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.7.0 - Transistors as Electrical Switches</span></strong>.</p>
+</div>
 </div>
 <div id="capacitance" class="section level2">
 <h2><span class="header-section-number">3.8</span> Capacitance</h2>
 <p>The <strong>capacitor</strong> is a component which has the ability or “capacity” to store energy in the form of an electrical charge producing a potential difference (Static Voltage) across its plates, much like a small rechargeable battery.</p>
 <p>There are many different kinds of capacitors available from very small capacitor beads used in resonance circuits to large power factor correction capacitors, but they all do the same thing, they store charge.</p>
 <p>In its basic form, a capacitor consists of two or more parallel conductive (metal) plates which are not connected or touching each other, but are electrically separated either by air or by some form of a good insulating material such as waxed paper, mica, ceramic, plastic or some form of a liquid gel as used in electrolytic capacitors. The insulating layer between a capacitors plates is commonly called the <strong>Dielectric</strong>.</p>
+<div class="figure">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Capacitors_%287189597135%29.jpg/345px-Capacitors_%287189597135%29.jpg" alt="" />
+<p class="caption">Capacitors</p>
+</div>
 <p>Due to this insulating layer, DC current can not flow through the capacitor as it blocks it allowing instead a voltage to be present across the plates in the form of an electrical charge.</p>
+<div class="figure">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Parallel_plate_capacitor.svg/330px-Parallel_plate_capacitor.svg.png" alt="" />
+<p class="caption">Capacitor Diagram</p>
+</div>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.8.0 - Using Capacitors</strong></p>
+</div>
+<p>Capacitance is a fundamental and highly useful electrical concept. Smoothing signals in inverters and other systems help make our robotics systems more reliable.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.8.0 - Using Capacitors</span></strong>.</p>
+</div>
 </div>
 <div id="logic-gates" class="section level2">
 <h2><span class="header-section-number">3.9</span> Logic Gates</h2>
 <p>Boolean logic is the fundamental mathematics of the <strong>integrated circuit</strong> (IC). It allows us to build complex computational devices from binary switches. <strong>Logic Gates</strong> are used in engineering projects to build decision making systems. Robotics systems use that decision making aparatus to control the flow of electricity in order to create the desired behaviors of the system. For example, a NAND gate on an IC, which produces current output in all conditions except when its two input pins are receiving a high voltage, may be used to activate a system when any single condition becomes true but not when both are true. For example, let’s say you are a shop owner and have an access gate to your back lot that is used fairly often during the day but very rarely at night. You would like a simple alert tone to sound once first thing in the morning to ensure that the system is activated and then when someone opens the gate at night since that would be an unusual event. During the day when people are frequently open the gate you do not need an alert. In this case if we build this system using the NAND gate we can accomplish this task. This logic gate will only send an output of high to an alarm when either the gate is opened or the light sensor initially senses light (first thing in the morning). If the gate is opened during daylight hours, no alert is created. In this way, we can control the alert system with a simple electronic component like the 7400 IC chip.</p>
+<p>Hobby circuits like the one shown here may be used to learn how these systems interact with electrical signals in making decisions:</p>
+<div class="figure">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/TexasInstruments_7400_chip%2C_view_and_element_placement.jpg/270px-TexasInstruments_7400_chip%2C_view_and_element_placement.jpg" alt="" />
+<p class="caption">Texas Instruments 7400 IC</p>
+</div>
+<p>These chips are designed to fit into solderless breadboards and usually placed over the channel in the middle.</p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqRUrTYaKjbZjg8wAkNFtwaT1YMxarRnsDgQ&amp;usqp=CAU" /></p>
+<p>They also generally fit in many ICs and may be soldered dirctly on them.</p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCfA3tSCybtNny63cU0SO8N2Jx2RKugkXXZA&amp;usqp=CAU" /></p>
+<div id="reading-the-ic-number" class="section level3">
+<h3><span class="header-section-number">3.9.1</span> Reading the IC Number</h3>
+<p>The most widely manufactured logic family series are the 7400 series ICs. Military grade ICs contain the 54 prefix instead. The derivation of these IC numbers is given below:</p>
+<p><img src="https://www.electronics-notes.com/images/logic-family-7400-numbering.svg" /></p>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="92%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Manufacturer</td>
+<td>This code normally consists of two letters and is a code normally used by a given manufacturer. SN is one used by Texas Instruments. Other manufacturers have their own codes that they place here.</td>
+</tr>
+<tr class="even">
+<td>Temperature Range</td>
+<td>This is indicated by these two figures. 74 indicates 0°C to 70°C commercial and 54 military: -55°C to +125°C. For most applications the 74 series is perfectly acceptable and this series will be found in consumer devices.</td>
+</tr>
+<tr class="odd">
+<td>Logic Series</td>
+<td>This is the sub-family. 7400 for example is the basic series, but there are many others.</td>
+</tr>
+<tr class="even">
+<td>Device</td>
+<td>This indicates the device function / type. For example devices with 04 are hex inverters, etc. They are the common across all sub-families.</td>
+</tr>
+<tr class="odd">
+<td>Package Code</td>
+<td>This is the package suffix. It is necessary to refer to the manufacturers datasheets as these codes vary between manufacturers.</td>
+</tr>
+</tbody>
+</table>
+<p>Almost all of the IC logic gates we use in this course are large footprint (made to fit on a breadboard) 74x00 to 74x99 gates. A comprehensive list of those ICs may be found on <a href="https://en.wikipedia.org/wiki/List_of_7400-series_integrated_circuits#74x00_%E2%80%93_74x99">this Wikipedia page</a>.</p>
+</div>
 <div id="truth-tables" class="section level3">
-<h3><span class="header-section-number">3.9.1</span> Truth Tables</h3>
-<p>A <strong>truth table</strong> is a mathematical table used in logic—specifically in connection with Boolean algebra, boolean functions, and propositional calculus—which sets out the functional values of logical expressions on each of their functional arguments, that is, for each combination of values taken by their logical variables. In particular, truth tables can be used to show whether a propositional expression is true for all legitimate input values, that is, logically valid.</p>
+<h3><span class="header-section-number">3.9.2</span> Truth Tables</h3>
+<p>Before getting to the actual electronics we should discuss truth. All logical functions follow the concept of logical truth which creates a model that may be used to understand and build circuits. A <strong>truth table</strong> is a mathematical table used in logic—specifically in connection with Boolean algebra, boolean functions, and propositional calculus—which sets out the functional values of logical expressions on each of their functional arguments, that is, for each combination of values taken by their logical variables. In particular, truth tables can be used to show whether a propositional expression is true for all legitimate input values, that is, logically valid.</p>
 <p>A truth table has one column for each input variable (for example, P and Q), and one final column showing all of the possible results of the logical operation that the table represents (for example, P XOR Q). Each row of the truth table contains one possible configuration of the input variables (for instance, P=true Q=false), and the result of the operation for those values.</p>
 <!-- AND Table -->
 <p><strong>The truth table for p AND q (also written as p ∧ q)</strong></p>
@@ -896,15 +971,69 @@ T
 </tr>
 </tbody>
 </table>
-</div>
-<div id="basic-logic-gates" class="section level3">
-<h3><span class="header-section-number">3.9.2</span> Basic Logic Gates</h3>
+<p>With these basic logical functions we can create electronic logical switches. All logic gates are built off the rules expressed in the tables above.</p>
 </div>
 <div id="inverters-and-buffers" class="section level3">
 <h3><span class="header-section-number">3.9.3</span> Inverters and Buffers</h3>
+<p>Both of these gates have only a single input pin and single output pin.</p>
+<p><strong>Inverters</strong> apply logical NOT and are represented with the following schematic symbol:</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/RoboticsEngineeringCourse/roboticsengineeringcourse.github.io/937f2ddecfcd195ad786833a2d94c7c7295e4f07/symbols/NOT_ANSI.svg" alt="" />
+<p class="caption">Logical NOT</p>
+</div>
+<p>Logical NOT is most widely used to invert either the input or output signal of another gate. The 74x06 and 74x14 ICs each provide six input and output gates that invert the signal.</p>
+<p>All logic gates placed on silicone ICs have external power and ground. This allows them to be utilized as <strong>buffers</strong> which may boost the single input signal. In this way the buffer gate shown below is only used in order to increase the electrical charge used as in input in other logic gates. While it might seem illogical to do this a buffer is essentially two inverters in a row. In a schematic diagram they are drawn as two NOT gates in a row or the specific buffer symbol.</p>
+<p>The 74x07 chip contains six hex buffer gates.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/Buffer_ANSI.svg" alt="" />
+<p class="caption">Buffer</p>
+</div>
+</div>
+<div id="basic-logic-gates" class="section level3">
+<h3><span class="header-section-number">3.9.4</span> Basic Logic Gates</h3>
+<p>The simplest two input logic gates are AND and OR. They each have two input pins and one output. AND and OR gates are shown here.</p>
+<p>The 74x08 and 74x32 chips each have four sets of their respective logic gates (AND and OR).</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/AND_ANSI.svg" alt="" />
+<p class="caption">AND Gate</p>
+</div>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/OR_ANSI.svg" alt="" />
+<p class="caption">OR Gate</p>
+</div>
+<p>Two other useful logic gates are XOR (exclusive OR) and XNOR (exclusive NOR). It is not yet immediately apparent for the need for the exclusive NOR but, like the exclusive OR, it modifies the gate by interpreting OR a little differently. In the exclusive case two input arguments that are true, do not equal an OR or NOR truth. (See the truth tables above.)</p>
+<p>The 74x86 IC Chip is a commonly used XOR gate which contains four gates with two inputs and one output each.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/XOR_ANSI.svg" alt="" />
+<p class="caption">XOR Gate</p>
+</div>
+<p>The 74x266 IC chip is one of the chips which uses four XNOR gates with four output pins.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/XNOR_ANSI.svg" alt="" />
+<p class="caption">XNOR Gate</p>
+</div>
 </div>
 <div id="universal-logic-gates" class="section level3">
-<h3><span class="header-section-number">3.9.4</span> Universal Logic Gates</h3>
+<h3><span class="header-section-number">3.9.5</span> Universal Logic Gates</h3>
+<p>The final two cases of logic gates are special. They are the only two gates which may actually be used to build all of the others. In that way, the chips that include these two gates (74x00 and 74x02 among others) function in prototyping projects as a basis for any other system given we have enough room to build the circuit.</p>
+<p>The 74x00 IC chip is the most commonly used IC because it contains four sets of NAND gates.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/NAND_ANSI.svg" alt="" />
+<p class="caption">NAND Gate</p>
+</div>
+<p>The 74x02 IC chip contains four sets of NOR gates.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/WHS-Robotics-Engineering-2021-22/RE-3.9.0-Utizing_Logic_Gates/ef374bfaf188f3d60f115b68e9b52ece09dc3f6f/symbols/NOR_ANSI.svg" alt="" />
+<p class="caption">NOR Gate</p>
+</div>
+<p>This <a href="https://en.wikipedia.org/wiki/Logic_gate#Universal_logic_gates">section of the Wikipedia article</a> on logic gates illustrates how to do this.</p>
+<div class="assignmentbox homework">
+<div class="left">
+<p><strong>ASSIGNMENT 3.9.0 - Logical Decisions with Integrated Circuits</strong></p>
+</div>
+<p>The foundation of computer science is built on the integrated circuit. These fundamental computer components require practice to understand. Be sure to carefully read the datasheets for the ICs before using them.</p>
+<p>Go to the Canvas page for this class and follow the instructions for <strong><span style="color: silver;">3.9.0 - Logical Decisions with Integrated Circuits</span></strong>.</p>
+</div>
 
 </div>
 </div>
